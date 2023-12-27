@@ -1,0 +1,5 @@
+#Carpetas ignoradas
+
+node_modules/
+
+#Archivos ignorados
