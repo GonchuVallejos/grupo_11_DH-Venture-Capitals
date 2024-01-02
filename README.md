@@ -1,22 +1,10 @@
 # grupo_11_DH-Venture-Capitals
 
-home
-# header
-    logo
-    carrito
-    iniciar sesion
+# Descripcion de la pag
+# Integrantes:
+## Barberis Bestani Diego Matias:
+Soy Diego tengo 33 años hace poco fui papa de una hermosa nena.
+Lic. en Administracion de empresas por la mañana trabajo de ello y por la tarde soy Qa tester en una empresa de Soft.
 
-# body
-    menu
-    carrousel
-    secciones
-        seccion 1 - consolas
-        seccion 2 - cartuchos
-        seccion 3 - accesorios
-
-# footer
-    info institucional
-
-detalle del producto - Como mercado libre, ebay, etc
-
-carrito de compras - Como mercado libre, ebay, etc
+# Sitios de referencia:
+https://www.start.com.ar/
