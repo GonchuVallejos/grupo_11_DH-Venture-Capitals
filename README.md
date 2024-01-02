@@ -13,5 +13,5 @@ Empiezo este curso con mucho entusiasmo porque me interesa ver posibilidades de 
 
 
 # Sitios de referencia:
-https://www.start.com.ar/
+https://www.start.com.ar/ 🐱‍🏍Por las funcionalidades implementadas.
 https://bitjumpgaming.com/
