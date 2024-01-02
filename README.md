@@ -11,7 +11,11 @@ Buenas, mi nombre es Catriel y tengo 31 años. Soy Contador Público y trabajo c
 Estudie algo de programación de forma autodidacta y también hice el curso CS50x de Harvard, por lo que mis conocimientos son todavía muy básicos.
 Empiezo este curso con mucho entusiasmo porque me interesa ver posibilidades de trabajar como programador, o bien aplicar los conocimientos  mi profesión!.
 
+## Ficoseco Enzo
+Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas becas programación. Anteriormente estudié aviación(soy piloto privado) y gastronomía. Mi objetivo es poder conseguir trabajo en el mundo IT y vivir de esto. Se que es un camino largo y que esto recién empieza, pero con constancia y ganas de aprender todo llega.
+
 
 # Sitios de referencia:
 https://www.start.com.ar/
 https://bitjumpgaming.com/
+https://storegamesargentina.com/ ~ Intuitiva a la hora de recorrerla ~
