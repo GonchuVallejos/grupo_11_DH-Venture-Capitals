@@ -16,6 +16,6 @@ Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas
 
 
 # Sitios de referencia:
-https://www.start.com.ar/
+https://www.start.com.ar/ 🐱‍🏍Por las funcionalidades implementadas.
 https://bitjumpgaming.com/
 https://storegamesargentina.com/ ~ Intuitiva a la hora de recorrerla ~
