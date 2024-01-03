@@ -33,6 +33,7 @@ Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas
 ¡Hola🙋🏻‍♂️! Soy Gonza, tengo 31 años. Soy Téc. en Informática, estoy en pleno proceso de realizar mi tesis de Ing. en Informática 🎓 y me encuentro finalizando el curso de Data Analytics con Digital House 📊.
 Trabaje como desarrollador de soft en el Hospital Pablo Soria y actualmente trabajo en el área de Economía del Conocimiento del Ministerio de Producción.
 Me inscribí en el curso porque encanta programar. Siempre estoy tratando de aprender sobre las últimas tecnologías para estar actualizado, porque en la tecnología, ¡la única constante es el cambio! 💻🚀
+
 ## Micaela Reynoso
 Soy Mica. Tengo 29 años y soy Arquitecta. De San Salvador de Jujuy. 
 Quiero ampliar un poco mi gama de conocimientos por lo que me pareció interesante el curso.
