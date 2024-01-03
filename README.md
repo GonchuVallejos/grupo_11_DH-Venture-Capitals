@@ -44,5 +44,4 @@ https://storegamesargentina.com/ ~ Intuitiva a la hora de recorrerla ~
 https://www.tecnoretrogames.com/ - Por la distribución de las secciones.
 https://www.naldo.com.ar/tecnologia/gaming/consolas - Por el diseño de la pagina, los filtros, entre otros.
 https://www.gameonretro.com.ar/ - Por los productos que ofrecen y las funcionalidades implementadas.
-https://www.tecnoretrogames.com/cartuchos-consolas/ - Por los productos que ofrecen y las funcionalidades implementadas.
 https://dixgamer.com/ - Por la estetica que presenta la pagina.git
