@@ -39,3 +39,4 @@ https://www.start.com.ar/ 🐱‍🏍Por las funcionalidades implementadas.
 https://bitjumpgaming.com/ - Por a foma dinamica de mostrar los productos en miniatura
 https://storegamesargentina.com/ ~ Intuitiva a la hora de recorrerla ~
 https://www.tecnoretrogames.com/ - Por la distribución de las secciones.
+https://www.naldo.com.ar/tecnologia/gaming/consolas - Por el diseño de la pagina, los filtros, entre otros.
