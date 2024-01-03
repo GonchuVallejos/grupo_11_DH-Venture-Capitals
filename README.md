@@ -14,6 +14,9 @@ Empiezo este curso con mucho entusiasmo porque me interesa ver posibilidades de 
 ## Ficoseco Enzo
 Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas becas programación. Anteriormente estudié aviación(soy piloto privado) y gastronomía. Mi objetivo es poder conseguir trabajo en el mundo IT y vivir de esto. Se que es un camino largo y que esto recién empieza, pero con constancia y ganas de aprender todo llega.
 
+## Mara Lujan
+こんにちは！Mi nombre es Mara, TENGO 26, soy Ingeniera en Informatica. Durante mi cursada realice varios proyectos de programacion con varios lenguajes. Actualmente me encuentro estudiando Dart&Flutter para poder aprender un poco de desarrollo de aplicaciones moviles. Me encanta aprender cosas nuevas , es por eso que me inscribi en esta beca, para poder aprender mas sobre aplicaciones web.
+
 
 # Sitios de referencia:
 https://www.start.com.ar/ 🐱‍🏍Por las funcionalidades implementadas.
