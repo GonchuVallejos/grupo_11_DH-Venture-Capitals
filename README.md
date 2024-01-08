@@ -14,27 +14,27 @@ Además, entendemos la importancia de la comunidad en torno a los videojuegos re
 Únete a nosotros en este viaje nostálgico y descubre la magia de los videojuegos retro en nuestra tienda en línea. Estamos emocionados de ofrecer a nuestros clientes una experiencia única y auténtica que va más allá de la simple compra de productos: es un viaje a través del tiempo, lleno de diversión y recuerdos inolvidables. ¡Bienvenido a nuestro mundo retro!
 
 # Integrantes:
-## Barberis Bestani Diego Matias:
+## Barberis Bestani Diego Matias - @dbarberisbestani
 Soy Diego tengo 33 años hace poco fui papa de una hermosa nena.
 Lic. en Administracion de empresas por la mañana trabajo de ello y por la tarde soy Qa tester en una empresa de Soft.
 
-## Conde Catriel:
+## Conde Catriel - @catriel25
 Buenas, mi nombre es Catriel y tengo 31 años. Soy Contador Público y trabajo como auditor en el Tribunal de Cuentas de la provincia de Jujuy, aunque también me ocupo de cuestiones impositivas y contables con clientes particulares.
 Estudie algo de programación de forma autodidacta y también hice el curso CS50x de Harvard, por lo que mis conocimientos son todavía muy básicos.
 Empiezo este curso con mucho entusiasmo porque me interesa ver posibilidades de trabajar como programador, o bien aplicar los conocimientos  mi profesión!.
 
-## Ficoseco Enzo
+## Ficoseco Enzo - @EnzoFicoseco
 Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas becas programación. Anteriormente estudié aviación(soy piloto privado) y gastronomía. Mi objetivo es poder conseguir trabajo en el mundo IT y vivir de esto. Se que es un camino largo y que esto recién empieza, pero con constancia y ganas de aprender todo llega.
 
-## Mara Lujan
+## Mara Lujan - @kotarourinni
 こんにちは！Mi nombre es Mara, TENGO 26, soy Ingeniera en Informatica. Durante mi cursada realice varios proyectos de programacion con varios lenguajes. Actualmente me encuentro estudiando Dart&Flutter para poder aprender un poco de desarrollo de aplicaciones moviles. Me encanta aprender cosas nuevas , es por eso que me inscribi en esta beca, para poder aprender mas sobre aplicaciones web.
 
-## Gonzalo Vallejos Gallardo
+## Gonzalo Vallejos Gallardo - @GonchuVallejos
 ¡Hola🙋🏻‍♂️! Soy Gonza, tengo 31 años. Soy Téc. en Informática, estoy en pleno proceso de realizar mi tesis de Ing. en Informática 🎓 y me encuentro finalizando el curso de Data Analytics con Digital House 📊.
 Trabaje como desarrollador de soft en el Hospital Pablo Soria y actualmente trabajo en el área de Economía del Conocimiento del Ministerio de Producción.
 Me inscribí en el curso porque encanta programar. Siempre estoy tratando de aprender sobre las últimas tecnologías para estar actualizado, porque en la tecnología, ¡la única constante es el cambio! 💻🚀
 
-## Micaela Reynoso
+## Micaela Reynoso - @MicaReynoso
 Soy Mica. Tengo 29 años y soy Arquitecta. De San Salvador de Jujuy. 
 Quiero ampliar un poco mi gama de conocimientos por lo que me pareció interesante el curso.
 
