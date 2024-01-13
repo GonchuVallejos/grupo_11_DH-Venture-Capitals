@@ -1,0 +1,17 @@
+{
+  "name": "grupo_11_dh-venture-capitals",
+  "version": "1.0.0",
+  "description": "¡Bienvenido a nuestra tienda en línea, el destino perfecto para los amantes de la nostalgia y los fanáticos de los videojuegos retro! En nuestro sitio web, nos apasiona revivir los momentos dorados de los videojuegos y ofrecer a nuestros clientes la oportunidad de sumergirse en la experiencia única de las consolas y juegos retro.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":  "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "GRUPO 11",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
