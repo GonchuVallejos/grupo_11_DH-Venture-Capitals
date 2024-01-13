@@ -5,7 +5,7 @@ const path = require('node:path');
 
 // Routes
 app.get('/', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/')
+    const pathHome = path.join(__dirname, 'views/index.html')
     res.sendFile(pathHome);
 })
 

@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.header-top{
+    height: 200px;
+    background-color: aqua;
+}
+
+.logo-busqueda{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.logo-busqueda img{
+    width: 20%;
+    
+}
+
+.lupa{
+    position: absolute;
+    display: block;
+    bottom: .5rem;
+    right: 1rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.usuario{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.main-navbar{
+    font-size: 35px;
+    text-align: center;
+}
