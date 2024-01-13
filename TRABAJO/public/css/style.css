@@ -8,7 +8,7 @@
 }
 
 .header-top{
-    height: 200px;
+    height: 190px;
     background-color: aqua;
 }
 
@@ -22,17 +22,26 @@
 }
 
 .logo-busqueda img{
-    width: 20%;
+    width: 100px;
     
 }
+
+input.input{
+    padding-right: 2.5rem;
+  }
 
 .lupa{
     position: absolute;
     display: block;
     bottom: .5rem;
     right: 1rem;
+    
     user-select: none;
     cursor: pointer;
+}
+
+.barra-busqueda{
+    position: relative;
 }
 
 .usuario{
@@ -45,4 +54,67 @@
 .main-navbar{
     font-size: 35px;
     text-align: center;
+
+}
+
+.menu-desplegable {
+    display: none;
+    z-index: 100;
+    position: relative;
+}
+
+.menu-desplegable ul{
+    list-style: none;
+}
+
+.submenu-cartuchos {
+    display: none;
+}
+
+.main-navbar:hover > .menu-desplegable {
+    display: block;
+    transition: all 3s;
+    background-color: rgba(0,0,0, 0.5)
+    
+}
+
+.cartuchos:hover > .submenu-cartuchos {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .header-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .logo-busqueda{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        order: 0;
+    }
+
+    .main-navbar{
+        order: 1;
+        
+    }
+
+    .usuario{
+        order: 2;
+    }
+
+    .usuario i{
+        padding: 10px;
+    }
+
+    .menu-desplegable {
+        position: absolute;
+        left: 70px;
+        top: 120px;
+        float: left;
+    }
 }
