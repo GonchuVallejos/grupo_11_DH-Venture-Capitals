@@ -21,27 +21,21 @@
     
 }
 
+
+
 .logo-busqueda img{
     width: 100px;
+    margin-bottom: 10px;
     
-}
-
-input.input{
-    padding-right: 2.5rem;
-  }
-
-.lupa{
-    position: absolute;
-    display: block;
-    bottom: .5rem;
-    right: 1rem;
-    
-    user-select: none;
-    cursor: pointer;
 }
 
 .barra-busqueda{
-    position: relative;
+
+    background-color: white;
+}
+
+.barra-busqueda input{
+    border: none;
 }
 
 .usuario{
