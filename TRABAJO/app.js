@@ -13,6 +13,11 @@ app.get('/login', ( req, res ) =>{
     res.sendFile(pathHome);
 })
 
+app.get('/productDetail', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/productDetail.html')
+    res.sendFile(pathHome);
+})
+
 // Public (static) Listen Server
 
 app.use(express.static('public'))
