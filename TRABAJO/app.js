@@ -8,6 +8,15 @@ app.get('/', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/index.html')
     res.sendFile(pathHome);
 })
+app.get('/login', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/login.html')
+    res.sendFile(pathHome);
+})
+
+app.get('/productDetail', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/productDetail.html')
+    res.sendFile(pathHome);
+})
 
 // Public (static) Listen Server
 
