@@ -7,9 +7,18 @@
 
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #FFF5E0;
+}
+
 .header-top{
-    height: 190px;
-    background-color: aqua;
+    height: 35vh;
+    background-color: #141E46;
+    color: #BB2525;
 }
 
 .logo-busqueda{
@@ -76,6 +85,26 @@
     display: block;
 }
 
+footer{
+    display: flex;
+    padding: 10px;
+    height: 30vh;
+    background-color: #141E46;
+    color: #BB2525;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.is-divider{
+    background-color: #FFF5E0;
+    display: block;
+    height: 3px;
+    margin: 1em 0;
+    max-width: 30px;
+    width: 100%
+}
+
 @media (min-width: 768px) {
     .header-top{
         display: flex;
@@ -83,6 +112,7 @@
         justify-content: space-between;
         padding: 15px;
         align-items: center;
+        height: 30vh;
     }
 
     .logo-busqueda{
@@ -110,5 +140,41 @@
         left: 70px;
         top: 120px;
         float: left;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 15px;
+    }
+    
+    .footer-info{
+        flex-basis: 50%;
+        max-width: 50%;
+        flex-direction: column;
+    }
+
+    .footer-redes{
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .footer-titulo{
+        letter-spacing: .05em;
+        line-height: 1.05;
+        text-transform: uppercase
+    }
+    footer p{
+        width: 100vw;
+    }
+
+    .is-divider{
+        background-color: #FFF5E0;
+        display: block;
+        height: 3px;
+        margin: 1em 0;
+        max-width: 30px;
+        width: 100%
     }
 }
