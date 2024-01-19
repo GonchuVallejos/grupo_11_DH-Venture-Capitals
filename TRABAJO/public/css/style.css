@@ -19,7 +19,7 @@ body{
     height: 35vh;
     background-color: #141E46;
     color: #bb2525;
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
 }
 
@@ -51,6 +51,7 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 30px;
+    text-decoration: none;
 }
 
 .main-navbar{
@@ -112,7 +113,7 @@ footer{
 }
 
 main{
-/*    padding-top: 35vh;*/
+    margin-top: 35vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -162,6 +163,7 @@ main{
     }
 
     footer{
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         flex-direction: row;
@@ -170,14 +172,14 @@ main{
     }
     
     .footer-info{
-        flex-basis: 50%;
-        max-width: 50%;
+        flex-basis: 70%;
+        max-width: 70%;
         flex-direction: column;
     }
 
     .footer-redes{
-        flex-basis: 50%;
-        max-width: 50%;
+        flex-basis: 30%;
+        max-width: 30%;
     }
 
     .footer-titulo{
@@ -206,7 +208,11 @@ main{
 
     .footer-redes i{
         color: #FFF5E0;
-        padding: 10px;
+        padding: 10px 10px 10px 0px;
         font-size: 30px;
+    }
+
+    main{
+        margin-top: 30vh;
     }
 }
