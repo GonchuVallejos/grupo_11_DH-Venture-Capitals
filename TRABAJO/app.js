@@ -18,6 +18,11 @@ app.get('/productDetail', ( req, res ) =>{
     res.sendFile(pathHome);
 })
 
+app.get('/register', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/register.html')
+    res.sendFile(pathHome);
+})
+
 // Public (static) Listen Server
 
 app.use(express.static('public'))
