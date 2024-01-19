@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.titulo{
+    padding: 30px;
+    padding-top: 60px;
+    text-align: center;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.contraseña{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+
+}
+.boton button{
+    padding: 7px 70px;
+    margin: 10px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+.form-bottom{
+    padding: 15px;
+    margin: 15px;
+}
+.form-bottom ul li{
+    list-style: none;
+    padding: 10px;
+}
+input{
+    margin : 8px;
+    height: 30px;
+}
+.email input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    background-color: rgb(241, 241, 241);
+    outline: none;
+}
+.contraseña input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    background-color: rgb(241, 241, 241);
+    outline: none;
+}

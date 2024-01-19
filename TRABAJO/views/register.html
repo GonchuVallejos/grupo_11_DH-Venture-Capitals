@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/registerStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+
     <header class="header-top">
         <div class="logo-busqueda">
             <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
@@ -43,7 +45,7 @@
                             <ul class="submenu-cartuchos">
                                 <li><a href="#">Super Nintendo</a></li>
                                 <li><a href="#">Sega</a></li>
-                                <li><a href="/register">Play Station 1</a></li>
+                                <li><a href="#">Play Station 1</a></li>
                                 <li><a href="/productDetail">Ver todos</a></li>
                             </ul>
                         </div>
@@ -60,34 +62,37 @@
     </header>
 
     <main>
-
-        <div class="banner">
-            <h1>Banner</h1>
-        </div>
-        <section>
-            <div class="productos-destacados">
-                <h1> Productos destacados</h1>
+        <form action="/register" method="POST" class="form-register">
+            <h2>CREAR CUENTA</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
             </div>
-            <article>
-
-            </article>
-        </section>
-        <section>
-            <div class="banner-informativo">
-                <h1>Banner para mostrar onda, envios gratis, descuentos con formas de pago, etc</h1>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
             </div>
-            <article>
-
-            </article>
-        </section>
-        <section>
-            <div class="ofertas">
-                <h1>Ofertas</h1>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
             </div>
-            <article>
+            <div class="form-pass">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" class="input-pass" placeholder="Contraseña"
+                    required>
+                <i class="fa-solid fa-eye" id="btn-password"
+                    onclick="mostrarContrasena('password', 'btn-password')"></i>
+            </div>
+            <div class="form-pass">
+                <label for="re-password">Confirmar contraseña</label>
+                <input type="password" name="re-password" id="re-password" class="input-pass"
+                    placeholder="Confirmar contraseña" required>
+                <i class="fa-solid fa-eye" id="btn-re-password"
+                    onclick="mostrarContrasena('re-password', 'btn-re-password')"></i>
+            </div>
 
-            </article>
-        </section>
+            <button type="submit" class="btn-register">Registrarse</button>
+        </form>
     </main>
 
     <footer>
@@ -114,6 +119,22 @@
         </div>
     </footer>
 
+    <script>
+        function mostrarContrasena(tipoId, iconId) {
+            var tipo = document.getElementById(tipoId);
+            var icon = document.getElementById(iconId);
+
+            if (tipo.type == "password") {
+                tipo.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                tipo.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
 </body>
 
 </html>

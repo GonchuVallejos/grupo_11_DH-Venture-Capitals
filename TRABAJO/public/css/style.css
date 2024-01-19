@@ -7,9 +7,20 @@
 
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #FFF5E0;
+}
+
 .header-top{
-    height: 190px;
-    background-color: aqua;
+    height: 35vh;
+    background-color: #141E46;
+    color: #bb2525;
+    /*position: fixed;*/
+    width: 100%;
 }
 
 .logo-busqueda{
@@ -73,6 +84,45 @@
     display: block;
 }
 
+footer{
+    display: flex;
+    padding: 10px;
+    height: 195px;
+    background-color: #141E46;
+    color: #BB2525;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.is-divider{
+    background-color: #FFF5E0;
+    display: block;
+    height: 3px;
+    margin: 1em 0;
+    width: 50%
+}
+
+.footer-redes i{
+    color: #FFF5E0;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+main{
+/*    padding-top: 35vh;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-accesos a{
+    text-decoration: none;
+    color: #FFF5E0;
+}
+
 @media (min-width: 768px) {
     .header-top{
         display: flex;
@@ -80,6 +130,7 @@
         justify-content: space-between;
         padding: 15px;
         align-items: center;
+        height: 30vh;
     }
 
     .logo-busqueda{
@@ -104,8 +155,57 @@
 
     .menu-desplegable {
         position: absolute;
-        left: 70px;
+        left: 50px;
         top: 120px;
         float: left;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 15px;
+        align-items: flex-start;
+    }
+    
+    .footer-info{
+        flex-basis: 50%;
+        max-width: 50%;
+        flex-direction: column;
+    }
+
+    .footer-redes{
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .footer-titulo{
+        letter-spacing: .05em;
+        line-height: 1.05;
+        text-transform: uppercase
+    }
+    footer p{
+        width: 100vw;
+    }
+
+    .is-divider{
+        background-color: #FFF5E0;
+        display: block;
+        height: 3px;
+        margin: 1em 0;
+        max-width: 30px;
+        width: 100%
+    }
+
+    .footer-accesos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .footer-redes i{
+        color: #FFF5E0;
+        padding: 10px;
+        font-size: 30px;
     }
 }
