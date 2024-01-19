@@ -32,8 +32,6 @@ body{
     
 }
 
-
-
 .logo-busqueda img{
     width: 100px;
     margin-bottom: 10px;
@@ -41,7 +39,6 @@ body{
 }
 
 .barra-busqueda{
-
     background-color: white;
 }
 
@@ -67,6 +64,7 @@ body{
     display: none;
     z-index: 100;
     position: relative;
+    transition: all 0.5s;
 }
 
 .menu-desplegable ul{
