@@ -16,7 +16,7 @@ body{
 }
 
 .header-top{
-    height: 35vh;
+    height: 25vh;
     background-color: #141E46;
     color: #bb2525;
     position: fixed;
@@ -113,7 +113,7 @@ footer{
 }
 
 main{
-    margin-top: 35vh;
+    margin-top: 25vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -232,7 +232,7 @@ a{
         justify-content: space-between;
         padding: 15px;
         align-items: center;
-        height: 30vh;
+        height: 22vh;
     }
 
     .logo-busqueda{
@@ -240,6 +240,9 @@ a{
         justify-content: space-around;
         width: 100%;
         order: 0;
+    }
+    main{
+        margin-top: 22vh;
     }
 
     .main-navbar{
@@ -328,9 +331,6 @@ a{
         font-size: 30px;
     }
 
-    main{
-        margin-top: 30vh;
-    }
 
     .banner-informativo{
         flex-direction: row;
