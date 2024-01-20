@@ -138,6 +138,7 @@ section{
 .banner-informativo-article i{
     font-size: 50px;
     color: #BB2525;
+    padding-top: 5px;
 }
 
 .banner-informativo-article h3{
@@ -145,7 +146,7 @@ section{
 }
 
 .banner-informativo-article p{
-    padding: 10px 0px 10px 0px;
+    padding: 10px 5px 10px 5px;
 }
 
 .index-productos{
@@ -288,6 +289,18 @@ section div h1{
 
     .banner-informativo{
         flex-direction: row;
+    }
+
+    .banner-informativo-article h3{
+        height: 75px;
+    }
+
+    .banner-informativo .borde-vertical{
+        background-color: #FFF5E0;
+        display: block;
+        height: 200px;
+        margin: 1em 0;
+        width: 3px;
     }
 }
 
