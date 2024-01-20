@@ -12,7 +12,6 @@ body{
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #FFF5E0;
 }
 
 .header-top{
@@ -123,6 +122,30 @@ main{
 .footer-accesos a{
     text-decoration: none;
     color: #FFF5E0;
+}
+
+section{
+    width: 90%;
+}
+.banner-informativo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 161, 161);
+    text-align: center;
+}
+
+.banner-informativo-article i{
+    font-size: 50px;
+    color: #BB2525;
+}
+
+.banner-informativo-article h3{
+    padding: 15px;
+}
+
+.banner-informativo-article p{
+    padding: 10px 0px 10px 0px;
 }
 
 @media (min-width: 768px) {
