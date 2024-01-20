@@ -1,54 +1,96 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-.titulo{
-    padding: 30px;
-    padding-top: 60px;
-    text-align: center;
-}
-.email{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-.contraseña{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-.boton{
+.form-login div {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 80%;
+}
 
-}
-.boton button{
-    padding: 7px 70px;
-    margin: 10px;
-    background-color: rgb(41, 41, 41);
-    color: white;
-}
-.form-bottom{
-    padding: 15px;
-    margin: 15px;
-}
-.form-bottom ul li{
-    list-style: none;
+.form-login div input {
+    width: 90%;
     padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
 }
-input{
-    margin : 8px;
-    height: 30px;
+
+.form-pass {
+    position: relative;
+    display: inline-block;
 }
-.email input:focus{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    background-color: rgb(241, 241, 241);
-    outline: none;
+
+.form-pass .input-pass {
+    padding-right: 30px;
+    width: 90%;
 }
-.contraseña input:focus{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    background-color: rgb(241, 241, 241);
-    outline: none;
+
+.form-pass .fa-solid {
+    cursor: pointer;
+    position: absolute;
+    color: #bb2525;
+    right: 20px;
+}
+
+.form-register label {
+    display: none;
+}
+
+.form-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(20, 30, 70, 1);
+    padding: 5px;
+    margin: 10px;
+    width: 80%;
+}
+
+.form-login h2{
+    margin: 15px;
+    color: #FFF5E0;
+}
+
+.btn-register {
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+
+    .form-login {
+
+        margin: 30px;;
+        width: 610px;
+    }
+    .form-login div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    
+    .form-login label {
+        display: block;
+        width: 150px;
+        text-align: right;
+        color: #FFF5E0;
+    }
+
+    .form-pass .fa-solid {
+        cursor: pointer;
+        position: absolute;
+        color: #bb2525;
+        right: 15px
+    }
+
+    .btn-register {
+        width: 300px;
+    }
+
+    .form-register div input::placeholder {
+        color: transparent;
+    }
 }
