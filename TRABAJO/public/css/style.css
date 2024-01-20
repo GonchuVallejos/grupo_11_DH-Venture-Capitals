@@ -155,12 +155,16 @@ section{
     flex-basis: 100%;
 }
 
+.index-productos-descripcion{
+    text-align: center;
+}
+
 section div h1{
     text-align: center;
 }
 .index-article{
     padding: 5px;
-    padding-left: 15px;
+    padding-left: 50px;
     background-color: rgba(0,0,0, 0.3);
 }
 
