@@ -131,7 +131,6 @@ section{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    align-items: center;
     background-color: rgb(161, 161, 161);
     text-align: center;
 }
