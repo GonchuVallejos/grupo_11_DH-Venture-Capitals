@@ -17,9 +17,27 @@ app.get('/productCart', ( req, res ) =>{
 app.get('/index', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/index.html')
     res.sendFile(pathHome);
+<<<<<<< HEAD
   })
  
 
+=======
+})
+app.get('/login', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/login.html')
+    res.sendFile(pathHome);
+})
+
+app.get('/productDetail', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/productDetail.html')
+    res.sendFile(pathHome);
+})
+
+app.get('/register', ( req, res ) =>{
+    const pathHome = path.join(__dirname, 'views/register.html')
+    res.sendFile(pathHome);
+})
+>>>>>>> 85da2faa518297e96a15b56f67afe3a0899ca7e2
 
 // Public (static) Listen Server
 

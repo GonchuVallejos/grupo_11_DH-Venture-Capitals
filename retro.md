@@ -1,3 +1,4 @@
+# Sprint 1 
 ## Cosas que hicimos bien:
 
 - Nos anticipamos con la organización y comenzamos el proyecto utilizando un tablero de Trello.
