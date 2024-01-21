@@ -1,0 +1,267 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    ;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/*------head-----------*/
+
+.header-top{
+    height: 200px;
+    background-color: rgb(20, 30, 70);
+    color: rgb(187, 37, 37);
+}
+
+.logo-busqueda{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.logo-busqueda img{
+    width: 100px;
+    margin-bottom: 10px;
+    
+}
+
+.barra-busqueda{
+
+    background-color: white;
+}
+
+.barra-busqueda input{
+    border: none;
+}
+
+.usuario{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.main-navbar{
+    font-size: 35px;
+    text-align: center;}
+
+.menu-desplegable {
+    display: none;
+    z-index: 100;
+    position: relative;
+}
+
+.menu-desplegable ul{
+    list-style: none;
+}
+
+.submenu-cartuchos {
+    display: none;
+}
+
+.main-navbar:hover > .menu-desplegable {
+    display: block;
+    transition: all 3s;
+    background-color: rgba(0,0,0, 0.5)
+    
+}
+
+.cartuchos:hover > .submenu-cartuchos {
+    display: block;
+}
+
+/*------------main-----------------*/
+
+
+main{width: 90%;
+    background-color: rgba(255, 105, 105, 0.4);
+    color: rgb(20, 30, 70);
+    margin: auto;   
+}
+
+.title-cart{ margin-left: 5px;}
+
+.productos{margin: 7px;
+background-color: rgba(255, 255, 255, 0.3);
+padding:5px }
+
+#prod_1{display:flex;
+    position: relative;  
+}
+.productos img{
+    width: 80px;
+    height: 80px;
+    align-self: center;
+}
+#prod_1 li{
+    flex-direction: column;
+    list-style: none;
+    margin-left: 10px;
+}
+.eliminar{color: rgb(187, 37, 37);
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 30%;
+
+}
+
+.envio{margin: 7px;
+padding-top: 10px;}
+
+.envio label{font-size: 12px;display: block;
+    font-weight: 500;
+    padding-top: 6px;
+    margin-left: 10px;
+padding-bottom: 4px;}
+
+    .envio input{width: 55vw;
+      
+    height: 25px;
+    margin-left: 10px;
+    }
+
+.envio ::placeholder{font-size: 12px;}
+
+ .envio p{font-size: 11px; margin-left: 10px;margin-right: 6px}
+
+ .envio button{ background-color: rgb(20, 30, 70);
+color: rgb(187, 37, 37);
+height: 25px;
+width: 20vw;
+border-radius: 7px;
+margin-left: 5px;
+font-weight: 500;
+font-size: 12px;
+}
+
+.precioTotal{margin: 15px 7px;
+}
+
+.suma{text-align: end;
+color: rgb(187, 37, 37);}
+
+.precioTotal .comprar{
+    display: block;
+    margin: 10px auto 5px;
+    width: 85%;
+    height: 25px;
+    background-color: rgb(20, 30, 70);
+color: rgb(187, 37, 37);
+border-radius: 7px;
+font-weight: 500;
+font-size: 18px;
+}
+
+.agregar{display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+color: rgb(187, 37, 37);}
+
+/*------------footer-----------*/
+footer{
+    display: flex;
+    padding: 10px;
+    height: 195px;
+    background-color: #141E46;
+    color: #BB2525;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-accesos a{
+    text-decoration: none;
+    color: #FFF5E0;
+}
+
+.footer-redes i{
+    color: #FFF5E0;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+@media (min-width: 768px) {
+    .header-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .logo-busqueda{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        order: 0;
+    }
+
+    .main-navbar{
+        order: 1;
+        
+    }
+
+    .usuario{
+        order: 2;
+    }
+
+    .usuario i{
+        padding: 10px;
+    }
+
+    .menu-desplegable {
+        position: absolute;
+        left: 70px;
+        top: 120px;
+        float: left;
+    }
+}
+
+main{width: 500px;}
+
+.productos img{
+    width: 100px;
+    height: 100px;
+}
+.eliminar{
+    font-size: 25px
+}
+
+#prod_1 li{
+    font-size: 18px;
+}
+
+.envio input{
+    width: 350px;
+}
+
+.envio button{
+    width: 100px;
+     }
+
+     footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 15px;
+        align-items: flex-start;
+    }
+    
+    .footer-info{
+        flex-basis: 70%;
+        max-width: 70%;
+        flex-direction: column;
+    }
+    .footer-redes{
+        flex-basis: 30%;
+        max-width: 30%;
+    }
