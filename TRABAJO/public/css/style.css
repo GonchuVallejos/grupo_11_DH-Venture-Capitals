@@ -2,14 +2,15 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid black;
+    ;
     font-family: 'Roboto', sans-serif;
 
 }
 
 .header-top{
-    height: 190px;
-    background-color: aqua;
+    height: 200px;
+    background-color: #151D3B;
+    color: #D82148;
 }
 
 .logo-busqueda{
@@ -75,6 +76,8 @@
 .cartuchos:hover > .submenu-cartuchos {
     display: block;
 }
+
+.usuario a{color: #D82148;}
 
 @media (min-width: 768px) {
     .header-top{
