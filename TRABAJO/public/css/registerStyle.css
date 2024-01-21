@@ -1,0 +1,96 @@
+.form-register div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.form-register div input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.form-pass {
+    position: relative;
+    display: inline-block;
+}
+
+.form-pass .input-pass {
+    padding-right: 30px;
+    width: 90%;
+}
+
+.form-pass .fa-solid {
+    cursor: pointer;
+    position: absolute;
+    color: #bb2525;
+    right: 20px;
+}
+
+.form-register label {
+    display: none;
+}
+
+.form-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(20, 30, 70, 1);
+    padding: 5px;
+    margin: 10px;
+    width: 80%;
+}
+
+.form-register h2{
+    margin: 15px;
+    color: #FFF5E0;
+}
+
+.btn-register {
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+
+    .form-register {
+
+        margin: 30px;;
+        width: 610px;
+    }
+    .form-register div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    
+    .form-register label {
+        display: block;
+        width: 150px;
+        text-align: right;
+        color: #FFF5E0;
+    }
+
+    .form-pass .fa-solid {
+        cursor: pointer;
+        position: absolute;
+        color: #bb2525;
+        right: 15px
+    }
+
+    .btn-register {
+        width: 300px;
+    }
+
+    .form-register div input::placeholder {
+        color: transparent;
+    }
+}
