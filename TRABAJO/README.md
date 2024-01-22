@@ -26,9 +26,6 @@ Empiezo este curso con mucho entusiasmo porque me interesa ver posibilidades de 
 ## Ficoseco Enzo - @EnzoFicoseco
 Hola! Soy Enzo, tengo 22 años y actualmente estoy estudiando mediante distintas becas programación. Anteriormente estudié aviación(soy piloto privado) y gastronomía. Mi objetivo es poder conseguir trabajo en el mundo IT y vivir de esto. Se que es un camino largo y que esto recién empieza, pero con constancia y ganas de aprender todo llega.
 
-## Mara Lujan - @kotarourinni
-こんにちは！Mi nombre es Mara, TENGO 26, soy Ingeniera en Informatica. Durante mi cursada realice varios proyectos de programacion con varios lenguajes. Actualmente me encuentro estudiando Dart&Flutter para poder aprender un poco de desarrollo de aplicaciones moviles. Me encanta aprender cosas nuevas , es por eso que me inscribi en esta beca, para poder aprender mas sobre aplicaciones web.
-
 ## Gonzalo Vallejos Gallardo - @GonchuVallejos
 ¡Hola🙋🏻‍♂️! Soy Gonza, tengo 31 años. Soy Téc. en Informática, estoy en pleno proceso de realizar mi tesis de Ing. en Informática 🎓 y me encuentro finalizando el curso de Data Analytics con Digital House 📊.
 Trabaje como desarrollador de soft en el Hospital Pablo Soria y actualmente trabajo en el área de Economía del Conocimiento del Ministerio de Producción.
@@ -37,6 +34,13 @@ Me inscribí en el curso porque encanta programar. Siempre estoy tratando de apr
 ## Micaela Reynoso - @MicaReynoso
 Soy Mica. Tengo 29 años y soy Arquitecta. De San Salvador de Jujuy. 
 Quiero ampliar un poco mi gama de conocimientos por lo que me pareció interesante el curso.
+
+## Emanuel Tejerina - @Manustoteles
+
+
+# SOLDADOS CAÍDOS
+## Mara Lujan - @kotarourinni
+こんにちは！Mi nombre es Mara, TENGO 26, soy Ingeniera en Informatica. Durante mi cursada realice varios proyectos de programacion con varios lenguajes. Actualmente me encuentro estudiando Dart&Flutter para poder aprender un poco de desarrollo de aplicaciones moviles. Me encanta aprender cosas nuevas , es por eso que me inscribi en esta beca, para poder aprender mas sobre aplicaciones web.
 
 # Sitios de referencia:
 https://www.start.com.ar/ 🐱‍🏍Por las funcionalidades implementadas.
@@ -52,3 +56,7 @@ https://www.naldo.com.ar/tecnologia/gaming/consolas - Por el diseño de la pagin
 https://www.gameonretro.com.ar/ - Por los productos que ofrecen y las funcionalidades implementadas.
 
 https://dixgamer.com/ - Por la estetica que presenta la pagina.git
+
+## Tablero de Trello
+
+https://trello.com/invite/b/Nd2s6J36/ATTIf5ab0e09c7796d090e92d40d71a618893AE72766/1up
