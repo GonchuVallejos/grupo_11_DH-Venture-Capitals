@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
     font-family: 'Roboto', sans-serif;
 
 }
@@ -16,9 +15,11 @@ body{
 }
 
 .header-top{
-    height: 190px;
-background-color: rgb(20, 30, 70);
-color: rgb(187, 37, 37);
+    height: 35vh;
+    background-color: #141E46;
+    color: #bb2525;
+    position: fixed;
+    width: 100%;
 }
 
 .logo-busqueda{
@@ -221,7 +222,7 @@ ul li {
 
 a{
     text-decoration: none;
-    color:#BB2525;
+    color: #BB2525;
 }
 @media (min-width: 768px) {
     .header-top{

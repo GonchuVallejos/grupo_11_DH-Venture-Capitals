@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styleCart.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>1UP Carrito de Compras</title>
@@ -11,7 +12,7 @@
 <body>
     <header class="header-top">
         <div class="logo-busqueda">
-           <a href="/index"> <img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
+            <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
             <form action="#" method="GET">
                 <div class="barra-busqueda">
                     <input type="password" class="input" placeholder="Buscar">
@@ -21,17 +22,17 @@
         </div>
 
         <div class="usuario">
-            <i class="far fa-user"></i>
+            <a href="/login"><i class="far fa-user"></i></a>
             <i class="far fa-heart"></i>
-            <i class="fas fa-shopping-cart"></i>
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
         </div>
-        
+
         <nav class="main-navbar">
             <i class="fas fa-bars"></i>
             <div class="menu-desplegable">
                 <ul>
                     <li>
-                       CONSOLAS
+                        CONSOLAS
                     </li>
                     <li>
                         <div class="cartuchos">
@@ -39,8 +40,8 @@
                             <ul class="submenu-cartuchos">
                                 <li><a href="#">Super Nintendo</a></li>
                                 <li><a href="#">Sega</a></li>
-                                <li><a href="#">Play Station 1</a></li>
-                                <li><a href="#">Ver todos</a></li>
+                                <li><a href="/register">Play Station 1</a></li>
+                                <li><a href="/productDetail">Ver todos</a></li>
                             </ul>
                         </div>
                     </li>
@@ -93,9 +94,9 @@
             <span class="footer-titulo">Info</span>
             <div class="is-divider"></div>
             <div class="footer-accesos">
-                <a href="#">Nosotros</a>
-                <a href="#">Politicas de seguridad</a>
-                <a href="#">Politicas de envíos</a>
+                <a href="">Nosotros</a>
+                <a href="">Politicas de seguridad</a>
+                <a href="">Politicas de envíos</a>
             </div>
         </div>
         <div class="footer-redes">
@@ -110,3 +111,6 @@
             - Todos los derechos reservados. 2024 ©
         </div>
     </footer>
+</body>
+
+</html>
