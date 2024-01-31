@@ -11,3 +11,19 @@
 ## Cosas que vamos a hacer:
 
 - Trabajar en ramas con Git.-
+
+# Sprint 2
+## Comenzar a hacer
+1°Comenzar a hacer el MVC, definir las rutas y los controladores de nuestro proyecto.
+
+## Hacer más
+2°Hacer mas daily para ponernos de acuerdo en los avances.
+
+## Continuar haciendo
+3°Continuar aplicando los conocimientos adquiridos durante clases.
+
+## Hacer menos
+4°No avisar al hacer un push!!avisar al realizar modificaciones.
+
+## Dejar de hacer
+5°Crear clases con nombres muy genericos para los archivos css y mejorar el sistema de ramas que llevamos.
