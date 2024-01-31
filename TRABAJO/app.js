@@ -3,24 +3,31 @@ const express = require('express');
 const app = express();
 const path = require('node:path');
 
+//Port
+const port = 3000
+
+// Public (static) Listen Server
+
+app.use(express.static('public'))
+
+//routes direction
+const userRoutes = require('./src/routes/userRoutes')
+
+const mainRoutes = require('./src/routes/mainRoutes')
+
+
+
 // Routes
- app.get('/', ( req, res ) =>{
-   const pathHome = path.join(__dirname, 'views/index.html')
-   res.sendFile(pathHome);
- })
+ app.get('/', mainRoutes)
+
+ app.get('/login', userRoutes)
+
+ app.get('/register', userRoutes)
+
 
 app.get('/productCart', ( req, res ) =>{
     const pathCart = path.join(__dirname, 'views/productCart.html')
     res.sendFile(pathCart);
-})
-
-app.get('/index', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/index.html')
-    res.sendFile(pathHome); })
-    
-app.get('/login', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/login.html')
-    res.sendFile(pathHome);
 })
 
 app.get('/productDetail', ( req, res ) =>{
@@ -28,12 +35,5 @@ app.get('/productDetail', ( req, res ) =>{
     res.sendFile(pathHome);
 })
 
-app.get('/register', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/register.html')
-    res.sendFile(pathHome);})
 
-// Public (static) Listen Server
-
-app.use(express.static('public'))
-
-app.listen( 3000, () => console.log(`Server up on PORT:  http://localhost:3000`) )
+app.listen( port, () => console.log(`Server up on PORT:  http://localhost:3000`) )
