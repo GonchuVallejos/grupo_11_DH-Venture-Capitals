@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/loginStyle.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-        <title>Ingresá</title>
-    </head>
+
+<head>
+    <%- include('./partials/metaDatos') %>
+        <link rel="stylesheet" href="/css/registerStyle.css">
+        <title>Document</title>
+</head>
+
 <body>
+
     <header class="header-top">
         <div class="logo-busqueda">
             <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
@@ -59,8 +56,16 @@
     </header>
 
     <main>
-        <form action="/" method="POST" class="form-login">
-            <h2>INICIAR SESION</h2>
+        <form action="/register" method="POST" class="form-register">
+            <h2>CREAR CUENTA</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+            </div>
             <div>
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email" placeholder="E-mail" required>
@@ -72,11 +77,18 @@
                 <i class="fa-solid fa-eye" id="btn-password"
                     onclick="mostrarContrasena('password', 'btn-password')"></i>
             </div>
+            <div class="form-pass">
+                <label for="re-password">Confirmar contraseña</label>
+                <input type="password" name="re-password" id="re-password" class="input-pass"
+                    placeholder="Confirmar contraseña" required>
+                <i class="fa-solid fa-eye" id="btn-re-password"
+                    onclick="mostrarContrasena('re-password', 'btn-re-password')"></i>
+            </div>
 
-            <button type="submit" class="btn-register">Iniciar Sesión</button>
+            <button type="submit" class="btn-register">Registrarse</button>
         </form>
     </main>
-    
+
     <footer>
         <div class="footer-info">
             <span class="footer-titulo">Info</span>
@@ -116,6 +128,6 @@
             }
         }
     </script>
-
 </body>
+
 </html>

@@ -6,6 +6,11 @@ const path = require('node:path');
 //Port
 const port = 3000
 
+
+//EJS config
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views/') )
+
 // Public (static) Listen Server
 
 app.use(express.static('public'))
