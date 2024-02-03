@@ -9,7 +9,7 @@ const port = 3000
 
 //EJS config
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views/') )
+app.set('views', path.join(__dirname, './src/views/') )
 
 // Public (static) Listen Server
 
@@ -20,7 +20,7 @@ const userRoutes = require('./src/routes/userRoutes')
 
 const mainRoutes = require('./src/routes/mainRoutes')
 
-
+const productsRoutes = require('./src/routes/productsRoutes')
 
 // Routes
  app.get('/', mainRoutes)
@@ -29,16 +29,8 @@ const mainRoutes = require('./src/routes/mainRoutes')
 
  app.get('/register', userRoutes)
 
+ app.get('/productCart', userRoutes)
 
-app.get('/productCart', ( req, res ) =>{
-    const pathCart = path.join(__dirname, 'views/productCart.html')
-    res.sendFile(pathCart);
-})
-
-app.get('/productDetail', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/productDetail.html')
-    res.sendFile(pathHome);
-})
-
+ app.get('/productDetail', productsRoutes)
 
 app.listen( port, () => console.log(`Server up on PORT:  http://localhost:3000`) )

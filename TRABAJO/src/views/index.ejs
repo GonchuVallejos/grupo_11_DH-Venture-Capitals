@@ -7,51 +7,7 @@
 </head>
 
 <body class="index-body">
-    <header class="header-top">
-        <div class="logo-busqueda">
-            <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
-            <form action="#" method="GET">
-                <div class="barra-busqueda">
-                    <input type="password" class="input" placeholder="Buscar">
-                    <span class="lupa"><i class="fa fa-search"></i></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="usuario">
-            <a href="/login"><i class="far fa-user"></i></a>
-            <i class="far fa-heart"></i>
-            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-
-        <nav class="main-navbar">
-            <i class="fas fa-bars"></i>
-            <div class="menu-desplegable">
-                <ul>
-                    <li>
-                        CONSOLAS
-                    </li>
-                    <li>
-                        <div class="cartuchos">
-                            CARTUCHOS
-                            <ul class="submenu-cartuchos">
-                                <li><a href="#">Super Nintendo</a></li>
-                                <li><a href="#">Sega</a></li>
-                                <li><a href="/register">Play Station 1</a></li>
-                                <li><a href="/productDetail">Ver todos</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        ACCESORIOS
-                    </li>
-                    <li>
-                        VARIOS
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <%- include('./partials/header') %>
 
     <main>
 
@@ -203,28 +159,7 @@
 
     </main>
 
-    <footer>
-        <div class="footer-info">
-            <span class="footer-titulo">Info</span>
-            <div class="is-divider"></div>
-            <div class="footer-accesos">
-                <a href="">Nosotros</a>
-                <a href="">Politicas de seguridad</a>
-                <a href="">Politicas de envíos</a>
-            </div>
-        </div>
-        <div class="footer-redes">
-            <span class="footer-titulo">Seguinos</span>
-            <div class="is-divider"></div>
-            <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <div class="copy">
-            <strong>1UP</strong>
-            - Todos los derechos reservados. 2024 ©
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
 
 </body>
 
