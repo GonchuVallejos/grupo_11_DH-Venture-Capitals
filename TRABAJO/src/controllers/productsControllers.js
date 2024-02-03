@@ -3,6 +3,9 @@ const path = require('path')
 const productsControllers = {
     productDetail: (req, res) => {
         res.render('productDetail')
+    },
+    productAdd: (req, res) => {
+        res.render('productAdd')
     }
 
     /*app.get('/productDetail', ( req, res ) =>{

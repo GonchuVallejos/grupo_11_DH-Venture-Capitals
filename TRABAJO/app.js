@@ -33,4 +33,6 @@ const productsRoutes = require('./src/routes/productsRoutes')
 
  app.get('/productDetail', productsRoutes)
 
+ app.get('/productAdd', productsRoutes)
+
 app.listen( port, () => console.log(`Server up on PORT:  http://localhost:3000`) )

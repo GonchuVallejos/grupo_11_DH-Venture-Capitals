@@ -20,6 +20,7 @@ body{
     color: #bb2525;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .logo-busqueda{

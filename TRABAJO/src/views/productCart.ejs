@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('./partials/metaDatos') %>
-    <link rel="stylesheet" href="/css/styleCart.css">
-    <title>1UP Carrito de Compras</title>
+        <link rel="stylesheet" href="/css/styleCart.css">
+        <title>1UP Carrito de Compras</title>
 </head>
+
 <body>
     <%- include('./partials/header') %>
 
-    <main>
-        <div class="title-cart"><h1>MIS COMPRAS</h1></div>
+        <main>
+            <div class="main-container">
+                <div class="title-cart">
+                    <h1>MIS COMPRAS</h1>
+                </div>
 
-        <div class="productos">
-            <ul>
-                <li id="prod_1">
-                    <img src="#" arc="prod_img">
+                <div class="productos">
                     <ul>
-                        <li class="descripcion"><h4>Descripcion</h4></li>
-                        <li class="cantidad">Cantidad:</li  >
-                        <li class="precio">$     </li>
+                        <li id="prod_1">
+                            <img src="#" arc="prod_img">
+                            <ul>
+                                <li class="descripcion">
+                                    <h4>Descripcion</h4>
+                                </li>
+                                <li class="cantidad">Cantidad:</li>
+                                <li class="precio">$ </li>
+                            </ul>
+                            <span class="eliminar"><i class="far fa-trash-alt"></i></span>
+                        </li>
                     </ul>
-                    <span class="eliminar"><i class="far fa-trash-alt"></i></span>
-                </li>
-            </ul>
-        </div>
-        <div class="envio">
-            <h4>Envío</h4>
-           <form action="/productCart" method="GET">
-            <label for="envio">Código Postal</label>
-            <input type="tel" name="cp" id="envio" placeholder="Código Postal">
-            <button type="submit">Calcular</button>
-            <p>* Se mostrará información de los posibles metodos de envío a la hora de ingresar un código postal válido.</p>
-           </form>         
-        </div>
-        <div class="precioTotal">
-            <h2>Total</h2>
-            <h2 class="suma">$ 95.500,00</h2>
-           <button type="submit" class="comprar">Comprar</button>
-           <a class="agregar" href="/index">Agregar mas productos</a>
-        </div>
-        
-    </main>
-    <%- include('./partials/footer') %>
+                </div>
+                <div class="envio">
+                    <h4>Envío</h4>
+                    <form action="/productCart" method="GET">
+                        <label for="envio">Código Postal</label>
+                        <input type="tel" name="cp" id="envio" placeholder="Código Postal">
+                        <button type="submit">Calcular</button>
+                        <p>* Se mostrará información de los posibles metodos de envío a la hora de ingresar un código
+                            postal válido.</p>
+                    </form>
+                </div>
+                <div class="precioTotal">
+                    <h2>Total</h2>
+                    <h2 class="suma">$ 95.500,00</h2>
+                    <button type="submit" class="comprar">Comprar</button>
+                    <a class="agregar" href="/index">Agregar mas productos</a>
+                </div>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>
 </body>
 
 </html>

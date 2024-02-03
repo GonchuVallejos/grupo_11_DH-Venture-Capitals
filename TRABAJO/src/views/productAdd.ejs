@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metaDatos') %>
+        <link rel="stylesheet" href="/css/registerStyle.css">
+        <title>Agregar Productos</title>
+</head>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+        <main>
+            <form action="/registerProduct" method="POST" class="form-register">
+                <h2>AGREGAR PRODUCTO</h2>
+                <div>
+                    <label for="nombreProducto">Nombre del producto</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                </div>
+                <div>
+                    <label for="descripción">Descripcion</label>
+                    <textarea name="apellido" id="apellido" rows="5" cols="33">
+                    </textarea>
+                </div>
+                <div>
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+                <div>
+                    <label for="categorias">Categorias</label>
+                    <select name="categorias" id="categorias" required>
+                        <option value="Seleccione">Seleccione</option>
+                        <option value="Consolas">Consolas</option>
+                        <option value="Cartuchos">Cartuchos</option>
+                        <option value="Accesorios">Accesorios</option>
+                        <option value="Varios">Varios</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="precio">Precio</label>
+                    <input type="text" name="precio" id="precio" placeholder="Precio" required>
+                </div>
+
+            <button type="submit" class="btn-register">Agregar!</button>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>
