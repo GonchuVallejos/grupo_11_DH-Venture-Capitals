@@ -4,7 +4,7 @@ const app = express();
 const path = require('node:path');
 
 //Port
-const port = 3000
+const PORT = process.env.PORT || 3000;
 
 
 //EJS config
@@ -35,4 +35,4 @@ const productsRoutes = require('./src/routes/productsRoutes')
 
  app.get('/productAdd', productsRoutes)
 
-app.listen( port, () => console.log(`Server up on PORT:  http://localhost:3000`) )
+app.listen(PORT, () => console.log(`Server up on port: http://localhost:${PORT}`))
