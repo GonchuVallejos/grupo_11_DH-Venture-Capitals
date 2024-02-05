@@ -60,4 +60,4 @@ https://dixgamer.com/ - Por la estetica que presenta la pagina.git
 
 ## Tablero de Trello
 
-https://trello.com/invite/b/Nd2s6J36/ATTIf5ab0e09c7796d090e92d40d71a618893AE72766/1up
+https://trello.com/b/Nd2s6J36/1up
