@@ -37,6 +37,7 @@ Quiero ampliar un poco mi gama de conocimientos por lo que me pareció interesan
 
 ## Emanuel Tejerina - @Manustoteles
 
+Hola, soy manu, tengo 38, soy contador, ademas de mi profesion, me dedico al mundo del soft donde tengo una empresa que se dedica a diversos desarrollos tanto propios como factory. Dentro de uno de esos proyectos me desempeño como PO y realizo algunas actividades como DEV Jr, mi idea es poder desarrollarme fulltime en esta actividad y alejarme un poco de la profesion como contador.-
 
 # SOLDADOS CAÍDOS
 ## Mara Lujan - @kotarourinni

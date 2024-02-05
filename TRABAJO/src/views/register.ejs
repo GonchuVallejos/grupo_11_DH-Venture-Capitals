@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metaDatos') %>
+        <link rel="stylesheet" href="/css/registerStyle.css">
+        <title>Document</title>
+</head>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <main>
+        <form action="/register" method="POST" class="form-register">
+            <h2>CREAR CUENTA</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-pass">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" class="input-pass" placeholder="Contraseña"
+                    required>
+                <i class="fa-solid fa-eye" id="btn-password"
+                    onclick="mostrarContrasena('password', 'btn-password')"></i>
+            </div>
+            <div class="form-pass">
+                <label for="re-password">Confirmar contraseña</label>
+                <input type="password" name="re-password" id="re-password" class="input-pass"
+                    placeholder="Confirmar contraseña" required>
+                <i class="fa-solid fa-eye" id="btn-re-password"
+                    onclick="mostrarContrasena('re-password', 'btn-re-password')"></i>
+            </div>
+
+            <button type="submit" class="btn-register">Registrarse</button>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+    <script>
+        function mostrarContrasena(tipoId, iconId) {
+            var tipo = document.getElementById(tipoId);
+            var icon = document.getElementById(iconId);
+
+            if (tipo.type == "password") {
+                tipo.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                tipo.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+
+</html>

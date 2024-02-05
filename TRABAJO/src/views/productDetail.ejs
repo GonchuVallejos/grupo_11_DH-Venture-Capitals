@@ -1,60 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <%- include('./partials/metaDatos') %>
     <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Detalle de Producto</title>
 </head>
 <body>
-    <header class="header-top">
-        <div class="logo-busqueda">
-            <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
-            <form action="#" method="GET">
-                <div class="barra-busqueda">
-                    <input type="password" class="input" placeholder="Buscar">
-                    <span class="lupa"><i class="fa fa-search"></i></span>
-                </div>
-            </form>
-        </div>
-
-        <div class="usuario">
-            <a href="/login"><i class="far fa-user"></i></a>
-            <i class="far fa-heart"></i>
-            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-
-        <nav class="main-navbar">
-            <i class="fas fa-bars"></i>
-            <div class="menu-desplegable">
-                <ul>
-                    <li>
-                        CONSOLAS
-                    </li>
-                    <li>
-                        <div class="cartuchos">
-                            CARTUCHOS
-                            <ul class="submenu-cartuchos">
-                                <li><a href="#">Super Nintendo</a></li>
-                                <li><a href="#">Sega</a></li>
-                                <li><a href="/register">Play Station 1</a></li>
-                                <li><a href="/productDetail">Ver todos</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        ACCESORIOS
-                    </li>
-                    <li>
-                        VARIOS
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <%- include('./partials/header') %>
     <main>
         <section class="product-detail">
             <div class="product-details-container">
@@ -111,28 +63,7 @@
         </div>
 
     </main>
-    <footer>
-        <div class="footer-info">
-            <span class="footer-titulo">Info</span>
-            <div class="is-divider"></div>
-            <div class="footer-accesos">
-                <a href="">Nosotros</a>
-                <a href="">Politicas de seguridad</a>
-                <a href="">Politicas de envíos</a>
-            </div>
-        </div>
-        <div class="footer-redes">
-            <span class="footer-titulo">Seguinos</span>
-            <div class="is-divider"></div>
-            <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <div class="copy">
-            <strong>1UP</strong>
-            - Todos los derechos reservados. 2024 ©
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
     
 </body>
 </html>

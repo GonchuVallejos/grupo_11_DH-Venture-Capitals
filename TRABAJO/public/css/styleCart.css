@@ -76,10 +76,10 @@
 /*------------main-----------------*/
 
 
-main{width: 90%;
+.main-container{width: 90%;
     background-color: rgba(255, 105, 105, 0.4);
-    color: rgb(20, 30, 70);
-    margin: auto;   
+    color: rgb(20, 30, 70); 
+    margin:auto
 }
 
 .title-cart{ margin-left: 5px;}

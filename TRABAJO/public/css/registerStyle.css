@@ -12,6 +12,20 @@
     border-radius: 25px;
 }
 
+.form-register div textarea{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.form-register div select{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
 .form-pass {
     position: relative;
     display: inline-block;
@@ -52,7 +66,7 @@
 .btn-register {
     padding: 10px;
     margin: 10px;
-    width: 50%;
+    width: 30%;
     font-weight: bold;
     border-radius: 25px;
     border: none;
@@ -61,8 +75,7 @@
 @media (min-width: 768px) {
 
     .form-register {
-
-        margin: 30px;;
+        margin: 30px;
         width: 610px;
     }
     .form-register div {
@@ -75,7 +88,7 @@
     .form-register label {
         display: block;
         width: 150px;
-        text-align: right;
+        text-align: left;
         color: #FFF5E0;
     }
 
@@ -87,7 +100,7 @@
     }
 
     .btn-register {
-        width: 300px;
+        width: 225px;
     }
 
     .form-register div input::placeholder {

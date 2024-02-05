@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metaDatos') %>
+        <link rel="stylesheet" href="/css/loginStyle.css">
+        <title>Ingresá</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <main>
+        <form action="/" method="POST" class="form-login">
+            <h2>INICIAR SESION</h2>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-pass">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" class="input-pass" placeholder="Contraseña"
+                    required>
+                <i class="fa-solid fa-eye" id="btn-password"
+                    onclick="mostrarContrasena('password', 'btn-password')"></i>
+            </div>
+
+            <button type="submit" class="btn-register">Iniciar Sesión</button>
+            <br>
+            <a href="/register">No tenes cuenta? Registrate</a>
+            <br>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+    <script>
+        function mostrarContrasena(tipoId, iconId) {
+            var tipo = document.getElementById(tipoId);
+            var icon = document.getElementById(iconId);
+
+            if (tipo.type == "password") {
+                tipo.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                tipo.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
