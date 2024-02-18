@@ -1,0 +1,76 @@
+[
+      {
+        "id": 1,
+        "name": "007 The World is not Enough",
+        "image": "n64_007worldisnotenough02.png",
+        "price": 40000,
+        "discount": "15",
+        "inOffert": false,
+        "descripcion": "En 007: The World Is Not Enough, juegas como James Bond, el famoso agente secreto del MI6, en una emocionante aventura llena de acción. Viaja por el mundo, desmantela organizaciones criminales y salva el día en este trepidante juego de disparos en primera persona para Nintendo 64."
+      },
+      {
+        "id": 2,
+        "name": "Sega Genesis",
+        "image": "Sega.jpg",
+        "price": 90000,
+        "discount": "30",
+        "inOffert": false,
+        "descripcion": "La Sega Genesis, también conocida como Mega Drive en algunas regiones, es una de las consolas de videojuegos más icónicas de la década de 1990. Con su amplio catálogo de juegos, gráficos impresionantes para su época y el legendario Sonic the Hedgehog, la Sega Genesis proporcionó horas de diversión a millones de jugadores en todo el mundo."
+      },
+      {
+        "id": 3,
+        "name": "Nintendo 64",
+        "image": "Nintendo64.jpg",
+        "price": 200000,
+        "discount": "10",
+        "inOffert": false,
+        "descripcion": "La Nintendo 64, lanzada por Nintendo en 1996, es una de las consolas más queridas de todos los tiempos. Con su innovador controlador de tres asas y títulos clásicos como Super Mario 64, The Legend of Zelda: Ocarina of Time y Mario Kart 64, la Nintendo 64 dejó una huella imborrable en la historia de los videojuegos."
+      },
+      {
+        "id": 4,
+        "name": "Tamagotchi",
+        "image": "Tamagotchi.jpg",
+        "price": 50000,
+        "discount": "10",
+        "inOffert": false,
+        "descripcion": "Los Tamagotchis fueron mascotas virtuales muy populares en la década de 1990. Estos pequeños dispositivos permitían a los usuarios cuidar a una criatura digital, alimentarla, jugar con ella y asegurarse de que estuviera sana y feliz. Los Tamagotchis se convirtieron en una verdadera sensación, proporcionando a personas de todas las edades una experiencia única de cuidado de mascotas."
+      },
+      {
+        "id": 5,
+        "name": "PlayStation One",
+        "image": "Play1.jpg",
+        "price": 150000,
+        "discount": "20",
+        "inOffert": true,
+        "descripcion": "La PlayStation One, también conocida como PSX o PS1, revolucionó la industria de los videojuegos cuando se lanzó en 1994. Con su amplio catálogo de juegos, incluidos clásicos como Final Fantasy VII, Metal Gear Solid y Gran Turismo, la PS1 marcó el comienzo de la era de los juegos en 3D y proporcionó horas de entretenimiento a millones de jugadores en todo el mundo."
+      },
+      {
+        "id": 6,
+        "name": "Donkey Kong 64",
+        "image": "n64_donkeykong64_jp.png",
+        "price": 30000,
+        "discount": "5",
+        "inOffert": true,
+        "descripcion": "Donkey Kong 64 es un juego de plataformas en 3D lanzado para la Nintendo 64 en 1999. En este juego, controlas a Donkey Kong y otros personajes de la serie mientras te aventuras a través de diferentes mundos para rescatar a los amigos de Donkey Kong y recuperar las bananas robadas por el malvado King K. Rool. Con su jugabilidad divertida y su vasto mundo para explorar, Donkey Kong 64 es un clásico atemporal para los amantes de los juegos de plataformas."
+      },
+      {
+        "id": 7,
+        "name": "Zelda: Ocarine of Time",
+        "image": "n64_legendofzeldaocarinaoftime_ce.png",
+        "price": 35000,
+        "discount": "10",
+        "inOffert": true,
+        "descripcion": "The Legend of Zelda: Ocarina of Time es ampliamente considerado como uno de los mejores juegos de todos los tiempos. Lanzado para la Nintendo 64 en 1998, este juego de acción y aventuras sigue la historia de Link mientras viaja a través del tiempo para detener al malvado Ganondorf y salvar el reino de Hyrule. Con su jugabilidad innovadora, gráficos impresionantes y una narrativa envolvente, Ocarina of Time dejó una marca indeleble en la historia de los videojuegos."
+      },
+      {
+        "id": 8,
+        "name": "Mario Kart 64",
+        "image": "n64_mariokart64.png",
+        "price": 40000,
+        "discount": "10",
+        "inOffert": true,
+        "descripcion": "Mario Kart 64 es un juego de carreras lanzado para la Nintendo 64 en 1996. Con un elenco de personajes icónicos de la serie Mario y emocionantes pistas para correr, Mario Kart 64 ofreció una experiencia multijugador sin igual que cautivó a jugadores de todas las edades. ¡Prepárate para lanzar caparazones y deslizarte por las pistas en este clásico juego de carreras de karts!"
+      }
+    ]
+
+  

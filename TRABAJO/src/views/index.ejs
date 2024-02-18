@@ -8,158 +8,104 @@
 
 <body class="index-body">
     <%- include('./partials/header') %>
-
-    <main>
-
-        <div class="banner">
-            <h3>📦 Envíos gratis en compras superiores a $40.000 🚚</h3> <!--Carrousel--> 
-        </div>
-        <section>
-            <div class="productos-destacados">
-                <h1>PRODUCTOS DESTACADOS</h1>
+        <main>
+            <div class="banner">
+                <h3>📦 Envíos gratis en compras superiores a $40.000 🚚</h3> <!--Carrousel-->
             </div>
-            <div class="index-productos">
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/cartuchos/n64_007worldisnotenough02.png" alt="007">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$40.000</p>
-                            <p class="index-producto-descuento">15% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">007 The World is not Enough</h4>
-                    </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/Sega.jpg" alt="Sega Genesis">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$90.0000</p>
-                            <p class="index-producto-descuento">30% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">Sega Genesis</h4>
-                    </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/Nintendo64.jpg" alt="Nintendo 64">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$200.000</p>
-                            <p class="index-producto-descuento">10% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">Nintendo 64</h4>
-                    </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/Tamagotchi.jpg" alt="Tamagotchi">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$50.000</p>
-                            <p class="index-producto-descuento">10% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">Tamagotchi</h4>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section>
-            <div class="banner-informativo">
-                <article>
-                    <div class="banner-informativo-article">
-                        <i class="fa-solid fa-truck-fast"></i>
-                        <h3>ENVÍOS A TODO EL PAÍS</h3>
-                        <p>Elegí el transporte de tu preferencia! Compra mínima $15000</p>
-                    </div>
-                </article>
-                <div class="borde-vertical">
+            <section>
+                <div class="productos-destacados">
+                    <h1>PRODUCTOS DESTACADOS</h1>
                 </div>
-                <article>
-                    <div class="banner-informativo-article">
-                        <i class="fa-regular fa-credit-card"></i>
-                        <h3>TODOS LOS MEDIOS DE PAGO</h3>
-                        <p>Mercado Pago, Transferencia/depósito, Rapipago y Pagofácil</p>
-                    </div>
-                </article>
-                <div class="borde-vertical">
+                <div class="index-productos">
+                    <% productWithOutOffert.map((prod)=> { %>
+
+                        <article>
+                            <a href="/products/productDetail/<%= prod.id %>">
+                            <div class="index-producto-img">
+                                <img src="/img/portada/<%= prod.image %>" alt="007">
+                            </div>
+                            <div class="index-article">
+                                <div class="index-producto-precio-descuento">
+                                    <p class="index-producto-precio">$ <%= prod.price %>
+                                    </p>
+                                    <p class="index-producto-descuento">
+                                        <%= prod.discount %>% off
+                                    </p>
+                                </div>
+                                <h4 class="index-productos-descripcion">
+                                    <%= prod.name %>
+                                </h4>
+                            </div>
+                        </a>
+                        </article>
+                        <% }) %>
                 </div>
-                <article>
-                    <div class="banner-informativo-article">
-                        <i class="fa-solid fa-house-user"></i>
-                        <h3>RETIRA GRATIS POR EL LOCAL</h3>
-                        <div>
-                            <p>Pedí online y retira San Salvador de Jujuy de lunes a viernes.</p>
+            </section>
+            <section>
+                <div class="banner-informativo">
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h3>ENVÍOS A TODO EL PAÍS</h3>
+                            <p>Elegí el transporte de tu preferencia! Compra mínima $15000</p>
                         </div>
+                    </article>
+                    <div class="borde-vertical">
                     </div>
-                </article>
-            </div>
-        </section>
-        <section>
-            <div class="ofertas">
-                <h1>OFERTAS</h1>
-            </div>
-            <div class="index-productos">
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/Play1.jpg" alt="PSX One">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$150.000</p>
-                            <p class="index-producto-descuento">20% off</p>
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <h3>TODOS LOS MEDIOS DE PAGO</h3>
+                            <p>Mercado Pago, Transferencia/depósito, Rapipago y Pagofácil</p>
                         </div>
-                        <h4 class="index-productos-descripcion">PlayStation One</h4>
+                    </article>
+                    <div class="borde-vertical">
                     </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/cartuchos/n64_donkeykong64_jp.png" alt="DK64">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$30.000</p>
-                            <p class="index-producto-descuento">5% off</p>
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-solid fa-house-user"></i>
+                            <h3>RETIRA GRATIS POR EL LOCAL</h3>
+                            <div>
+                                <p>Pedí online y retira San Salvador de Jujuy de lunes a viernes.</p>
+                            </div>
                         </div>
-                        <h4 class="index-productos-descripcion">Donkey Kong 64</h4>
-                    </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/cartuchos/n64_legendofzeldaocarinaoftime_ce.png" alt="Zelda Ocarine of Time">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$35.000</p>
-                            <p class="index-producto-descuento">10% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">Zelda: Ocarine of Time</h4>
-                    </div>
-                </article>
-                <article>
-                    <div class="index-producto-img">
-                        <img src="/img/cartuchos/n64_mariokart64.png" alt="Mario Kart 64">
-                    </div>
-                    <div class="index-article">
-                        <div class="index-producto-precio-descuento">
-                            <p class="index-producto-precio">$40.000</p>
-                            <p class="index-producto-descuento">10% off</p>
-                        </div>
-                        <h4 class="index-productos-descripcion">Mario Kart 64</h4>
-                    </div>
-                </article>
-            </div>
-        </section>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <div class="ofertas">
+                    <h1>OFERTAS</h1>
+                </div>
+                <div class="index-productos">
+                    <% productWithOffert.map((prod)=> { %>
+
+                        <article>
+                            <a href="/products/productDetail/<%= prod.id %>">
+                            <div class="index-producto-img">
+                                <img src="/img/portada/<%= prod.image %>" alt="007">
+                            </div>
+                            <div class="index-article">
+                                <div class="index-producto-precio-descuento">
+                                    <p class="index-producto-precio">$ <%= prod.price %>
+                                    </p>
+                                    <p class="index-producto-descuento">
+                                        <%= prod.discount %>% off
+                                    </p>
+                                </div>
+                                <h4 class="index-productos-descripcion">
+                                    <%= prod.name %>
+                                </h4>
+                            </div>
+                        </a>
+                        </article>
+                        <% }) %>
+                </div>
+            </section>
 
 
-    </main>
+        </main>
 
-    <%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>
 
 </body>
 

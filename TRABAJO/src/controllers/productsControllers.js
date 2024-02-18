@@ -1,8 +1,14 @@
 const path = require('path')
 
+let products = require('../data/productsDataBase.json')
+
 const productsControllers = {
     productDetail: (req, res) => {
-        res.render('productDetail')
+        productoId = req.params.id
+
+		productoSeleccionado = products.find((product) => product.id == productoId)
+        
+        res.render('productDetail', { productoSeleccionado })
     },
     productAdd: (req, res) => {
         res.render('productAdd')
