@@ -13,6 +13,9 @@ const productsControllers = {
     productAdd: (req, res) => {
         res.render('productAdd')
     }
+    
+
+
 
     /*app.get('/productDetail', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/productDetail.html')

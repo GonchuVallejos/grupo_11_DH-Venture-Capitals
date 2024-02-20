@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/metaDatos') %>
+        <title>Principal</title>
+</head>
+
+<body class="index-body">
+    <%- include('./partials/header') %>
+        <main>
+            <div class="banner">
+                <h3>📦 Envíos gratis en compras superiores a $40.000 🚚</h3> <!--Carrousel-->
+            </div>
+            <section>
+                <div class="productos-destacados">
+                    <h1>PRODUCTOS BUSCADOS: <%= busqueda %>
+                    </h1>
+                </div>
+                <% if(productoBuscado.length> 0) { %>
+
+
+                    <div class="index-productos">
+                        <% productoBuscado.map((prod)=> { %>
+
+                            <article>
+                                <a href="/products/productDetail/<%= prod.id %>">
+                                    <div class="index-producto-img">
+                                        <img src="/img/portada/<%= prod.image %>" alt="007">
+                                    </div>
+                                    <div class="index-article">
+                                        <div class="index-producto-precio-descuento">
+                                            <p class="index-producto-precio">$ <%= prod.price %>
+                                            </p>
+                                            <p class="index-producto-descuento">
+                                                <%= prod.discount %>% off
+                                            </p>
+                                        </div>
+                                        <h4 class="index-productos-descripcion">
+                                            <%= prod.name %>
+                                        </h4>
+                                    </div>
+                                </a>
+                            </article>
+                            <% }) %>
+                    </div>
+                    <% } else { %>
+                        <div class="col-12">
+                            <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa
+                                búsqueda</h2>
+                        </div>
+
+                        <% } %>
+            </section>
+            <section>
+                <div class="banner-informativo">
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <h3>ENVÍOS A TODO EL PAÍS</h3>
+                            <p>Elegí el transporte de tu preferencia! Compra mínima $15000</p>
+                        </div>
+                    </article>
+                    <div class="borde-vertical">
+                    </div>
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <h3>TODOS LOS MEDIOS DE PAGO</h3>
+                            <p>Mercado Pago, Transferencia/depósito, Rapipago y Pagofácil</p>
+                        </div>
+                    </article>
+                    <div class="borde-vertical">
+                    </div>
+                    <article>
+                        <div class="banner-informativo-article">
+                            <i class="fa-solid fa-house-user"></i>
+                            <h3>RETIRA GRATIS POR EL LOCAL</h3>
+                            <div>
+                                <p>Pedí online y retira San Salvador de Jujuy de lunes a viernes.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/footer') %>
+
+</body>
+
+</html>
