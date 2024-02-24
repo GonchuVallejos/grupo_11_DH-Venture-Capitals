@@ -41,6 +41,10 @@
                     <div class="add-to-cart">
                         <button>Agregar al carrito</button>
                     </div>
+                    <div>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -49,19 +53,10 @@
         <div class="specifications">
             <h3>Especificaciones del producto:</h3>
             <ul>
-                <li>Procesador: Ricoh 5A22, basado en el procesador WDC W65C816 de 16 bits.47​48​
-                    Velocidad de reloj: 1.79, 2.68 MHz, o 3.58 MHz (NTSC);47​48​ 1,77 MHz, 2,66 MHz o 3,55 MHz (PAL).
-                    Memoria RAM principal: 128 KB.</li>
-                <li>Sonido: Sony SPC700 de 8 bits - Procesador digital de sonido: S-DSP de 16 bits.</li>
-                <li>Video: Circuitos S-PPU1 y S-PPU2, unidades de procesamiento de imagen de 16 bits.</li>
-                <li>Alimentación: La fuentes de alimentación varían dependiendo de los modelos liberados en los diferentes mercados.</li>
+                <li> <%= productoSeleccionado.requirement %> </li>
             <br>
             <p>Historia:</p>
-            <p>La Super Nintendo Entertainment System (SNES), también conocida como Super Famicom en Japón, es una consola de videojuegos de 16 bits desarrollada y fabricada por Nintendo. Fue lanzada originalmente en Japón en 1990 y posteriormente en América del Norte en 1991 y en Europa en 1992. La SNES es la sucesora de la Nintendo Entertainment System (NES) y fue una de las consolas más exitosas de su época.</p>
-            <p>La consola venía con el icónico controlador de Super Nintendo, que incluía cuatro botones frontales (A, B, X, Y), dos botones de hombro (L y R), un botón de inicio y un cruceta de dirección.</p>
-            <p>A diferencia de la tendencia emergente de las consolas de CD en ese momento, la SNES utilizaba cartuchos como formato de juego. Esto permitía tiempos de carga más rápidos y mayor durabilidad, pero también limitaba la capacidad de almacenamiento en comparación con los CD.</p>
-            <p>Juegos icónicos: La SNES albergó una biblioteca impresionante de juegos clásicos que se han convertido en parte fundamental de la historia de los videojuegos. Algunos ejemplos incluyen "Super Mario World", "The Legend of Zelda: A Link to the Past", "Super Metroid" y "Super Mario Kart".</p>
-            <p>La Super Nintendo sigue siendo apreciada por muchos entusiastas de los videojuegos como una de las mejores consolas de la historia debido a su sólida biblioteca de juegos, sus mejoras técnicas y su contribución significativa al mundo de los videojuegos.</p>
+            <p> <%= productoSeleccionado.history %></p>
         </div>
 
     </main>
