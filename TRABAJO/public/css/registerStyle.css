@@ -72,6 +72,26 @@
     border: none;
 }
 
+.btn-update {
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    color: green;
+}
+
+.btn-delete {
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    color: #bb2525;
+}
+
 @media (min-width: 768px) {
 
     .form-register {
@@ -100,6 +120,13 @@
     }
 
     .btn-register {
+        width: 225px;
+    }
+
+    .btn-update {
+        width: 225px;
+    }
+    .btn-delete {
         width: 225px;
     }
 
