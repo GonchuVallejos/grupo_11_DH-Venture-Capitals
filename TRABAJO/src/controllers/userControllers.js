@@ -1,24 +1,40 @@
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto'); //Para generar los id
+
+const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userControllers = {
     login: (req, res) => {
-        /*const pathHome = path.join(__dirname, '..' , '..' ,'/views/login.html')
-        res.sendFile(pathHome);*/
         res.render('login')
     },
     register: (req, res) => {
-        /*const pathHome = path.join(__dirname, '..' , '..' , 'views/register.html')
-        res.sendFile(pathHome);*/
         res.render('register')
+    },
+    store:(req, res) => {
+        const newUser = {
+            id : crypto.randomUUID(),
+            nombre : req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: req.body.password,
+            //image: "default-image.png"
+        }
+
+        users.push(newUser);
+
+        //Sobreescribo el archivo json original
+        fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2))
+
+        res.render('login');
     },
     productCart: (req, res) => {
         res.render('productCart')
-    } 
-    /*app.get('/productCart', ( req, res ) =>{
-        const pathCart = path.join(__dirname, 'views/productCart.html')
-        res.sendFile(pathCart);
-    })*/
-
+    },
+    update: (req, res) => {
+        res.render('updateUser')
+    }
 }
 
 module.exports = userControllers;

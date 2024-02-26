@@ -1,0 +1,16 @@
+[
+    {
+      "id": 0,
+      "nombre": "default",
+      "apellido": "default",
+      "email": "mail@default.com",
+      "password": "default"
+    },
+    {
+      "id": "96083bb2-3fd2-4d87-8d43-66241939dd6e",
+      "nombre": "Gonzalo",
+      "apellido": "Vallejos Gallardo",
+      "email": "vallejos.gallardo.gonzalo@gmail.com",
+      "password": "1234"
+    }
+  ]  
