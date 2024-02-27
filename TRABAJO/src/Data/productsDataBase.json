@@ -113,18 +113,6 @@
     "history": ""
   },
   {
-    "id": "0088e2ee-e35a-47b6-ad56-896f091e99c2",
-    "name": "celulares",
-    "image": "default-image.png",
-    "price": "1000000",
-    "categorias": "Consolas",
-    "discount": "",
-    "inOffert": false,
-    "descripcion": "celularrrrrr                    ",
-    "requirement": "",
-    "history": ""
-  },
-  {
     "id": "9ee21c8a-a4c1-4c40-b036-c693d61a375f",
     "name": "celularess",
     "image": "default-image.png",
@@ -145,18 +133,6 @@
     "discount": "",
     "inOffert": false,
     "descripcion": "                    catriel",
-    "requirement": "",
-    "history": ""
-  },
-  {
-    "id": "7b617ead-3006-4c79-b5ab-ab66a94d7f2e",
-    "name": "Catriel",
-    "image": "default-image.png",
-    "price": "1000000",
-    "categorias": "Consolas",
-    "discount": "",
-    "inOffert": false,
-    "descripcion": "                    casdasda",
     "requirement": "",
     "history": ""
   },
@@ -183,5 +159,29 @@
     "descripcion": "COnsola de juego                    ",
     "requirement": "tener un enchufe y una tele                    ",
     "history": "                    consola legendaria"
+  },
+  {
+    "id": "bc16fccd-9d13-4de5-93b4-ebfe546844d1",
+    "name": "ManuPrueba",
+    "image": "default-image.png",
+    "price": "100000",
+    "categorias": "Accesorios",
+    "discount": "10",
+    "inOffert": true,
+    "descripcion": "muchas",
+    "requirement": "asd                    ",
+    "history": "asda                    "
+  },
+  {
+    "id": "467cd2e5-1724-4dc5-ab88-1b42879143d9",
+    "name": "manuconImagen",
+    "image": "img-1709041375031.png",
+    "price": "1000",
+    "categorias": "Accesorios",
+    "discount": "0",
+    "inOffert": false,
+    "descripcion": "                    a\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+    "requirement": "a                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ",
+    "history": "a                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    "
   }
 ]

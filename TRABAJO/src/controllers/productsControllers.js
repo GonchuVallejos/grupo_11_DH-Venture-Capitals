@@ -24,10 +24,12 @@ const productsControllers = {
             hasOffert = true;
         }
 
+        let imageName = req.file ? req.file.filename : "default-image.png";
+
         const newProduct = {
             id : crypto.randomUUID(),
             name: req.body.nombre,
-            image: "default-image.png",
+            image: imageName,
             price: req.body.precio,
             categorias: req.body.categorias,
             discount: req.body.descuento,
@@ -36,8 +38,8 @@ const productsControllers = {
             requirement: req.body.requisitos,
             history: req.body.historia
         }
-        console.log(newProduct);
-        console.log(hasDiscount);
+        console.log(imageName);
+        
         products.push(newProduct);
 
         //Sobreescribo el archivo json original
@@ -61,43 +63,35 @@ const productsControllers = {
         res.render('productEdit', { productoSeleccionado })
     },
 
-    update: (req, res)=>{
-        let {id} = req.params;
-       // let {name, image, price, categorias, discount, inOffert, descripcion, requirement, history} = req.body;
+    update: (req, res) => {
+        let { id } = req.params;
         let hasDiscount = parseInt(req.body.descuento, 10);
         let hasOffert = false;
-        if (hasDiscount > 0){ 
+        if (hasDiscount > 0) { 
             hasOffert = true;
         }
 
         products.forEach(producto => {
-
-            if(producto.id == id){
-                producto.name = req.body.nombre,
-                producto.image = "default-image.png",
-                producto.price = req.body.precio,
-                producto.categorias = req.body.categorias,
-                producto.discount = req.body.descuento,
-                producto.inOffert = hasOffert,
-                producto.descripcion = req.body.descripcion,
-                producto.requirement =  req.body.requisitos,
-                producto.history = req.body.historia
+            if (producto.id == id) {
+                producto.name = req.body.nombre;
+                if(req.file){
+                    producto.image = req.file.filename;
+                }
+                producto.price = req.body.precio;
+                producto.categorias = req.body.categorias;
+                producto.discount = req.body.descuento;
+                producto.inOffert = hasOffert;
+                producto.descripcion = req.body.descripcion;
+                producto.requirement = req.body.requisitos;
+                producto.history = req.body.historia;
             }
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-            res.redirect('/products/productDetail/' + id);
-        })
+        });
 
+       
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        res.redirect('/products/productDetail/' + id);
     }
-
-    
-
-
-
-    /*app.get('/productDetail', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/productDetail.html')
-    res.sendFile(pathHome);
-})
-*/
 }
 
 module.exports = productsControllers;

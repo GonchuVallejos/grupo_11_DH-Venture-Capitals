@@ -1,23 +1,26 @@
 const express = require('express');
+const path = require('path')
 
 const router = express.Router();
 
+const multer = require('multer') // requiero multer para poder subir archivos
+
 const productControllers = require('../controllers/productsControllers');
 
-/* 1. /products (GET) ESTA
-Listado de productos
-2. /products/create (GET)
-Formulario de creación de productos
-3. /products/:id (GET)
-Detalle de un producto particular
-4. /products (POST)
-Acción de creación (a donde se envía el formulario)
-5. /products/:id/edit (GET)
-Formulario de edición de productos
-6. /products/:id (PUT)
-Acción de edición (a donde se envía el formulario):
-7. /products/:id (DELETE)
-Acción de borrado */
+// configuro multer
+
+var storage = multer.diskStorage({
+    destination: function (req, file,cb){
+        cb(null,path.join(__dirname,'..','..','public','img','portada'))
+    },
+    
+    filename: function(req, file, cb){
+        pathFileName = 'img-' + Date.now() + path.extname(file.originalname) 
+        cb(null, pathFileName);
+    }
+})
+
+var upload = multer({storage})
 
 
 
@@ -29,11 +32,11 @@ router.delete('/productDetail/:id', productControllers.delete);
 
 router.get('/productEdit/:id', productControllers.edit);
 
-router.put('/productEdit/:id', productControllers.update);
+router.put('/productEdit/:id',upload.single('imagen'), productControllers.update);
 
 router.get('/productAdd', productControllers.productAdd);
 
-router.post('/productAdd', productControllers.store);
+router.post('/productAdd', upload.single('imagen'), productControllers.store);
 
 
 
