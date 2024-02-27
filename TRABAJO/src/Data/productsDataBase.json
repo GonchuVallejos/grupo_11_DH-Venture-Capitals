@@ -13,13 +13,14 @@
   {
     "id": 2,
     "name": "Sega Genesis",
-    "image": "Sega.jpg",
-    "price": 90000,
+    "image": "default-image.png",
+    "price": "50000000000000000000000000000000",
     "discount": "30",
-    "inOffert": false,
-    "descripcion": "La Sega Genesis, también conocida como Mega Drive en algunas regiones, es una de las consolas de videojuegos más icónicas de la década de 1990. Con su amplio catálogo de juegos, gráficos impresionantes para su época y el legendario Sonic the Hedgehog, la Sega Genesis proporcionó horas de diversión a millones de jugadores en todo el mundo.",
-    "requirement": "Procesador: Procesador personalizado de Sega. Velocidad de reloj: Varía según el modelo. Memoria RAM principal: Depende del modelo. Sonido: Chip de sonido Yamaha. Video: Procesador de gráficos VDP de Sega. Alimentación: Varía dependiendo del modelo y región.",
-    "history": "Lanzada en 1988, Sega Genesis se convirtió en un nombre familiar, compitiendo con la dominación de Nintendo. Sonic the Hedgehog, la mascota icónica, contribuyó a su inmenso éxito."
+    "inOffert": true,
+    "descripcion": "La Sega Genesis, también conocida como Mega Drive en algunas regiones, es una de las consolas de videojuegos más icónicas de la década de 1990. Con su amplio catálogo de juegos, gráficos impresionantes para su época y el legendario Sonic the Hedgehog, la Sega Genesis proporcionó horas de diversión a millones de jugadores en todo el mundo.\r\n                    \r\n                    \r\n                    ",
+    "requirement": "Procesador: Procesador personalizado de Sega. Velocidad de reloj: Varía según el modelo. Memoria RAM principal: Depende del modelo. Sonido: Chip de sonido Yamaha. Video: Procesador de gráficos VDP de Sega. Alimentación: Varía dependiendo del modelo y región.\r\n                    \r\n                    \r\n                    ",
+    "history": "Lanzada en 1988, Sega Genesis se convirtió en un nombre familiar, compitiendo con la dominación de Nintendo. Sonic the Hedgehog, la mascota icónica, contribuyó a su inmenso éxito.\r\n                    \r\n                    \r\n                    ",
+    "categorias": "Consolas"
   },
   {
     "id": 3,
@@ -86,8 +87,101 @@
     "descripcion": "Mario Kart 64 es un juego de carreras lanzado para la Nintendo 64 en 1996. Con un elenco de personajes icónicos de la serie Mario y emocionantes pistas para correr, Mario Kart 64 ofreció una experiencia multijugador sin igual que cautivó a jugadores de todas las edades. ¡Prepárate para lanzar caparazones y deslizarte por las pistas en este clásico juego de carreras de karts!",
     "requirement": "Procesador: NEC VR4300 de 64 bits. Velocidad de reloj: 93.75 MHz. Memoria RAM principal: 4 MB RDRAM. Sonido: Chip de sonido personalizado. Video: Circuito de gráficos Reality Co-Processor. Alimentación: Adaptador de corriente específico de la consola.",
     "history": "Mario Kart 64 es un clásico juego de carreras lanzado para la Nintendo 64 en 1996. Con un elenco de personajes icónicos de la serie Mario y emocionantes pistas para correr, Mario Kart 64 ofreció una experiencia multijugador sin igual que cautivó a jugadores de todas las edades. ¡Prepárate para lanzar caparazones y deslizarte por las pistas en este clásico juego de carreras de karts!"
+  },
+  {
+    "id": "12ccb851-2b53-416f-ad9e-d17af18f19cf",
+    "name": "c",
+    "image": "default-image.png",
+    "price": "50000",
+    "categorias": "Cartuchos",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "                    c",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "06aa6e6b-2851-4c53-ad86-f6ae97e0f578",
+    "name": "celulares",
+    "image": "default-image.png",
+    "price": "50000",
+    "categorias": "Cartuchos",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "                    esto es un celular",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "0088e2ee-e35a-47b6-ad56-896f091e99c2",
+    "name": "celulares",
+    "image": "default-image.png",
+    "price": "1000000",
+    "categorias": "Consolas",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "celularrrrrr                    ",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "9ee21c8a-a4c1-4c40-b036-c693d61a375f",
+    "name": "celularess",
+    "image": "default-image.png",
+    "price": "1000000",
+    "categorias": "Consolas",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "celularessssssssssssssss                    ",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "217202e0-f9f8-414b-95e5-7f3f14095418",
+    "name": "Catriel",
+    "image": "default-image.png",
+    "price": "10000000",
+    "categorias": "Consolas",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "                    catriel",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "7b617ead-3006-4c79-b5ab-ab66a94d7f2e",
+    "name": "Catriel",
+    "image": "default-image.png",
+    "price": "1000000",
+    "categorias": "Consolas",
+    "discount": "",
+    "inOffert": false,
+    "descripcion": "                    casdasda",
+    "requirement": "",
+    "history": ""
+  },
+  {
+    "id": "7ba36893-46fa-465c-8031-86e1cf1704db",
+    "name": "COmputadora",
+    "image": "default-image.png",
+    "price": "100000",
+    "categorias": "Consolas",
+    "discount": "0",
+    "inOffert": true,
+    "descripcion": "COmputadora intel ram etc                    ",
+    "requirement": "tener luz                    ",
+    "history": "                    esta es una computadora"
+  },
+  {
+    "id": "23702743-23ce-448e-815a-a47cf9e280b1",
+    "name": "playstaition",
+    "image": "default-image.png",
+    "price": "10000",
+    "categorias": "Consolas",
+    "discount": "0",
+    "inOffert": true,
+    "descripcion": "COnsola de juego                    ",
+    "requirement": "tener un enchufe y una tele                    ",
+    "history": "                    consola legendaria"
   }
 ]
-
-
-  

@@ -12,7 +12,7 @@
     <%- include('./partials/header') %>
 
         <main>
-            <form action="/registerProduct" method="POST" class="form-register">
+            <form action="/products/productAdd" method="POST" class="form-register">
                 <h2>AGREGAR PRODUCTO</h2>
                 <div>
                     <label for="nombreProducto">Nombre del producto</label>
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label for="descripción">Descripcion</label>
-                    <textarea name="apellido" id="apellido" rows="5" cols="33">
+                    <textarea name="descripcion" id="descripcion" rows="5" cols="33">
                     </textarea>
                 </div>
                 <div>
@@ -38,8 +38,22 @@
                     </select>
                 </div>
                 <div>
+                    <label for="descuento">Descuento</label>
+                    <input type="number" name="descuento" id="descuento" placeholder="Descuento" required>
+                </div>
+                <div>
                     <label for="precio">Precio</label>
                     <input type="text" name="precio" id="precio" placeholder="Precio" required>
+                </div>
+                <div>
+                    <label for="historia">Historia</label>
+                    <textarea name="historia" id="historia" rows="5" cols="33">
+                    </textarea>
+                </div>
+                <div>
+                    <label for="requisitos">Requisitos</label>
+                    <textarea name="requisitos" id="requisitos" rows="5" cols="33">
+                    </textarea>
                 </div>
 
             <button type="submit" class="btn-register">Agregar!</button>

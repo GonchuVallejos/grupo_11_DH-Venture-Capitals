@@ -42,8 +42,13 @@
                         <button>Agregar al carrito</button>
                     </div>
                     <div>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
+                        <form action="/products/productEdit/<%= productoSeleccionado.id %>" method="GET" >
+                            <button type="submit">Editar</button>
+                        </form>
+                        <form action="/products/productDetail/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" >
+                            <button type="submit">Eliminar</button>
+                        </form>
+                        
                     </div>
                 </div>
             </div>
