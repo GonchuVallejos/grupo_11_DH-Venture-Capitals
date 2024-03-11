@@ -4,7 +4,11 @@ const router = express.Router();
 
 const userControllers = require('../controllers/userControllers');
 
-router.get('/login', userControllers.login);
+const sesionFactory = require('../middlewares/sesionFactory')
+
+router.get('/login',sesionFactory.userLogin, userControllers.login);
+
+router.post('/login', userControllers.enterLogin);
 
 router.get('/register', userControllers.register);
 
