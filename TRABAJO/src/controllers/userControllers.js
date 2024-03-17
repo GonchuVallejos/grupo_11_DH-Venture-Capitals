@@ -11,21 +11,22 @@ const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userControllers = {
     login: (req, res) => {
-        res.render('login')
+        const idFound = +req.params.id
+        const User = users.find(U => U.id === idFound)
+        res.render('login',{User})
     },
     enterLogin: (req, res) => {
-        userMail = req.body.email;
-        userPass = req.body.password;
+        const {password, email} = req.body
+        let check = usersModel.findeUserToLogin(req.body.password, req.body.email)
 
-        let check = usersModel.findeUserToLogin(userMail, userPass)
-
-        if (check) {
-            req.session.userLogin = userMail;
+        users.forEach(U => {if (check) {
+            U.password = password;
+            U.email = email
             console.log(req.session.userLogin)
-            res.redirect('/')
-        } else {
-            res.redirect('/users/login')
-        }
+        }})
+        /*else{ res.redirect('/users/login') } esta parte hace que el button te envie al mismo lugar sin importar el resultado,
+         esto se puede solucionar luego agregando las promesas*/
+        res.redirect('/')
 
     },
     register: (req, res) => {

@@ -10,6 +10,7 @@ const session = require('express-session') // requerimos para poder utilizar ses
 const PORT = process.env.PORT || 3000;
 
 // middleWares
+app.use(express.static("public"))
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

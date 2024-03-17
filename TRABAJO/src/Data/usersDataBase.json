@@ -12,5 +12,12 @@
     "apellido": "Tejerina",
     "email": "emanueljtejerina@gmail.com",
     "password": "$2a$10$lQuS8SbhoejZCSiYEYa2kuby/EcAUarLX./KwupahqSoaeVHNBZoe"
+  },
+  {
+    "id": "a7b048d5-62be-4503-87ca-a392c5b6b6b6",
+    "nombre": "Mars123",
+    "apellido": "rojo",
+    "email": "123@gmail.com",
+    "password": "$2a$10$8R6IwzLWq0MJ103kIomUXux/BmTPqBgneRKmg4dqqY/BMrJUiO92W"
   }
 ]
