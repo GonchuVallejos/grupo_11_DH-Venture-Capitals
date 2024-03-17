@@ -3,7 +3,8 @@ const path = require('path');
 const crypto = require('crypto'); //Para generar los id
 const bcryptjs = require('bcryptjs'); // para encriptar o hashear la conrtaseña
 const usersModel = require('../Models/Users')
-const session = require('express-session') // requerimos para poder utilizar sesiones
+const session = require('express-session'); // requerimos para poder utilizar sesiones
+const User = require('../Models/Users');
 
 
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -17,17 +18,16 @@ const userControllers = {
     },
     enterLogin: (req, res) => {
         const {password, email} = req.body
-        let check = usersModel.findeUserToLogin(req.body.password, req.body.email)
+        let check = usersModel.findeUserToLogin(req.body.password, req.body.password)
 
-        users.forEach(U => {if (check) {
-            U.password = password;
-            U.email = email
+        if (check) {
+            req.session.email = email;
+            req.session.password = password
             console.log(req.session.userLogin)
-        }})
-        /*else{ res.redirect('/users/login') } esta parte hace que el button te envie al mismo lugar sin importar el resultado,
-         esto se puede solucionar luego agregando las promesas*/
-        res.redirect('/')
-
+            res.redirect('/')
+        } else {
+            res.redirect("/users/login")
+        }
     },
     register: (req, res) => {
         res.render('register')
@@ -38,8 +38,8 @@ const userControllers = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10)
-            //image: "default-image.png"
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: res.cookie("imageUser", "default-image.png")
         }
 
         users.push(newUser);
@@ -53,6 +53,18 @@ const userControllers = {
         res.render('productCart')
     },
     update: (req, res) => {
+        User.forEach(user => {
+            
+            if (user.id == id) {
+                if(req.cookies.file){
+                    res.cookie("imageUser", user.image = req.file.filename)
+                }
+                user.nombre = req.body.nombre;
+                user.apellido = req.body.apellido;
+                user.email = email;
+                producto.password = req.body.password;
+            }
+        });
         res.render('updateUser')
     }
 }
