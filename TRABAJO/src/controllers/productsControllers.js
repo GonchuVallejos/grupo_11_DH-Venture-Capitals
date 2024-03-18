@@ -29,7 +29,7 @@ const productsControllers = {
         const newProduct = {
             id : crypto.randomUUID(),
             name: req.body.nombre,
-            image: imageName,
+            image: res.cookie("imageProduct", imageName), //res.cookie("img", imageName)
             price: req.body.precio,
             categorias: req.body.categorias,
             discount: req.body.descuento,
@@ -74,8 +74,8 @@ const productsControllers = {
         products.forEach(producto => {
             if (producto.id == id) {
                 producto.name = req.body.nombre;
-                if(req.file){
-                    producto.image = req.file.filename;
+                if(req.cookies.file){
+                    producto.image = req.cookies.file.filename;
                 }
                 producto.price = req.body.precio;
                 producto.categorias = req.body.categorias;

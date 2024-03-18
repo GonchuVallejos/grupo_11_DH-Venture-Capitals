@@ -7,6 +7,8 @@ const session = require('express-session'); // requerimos para poder utilizar se
 const { validationResult } = require('express-validator');
 
 
+
+
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -57,6 +59,18 @@ const userControllers = {
         res.render('productCart')
     },
     update: (req, res) => {
+        User.forEach(user => {
+            
+            if (user.id == id) {
+                if(req.cookies.file){
+                    res.cookie("imageUser", user.image = req.file.filename)
+                }
+                user.nombre = req.body.nombre;
+                user.apellido = req.body.apellido;
+                user.email = email;
+                producto.password = req.body.password;
+            }
+        });
         res.render('updateUser')
     }
 }
