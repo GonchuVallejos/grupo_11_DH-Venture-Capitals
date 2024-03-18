@@ -3,7 +3,8 @@ const path = require('path');
 const crypto = require('crypto'); //Para generar los id
 const bcryptjs = require('bcryptjs'); // para encriptar o hashear la conrtaseña
 const usersModel = require('../Models/Users')
-const session = require('express-session') // requerimos para poder utilizar sesiones
+const session = require('express-session'); // requerimos para poder utilizar sesiones
+const { validationResult } = require('express-validator');
 
 
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
@@ -14,19 +15,22 @@ const userControllers = {
         const idFound = +req.params.id
         const User = users.find(U => U.id === idFound)
         res.render('login',{User})
+        let errors = validationResult(req);
     },
     enterLogin: (req, res) => {
-        const {password, email} = req.body
-        let check = usersModel.findeUserToLogin(req.body.password, req.body.email)
+        userMail = req.body.email;
+        userPass = req.body.password;
 
-        users.forEach(U => {if (check) {
-            U.password = password;
-            U.email = email
+        let check = usersModel.findeUserToLogin(userMail, userPass)
+
+        if (check) {
+            req.session.userLogin = userMail;
             console.log(req.session.userLogin)
-        }})
-        /*else{ res.redirect('/users/login') } esta parte hace que el button te envie al mismo lugar sin importar el resultado,
-         esto se puede solucionar luego agregando las promesas*/
-        res.redirect('/')
+            res.redirect('/')
+        } else {
+            let mensajeError = 'Usuario y/o contraseña invalidos'
+            res.render('login', {mensajeError:mensajeError});
+        }
 
     },
     register: (req, res) => {
@@ -38,8 +42,8 @@ const userControllers = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10)
-            //image: "default-image.png"
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: req.file.filename || 'default.jpg'
         }
 
         users.push(newUser);

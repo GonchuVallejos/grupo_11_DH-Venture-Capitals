@@ -12,7 +12,7 @@
     <%- include('./partials/header') %>
 
     <main>
-        <form action="/users/register" method="POST" class="form-register">
+        <form action="/users/register" method="POST" class="form-register" enctype="multipart/form-data">
             <h2>CREAR CUENTA</h2>
             <div>
                 <label for="nombre">Nombre</label>
@@ -40,8 +40,13 @@
                 <i class="fa-solid fa-eye" id="btn-re-password"
                     onclick="mostrarContrasena('re-password', 'btn-re-password')"></i>
             </div>
+            <div>
+                <label for="imagen">Imagen de perfil</label>
+                <input type="file" name="userAvatar" id="image">
+            </div>
 
             <button type="submit" class="btn-register">Registrarse</button>
+            
         </form>
     </main>
 

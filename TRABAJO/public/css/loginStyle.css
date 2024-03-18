@@ -28,6 +28,9 @@
     color: #bb2525;
     right: 20px;
 }
+.error-message{
+    color: #bb2525;
+}
 
 .form-register label {
     display: none;
