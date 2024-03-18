@@ -16,7 +16,11 @@ const userControllers = {
     login: (req, res) => {
         const idFound = +req.params.id
         const User = users.find(U => U.id === idFound)
-        res.render('login',{User})
+        loggedUser = false;
+        if(req.session.userLogin){
+            loggedUser = true;
+        }
+        res.render('login',{User, loggedUser})
         let errors = validationResult(req);
     },
     enterLogin: (req, res) => {
@@ -35,17 +39,38 @@ const userControllers = {
         }
 
     },
+
+    destroySession: function(req, res){
+        req.session.destroy();
+        res.redirect('/')
+    },
+
     register: (req, res) => {
         res.render('register')
     },
     store: (req, res) => {
+        
+        existeUsuario = false;
+        
+        users.forEach(function(user){
+            if(user.email == req.body.email){
+                existeUsuario = true;
+            }
+        })
+        userImg = 'default.jpg'
+
+        if(req.file && req.file.filename){
+            userImg = req.file.filename
+
+        }
+        
         const newUser = {
             id: crypto.randomUUID(),
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file.filename || 'default.jpg'
+            image: userImg
         }
 
         users.push(newUser);

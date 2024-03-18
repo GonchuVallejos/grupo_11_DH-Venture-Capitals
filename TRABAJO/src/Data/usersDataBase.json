@@ -19,12 +19,5 @@
     "apellido": "rojo",
     "email": "123@gmail.com",
     "password": "$2a$10$8R6IwzLWq0MJ103kIomUXux/BmTPqBgneRKmg4dqqY/BMrJUiO92W"
-  },
-  {
-    "id": "06c8292a-8491-4c6a-a7aa-ce0ecd669553",
-    "nombre": "catrielc",
-    "apellido": "conde",
-    "email": "catrielconde@gmail.com",
-    "password": "$2a$10$po/ZHZq2ct6M5s/dhYMjF.CmZDSiuYQKbI4Q57D3lkoD9gjlv99ku"
   }
 ]

@@ -17,7 +17,6 @@ let storage = multer.diskStorage({
 let upload = multer({storage: storage});
 
 
-
 const router = express.Router();
 
 const userControllers = require('../controllers/userControllers');
@@ -25,11 +24,13 @@ const userControllers = require('../controllers/userControllers');
 const sesionFactory = require('../middlewares/sesionFactory');
 const { validationResult } = require('express-validator');
 
-router.get('/login',sesionFactory.userLogin,userValidations.loginValidations, userControllers.login);
+router.get('/login', userControllers.login);
 
 router.post('/login', userControllers.enterLogin);
 
-router.get('/register', userControllers.register);
+router.post('/destroy', userControllers.destroySession);
+
+router.get('/register', sesionFactory.userLogin, userControllers.register);
 
 router.get('/productCart', userControllers.productCart);
 

@@ -11,6 +11,8 @@
     <%- include('./partials/header') %>
 
     <main>
+        <% if (!locals.loggedUser) { %>
+              
         <form action="/users/login" method="POST" class="form-login">
             <h2>INICIAR SESION</h2>
             <div>
@@ -33,6 +35,12 @@
             <a href="../users/register">No tenes cuenta? Registrate</a>
             <br>
         </form>
+        
+        <% } else { %>
+            <form action="/users/destroy" method="POST" class="form-login">
+                <button type="submit" class="btn-register">Cerrar Sesion</button>
+            </form>
+            <% } %>   
     </main>
 
     <%- include('./partials/footer') %>
