@@ -4,12 +4,16 @@ let products = require('../data/productsDataBase.json')
 const crypto = require('crypto'); //Para generar los id
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 
 const productsControllers = {
-    productDetail: (req, res) => {
+    productDetail: async (req, res) => {
         productoId = req.params.id
 
-		productoSeleccionado = products.find((product) => product.id == productoId)
+		productoSeleccionado = await db.Producto.findByPk(productoId)
+        //products.find((product) => product.id == productoId)
         
         res.render('productDetail', { productoSeleccionado })
     },

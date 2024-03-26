@@ -14,19 +14,19 @@
             <div class="product-details-container">
                 <div class="img-container">
                     <div class="img-container-img">
-                        <img src="/img/portada/<%= productoSeleccionado.image %>" alt="<%= productoSeleccionado.name %>" class="img">
+                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="<%= productoSeleccionado.name %>" class="img">
                     </div>
                     
                     <div class="thumbnail-container">
-                        <img src="/img/portada/<%= productoSeleccionado.image %>" alt="Thumbnail 1" class="thumbnail">
-                        <img src="/img/portada/<%= productoSeleccionado.image %>" alt="Thumbnail 2" class="thumbnail">
-                        <img src="/img/portada/<%= productoSeleccionado.image %>" alt="Thumbnail 3" class="thumbnail">
+                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 1" class="thumbnail">
+                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 2" class="thumbnail">
+                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 3" class="thumbnail">
                     </div>
                 </div>
             </div>
             <div class="text-container">
                 <div class="nameProduct">
-                    <h2><%= productoSeleccionado.name %></h2>
+                    <h2><%= productoSeleccionado.nombre %></h2>
                 </div>
                 <div class="details">
                     <div class="price">
@@ -36,7 +36,7 @@
                         <p>Medios de envío</p>
                     </div>
                     <div class="price-add-to-cart">
-                        <p>Precio: $<%= productoSeleccionado.price %></p>
+                        <p>Precio: $<%= productoSeleccionado.precio %></p>
                     </div>
                     <div class="add-to-cart">
                         <button>Agregar al carrito</button>
@@ -58,10 +58,10 @@
         <div class="specifications">
             <h3>Especificaciones del producto:</h3>
             <ul>
-                <li> <%= productoSeleccionado.requirement %> </li>
+                <li> <%= productoSeleccionado.requisitos %> </li>
             <br>
             <p>Historia:</p>
-            <p> <%= productoSeleccionado.history %></p>
+            <p> <%= productoSeleccionado.historia %></p>
         </div>
 
     </main>
