@@ -1,6 +1,6 @@
 #Carpetas ignoradas
 
-node_modules/
+TRABAJO/node_modules/
 pdf/
 
 #Archivos ignorados
