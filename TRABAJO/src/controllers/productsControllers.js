@@ -5,96 +5,83 @@ const crypto = require('crypto'); //Para generar los id
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
 const db = require('../database/models');
+const { response } = require('express');
 const sequelize = db.sequelize;
 
 
 const productsControllers = {
+
     productDetail: async (req, res) => {
-        productoId = req.params.id
-
-		productoSeleccionado = await db.Producto.findByPk(productoId)
-        //products.find((product) => product.id == productoId)
-        
-        res.render('productDetail', { productoSeleccionado })
+        //productoId = req.params.id
+        try{
+            const productoSeleccionado = await db.Producto.findByPk(req.params.id)
+            res.render('productDetail', { productoSeleccionado })
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
     },
-    productAdd: (req, res) => {
-        res.render('productAdd')
+    productAdd: async (req, res) => {
+        try{
+            const productoSeleccionado = await db.Producto.findAll()
+            res.render('productAdd', { productoSeleccionado })
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
     },
-
-    store:(req, res) => {
-        let hasDiscount = parseInt(req.body.descuento, 10);
+    store: async (req, res) => {
+        /*let hasDiscount = parseInt(req.body.descuento, 10);
         let hasOffert = false;
         if (hasDiscount > 0){ 
             hasOffert = true;
+        }*/
+        try{
+            await db.Producto.create(...req.body)
+                .then(product => {return res.status(200).json({
+                    /*aca se añadiran los datos*/
+                })})
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
         }
-
-        let imageName = req.file ? req.file.filename : "default-image.png";
-
-        const newProduct = {
-            id : crypto.randomUUID(),
-            name: req.body.nombre,
-            image: res.cookie("imageProduct", imageName), //res.cookie("img", imageName)
-            price: req.body.precio,
-            categorias: req.body.categorias,
-            discount: req.body.descuento,
-            inOffert: hasOffert,
-            descripcion: req.body.descripcion,
-            requirement: req.body.requisitos,
-            history: req.body.historia
+    },
+    edit: async(req, res) => {
+        try{
+            const productoSeleccionado = await db.Producto.findByPk(req.params.id)
+            console.log("estoy en edit");
+            res.render('productEdit', { productoSeleccionado })
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
         }
-        console.log(imageName);
-        
-        products.push(newProduct);
-
-        //Sobreescribo el archivo json original
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-        let idProducto= newProduct.id
-        res.redirect('/products/productDetail/' + idProducto);
     },
-    delete:(req, res) =>{
-        let id = req.params.id
-        let productsDelete = products.filter(product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(productsDelete, null, 2))
-        res.redirect('/');
-        console.log("borre el id" + id);
-
-    },
-    edit:(req, res) => {
-        productoId = req.params.id
-
-		productoSeleccionado = products.find((product) => product.id == productoId)
-        console.log("estoy en edit");
-        res.render('productEdit', { productoSeleccionado })
-    },
-
-    update: (req, res) => {
-        let { id } = req.params;
-        let hasDiscount = parseInt(req.body.descuento, 10);
-        let hasOffert = false;
-        if (hasDiscount > 0) { 
-            hasOffert = true;
+    update: async(req, res) => {
+        try{
+            await db.Producto.update(...req.body,{where:{id: req.params.id}})
+                .then(product => {return res.status(200).json({
+                    /*aca se añadiran los datos*/
+                })})
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
         }
-
-        products.forEach(producto => {
-            if (producto.id == id) {
-                producto.name = req.body.nombre;
-                if(req.cookies.file){
-                    producto.image = req.cookies.file.filename;
-                }
-                producto.price = req.body.precio;
-                producto.categorias = req.body.categorias;
-                producto.discount = req.body.descuento;
-                producto.inOffert = hasOffert;
-                producto.descripcion = req.body.descripcion;
-                producto.requirement = req.body.requisitos;
-                producto.history = req.body.historia;
-            }
-        });
-
-       
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect('/products/productDetail/' + id);
+    },
+    delete: async(req, res) =>{
+        try{
+            const productoSeleccionado = await db.Producto.findByPk(req.params.id)
+            res.render('productEdit', { productoSeleccionado })
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
+    },
+    destroy: async (req, res) =>{
+        try{
+            await db.Producto.destroy({where:{id: req.params.id}})
+                .then(result => {return res.status(200).json({
+                    /*aca se añadiran los datos*/
+                })})
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
+        }
     }
 }
 
