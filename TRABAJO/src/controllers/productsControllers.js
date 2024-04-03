@@ -16,16 +16,16 @@ const productsControllers = {
         try{
             const productoSeleccionado = await db.Producto.findByPk(req.params.id)
             res.render('productDetail', { productoSeleccionado })
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     productAdd: async (req, res) => {
         try{
             const productoSeleccionado = await db.Producto.findAll()
             res.render('productAdd', { productoSeleccionado })
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     store: async (req, res) => {
@@ -36,12 +36,9 @@ const productsControllers = {
         }*/
         try{
             await db.Producto.create(...req.body)
-                .then(product => {return res.status(200).json({
-                    /*aca se añadiran los datos*/
-                })})
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>",error)
         }
     },
     edit: async(req, res) => {
@@ -49,38 +46,32 @@ const productsControllers = {
             const productoSeleccionado = await db.Producto.findByPk(req.params.id)
             console.log("estoy en edit");
             res.render('productEdit', { productoSeleccionado })
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     update: async(req, res) => {
         try{
             await db.Producto.update(...req.body,{where:{id: req.params.id}})
-                .then(product => {return res.status(200).json({
-                    /*aca se añadiran los datos*/
-                })})
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>",error)
         }
     },
     delete: async(req, res) =>{
         try{
             const productoSeleccionado = await db.Producto.findByPk(req.params.id)
             res.render('productEdit', { productoSeleccionado })
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     destroy: async (req, res) =>{
         try{
             await db.Producto.destroy({where:{id: req.params.id}})
-                .then(result => {return res.status(200).json({
-                    /*aca se añadiran los datos*/
-                })})
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>", error)
         }
     }
 }

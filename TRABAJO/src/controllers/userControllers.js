@@ -21,100 +21,67 @@ const userControllers = {
         }catch{
             return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
         }
-        /*const idFound = +req.params.id
-        const User = users.find(U => U.id === idFound)
-        loggedUser = false;
-        if(req.session.userLogin){
-            loggedUser = true;
-        }
-        res.render('login',{User, loggedUser})
-        let errors = validationResult(req);*/
     },
-    enterLogin: async(req, res) => {
+/*    enterLogin: async(req, res) => {
         try{
-            const userIds = await db.User.findAll()
-            await db.User.create(...req.body)
-                .then(user => {return res.status(200).json({
-                    /*aca se añadiran los datos*/
-                })})
-                .catch(error => {})
+            const userIds = await db.User.findByPk(req.params.id)
+            res.render('login',{userIds})
         }catch{
             return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
         }
-        /*userMail = req.body.email;
-        userPass = req.body.password;
-
-        let check = usersModel.findeUserToLogin(userMail, userPass)
-
-        if (check) {
-            req.session.userLogin = userMail;
-            console.log(req.session.userLogin)
-            res.redirect('/')
-        } else {
-            let mensajeError = 'Usuario y/o contraseña invalidos'
-            res.render('login', {mensajeError:mensajeError});
-        }*/
-
-    },
-
-    destroySession: function(req, res){
-        req.session.destroy();
-        res.redirect('/')
-    },
-
-    register: (req, res) => {
-        res.render('register')
-    },
-    store: (req, res) => {
-        
-        existeUsuario = false;
-        
-        users.forEach(function(user){
-            if(user.email == req.body.email){
-                existeUsuario = true;
-            }
-        })
-        userImg = 'default.jpg'
-
-        if(req.file && req.file.filename){
-            userImg = req.file.filename
-
+    },*/
+    delete: async (req, res) => {
+        try{
+            const userIds = await db.User.findByPk(req.params.id)
+            res.render('destroy',{userIds})
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
         }
-        
-        const newUser = {
-            id: crypto.randomUUID(),
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: userImg
+    },
+    destroySession:  async function(req, res){
+        //req.session.destroy();
+        try{
+            await db.User.destroy({where:{id: req.params.id}})
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
         }
-
-        users.push(newUser);
-
-        //Sobreescribo el archivo json original
-        fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2))
-
-        res.render('login');
+    },
+    register: async (req, res) => {
+        try{
+            const userIds = await db.User.findAll()
+            res.render('register',{userIds})
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
+    },
+    store: async (req, res) => {
+        try{
+            await db.User.create(...req.body)
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
+    },
+    edit: async (req, res) => {
+        try{
+            const userIds = await db.User.findByPk(req.params.id)
+            res.render('updateUser',{userIds})
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
+    },
+    update:async (req, res) => {
+        try{
+            await db.User.update(...req.body,{where:{id: req.params.id}})
+            return res.redirect("/")
+        }catch{
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }
     },
     productCart: (req, res) => {
         res.render('productCart')
     },
-    update: (req, res) => {
-        User.forEach(user => {
-            
-            if (user.id == id) {
-                if(req.cookies.file){
-                    res.cookie("imageUser", user.image = req.file.filename)
-                }
-                user.nombre = req.body.nombre;
-                user.apellido = req.body.apellido;
-                user.email = email;
-                producto.password = req.body.password;
-            }
-        });
-        res.render('updateUser')
-    }
 }
 
 module.exports = userControllers;

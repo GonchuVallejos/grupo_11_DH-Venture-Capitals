@@ -10,8 +10,6 @@ let storage = multer.diskStorage({
     filename: function(req, file, cb){
         cb(null, file.fieldname + req.body.email+ '-' + Date.now() + path.extname(file.originalname))
     }
-
-
 })
 
 let upload = multer({storage: storage});
@@ -25,17 +23,17 @@ const sesionFactory = require('../middlewares/sesionFactory');
 const { validationResult } = require('express-validator');
 
 router.get('/login', userControllers.login);
+//router.post('/login', userControllers.enterLogin);
 
-router.post('/login', userControllers.enterLogin);
-
-router.post('/destroy', userControllers.destroySession);
-
-router.get('/register', sesionFactory.userLogin, userControllers.register);
+router.post('/destroy/:id', userControllers.delete);
+router.post('/destroy/:id', userControllers.destroySession);
 
 router.get('/productCart', userControllers.productCart);
 
-router.post('/register', upload.single('userAvatar'), userControllers.store);
+router.get('/register', userControllers.register );
+router.post('/register',  upload.single('userAvatar'), userControllers.store);
 
-router.get('/updateUser', userControllers.update);
+router.get('/updateUser/:id', userControllers.edit);
+router.get('/updateUser/:id', userControllers.update);
 
 module.exports = router;
