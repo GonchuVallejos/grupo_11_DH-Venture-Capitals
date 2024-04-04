@@ -18,8 +18,8 @@ const userControllers = {
         try{
             const userIds = await db.User.findByPk(req.params.id)
             res.render('login',{userIds})
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
         }
     },
 /*    enterLogin: async(req, res) => {
@@ -34,49 +34,52 @@ const userControllers = {
         try{
             const userIds = await db.User.findByPk(req.params.id)
             res.render('destroy',{userIds})
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     destroySession:  async function(req, res){
         //req.session.destroy();
         try{
-            await db.User.destroy({where:{id: req.params.id}})
+            const destroyUser = await db.User.destroy({where:{id: req.params.id}})
+            if(!destroyUser){
+                return res.status(404).send({mesagge: "Error delete"})
+            }
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en el algoritmo</h2>", error)
         }
     },
     register: async (req, res) => {
         try{
             const userIds = await db.User.findAll()
             res.render('register',{userIds})
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
         }
     },
     store: async (req, res) => {
         try{
             await db.User.create(...req.body)
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
         }
     },
     edit: async (req, res) => {
         try{
             const userIds = await db.User.findByPk(req.params.id)
             res.render('updateUser',{userIds})
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
         }
     },
     update:async (req, res) => {
         try{
             await db.User.update(...req.body,{where:{id: req.params.id}})
             return res.redirect("/")
-        }catch{
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>")
+        }catch (error){
+            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
         }
     },
     productCart: (req, res) => {

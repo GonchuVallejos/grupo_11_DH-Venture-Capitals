@@ -36,6 +36,7 @@ const productsControllers = {
         }*/
         try{
             await db.Producto.create(...req.body)
+            await res.status(200).send({status: 200, mesagge: "product create"})
             return res.redirect("/")
         }catch (error){
             return res.send("<h2>A acurrido un error en el algoritmo</h2>",error)
@@ -68,7 +69,10 @@ const productsControllers = {
     },
     destroy: async (req, res) =>{
         try{
-            await db.Producto.destroy({where:{id: req.params.id}})
+            const destroyProduct = await db.Producto.destroy({where:{id: req.params.id}})
+            if(!destroyProduct){
+                return res.status(404).send({mesagge: "Error delete"})
+            }
             return res.redirect("/")
         }catch (error){
             return res.send("<h2>A acurrido un error en el algoritmo</h2>", error)
