@@ -25,15 +25,10 @@ const { validationResult } = require('express-validator');
 router.get('/login', userControllers.login);
 //router.post('/login', userControllers.enterLogin);
 
-router.post('/destroy/:id', userControllers.delete);
-router.post('/destroy/:id', userControllers.destroySession);
-
-router.get('/productCart', userControllers.productCart);
-
 router.get('/register', userControllers.register );
-router.post('/register',  upload.single('userAvatar'), userControllers.store);
+router.post('/register',  upload.single('userAvatar'), userControllers.create);
 
 router.get('/updateUser/:id', userControllers.edit);
-router.get('/updateUser/:id', userControllers.update);
+router.get('/updateUser/:id', upload.single('userAvatar'), userControllers.update);
 
 module.exports = router;
