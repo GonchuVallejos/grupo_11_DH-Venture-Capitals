@@ -20,7 +20,7 @@ const userControllers = {
             const userIds = await db.User.findByPk(req.params.id)
             res.render('login',{userIds})
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
+            return res.send("A acurrido un error en la busqueda del id", error)
         }
     },
     /*Crear*/
@@ -29,7 +29,7 @@ const userControllers = {
             const userIds = await db.User.findAll()
             res.render('register',{userIds})
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
+            return res.send("A acurrido un error en la busqueda del id", error)
         }
     },
     create: async (req, res) => {
@@ -37,7 +37,7 @@ const userControllers = {
             await db.User.create(...req.body)
             return res.redirect("/")
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
+            return res.send("A acurrido un error en la busqueda del id", error)
         }
     },
     /*Editar*/
@@ -46,7 +46,7 @@ const userControllers = {
             const userIds = await db.User.findByPk(req.params.id)
             res.render('updateUser',{userIds})
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>", error)
+            return res.send("A acurrido un error en la busqueda del id", error)
         }
     },
     update: async (req, res) => {
@@ -54,7 +54,7 @@ const userControllers = {
             await db.User.update(...req.body,{where:{id: req.params.id}})
             return res.redirect("/")
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
+            return res.send("A acurrido un error en la busqueda del id",error)
         }
     }
 }

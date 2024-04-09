@@ -12,7 +12,7 @@ const sequelize = db.sequelize;
 const productsControllers = {
     /*Listar*/
     'list': (req, res) => {
-        db.Producto.findAll({include:["genre", "actors"]})
+        db.Producto.findAll({include:["requisitos", "historia", "precio"]})
             .then(productos => {
                 res.render('productList.ejs', {productos})
                 //res.json(movies)
@@ -31,7 +31,7 @@ const productsControllers = {
             const productoSeleccionado = await db.Producto.findAll()
             res.render('productAdd', { productoSeleccionado })
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
+            return res.send("A acurrido un error en la busqueda del id",error)
         }
     },
     create: async (req, res) => {
@@ -40,7 +40,7 @@ const productsControllers = {
             await res.status(200).send({status: 200, mesagge: "product create"})
             return res.redirect("/")
         }catch (error){
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>",error)
+            return res.send("A acurrido un error en el algoritmo",error)
         }
     },
     /*Editar*/
@@ -50,7 +50,7 @@ const productsControllers = {
             console.log("estoy en edit");
             res.render('productEdit', { productoSeleccionado })
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
+            return res.send("A acurrido un error en la busqueda del id",error)
         }
     },
     update: async(req, res) => {
@@ -58,7 +58,7 @@ const productsControllers = {
             await db.Producto.update(...req.body,{where:{id: req.params.id}})
             return res.redirect("/")
         }catch (error){
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>",error)
+            return res.send("A acurrido un error en el algoritmo",error)
         }
     },
     /*Eliminar*/
@@ -67,7 +67,7 @@ const productsControllers = {
             const productoSeleccionado = await db.Producto.findByPk(req.params.id)
             res.render('productdetail', { productoSeleccionado })
         }catch (error){
-            return res.send("<h2>A acurrido un error en la busqueda del id</h2>",error)
+            return res.send("A acurrido un error en la busqueda del id",error)
         }
     },
     destroy: async (req, res) =>{
@@ -78,7 +78,7 @@ const productsControllers = {
             }
             return res.redirect("/")
         }catch (error){
-            return res.send("<h2>A acurrido un error en el algoritmo</h2>", error)
+            return res.send("A acurrido un error en el algoritmo", error)
         }
     },
     /*Carrito*/
