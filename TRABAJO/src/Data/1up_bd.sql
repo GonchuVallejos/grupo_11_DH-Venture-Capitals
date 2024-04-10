@@ -24,9 +24,8 @@ CREATE TABLE personas(
     tipo_doc VARCHAR(3),
     dni VARCHAR(8),
     domicilio VARCHAR(255),
-    fk_localizacion INT,
     fecha_nac DATE,
-    sexo VARCHAR(10),
+    sexo VARCHAR(1),
     email VARCHAR(100),
     telefono VARCHAR(11),
     estado BOOLEAN NOT NULL DEFAULT TRUE);
@@ -35,6 +34,9 @@ CREATE TABLE personas(
 DROP TABLE IF EXISTS usuarios;
 CREATE TABLE usuarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
     id_persona INT,
     nombre_usuario VARCHAR(30),
     contraseña VARCHAR(255),
@@ -78,6 +80,9 @@ DROP TABLE IF EXISTS carrito_compras;
 CREATE TABLE carrito_compras(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    deleted_at TIMESTAMP NULL DEFAULT NULL,
     fecha TIMESTAMP NOT NULL,
     estado VARCHAR(25),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
