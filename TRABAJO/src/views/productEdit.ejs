@@ -17,7 +17,7 @@
                 <h2>AGREGAR PRODUCTO</h2>
                 <div>
                     <label for="nombreProducto">Nombre del producto</label>
-                    <input type="text" name="nombre" id="nombre" value="<%= productoSeleccionado.name%>" required>
+                    <input type="text" name="nombre" id="nombre" value="<%= productoSeleccionado.nombre%>" required>
                 </div>
                 <div>
                     <label for="descripción">Descripcion</label>
@@ -60,20 +60,20 @@
                 </div>
                 <div>
                     <label for="descuento">Descuento</label>
-                    <input type="number" name="descuento" id="descuento" placeholder="Descuento" required value="<%= productoSeleccionado.discount%>" >
+                    <input type="number" name="descuento" id="descuento" placeholder="Descuento" required value="<%= productoSeleccionado.descuento%>" >
                 </div>
                 <div>
                     <label for="precio">Precio</label>
-                    <input type="text" name="precio" id="precio" placeholder="Precio" required value="<%= productoSeleccionado.price%>" >
+                    <input type="text" name="precio" id="precio" placeholder="Precio" required value="<%= productoSeleccionado.precio%>" >
                 </div>
                 <div>
                     <label for="historia">Historia</label>
-                    <textarea name="historia" id="historia" rows="5" cols="33"><%= productoSeleccionado.history%>
+                    <textarea name="historia" id="historia" rows="5" cols="33"><%= productoSeleccionado.historia%>
                     </textarea>
                 </div>
                 <div>
                     <label for="requisitos">Requisitos</label>
-                    <textarea name="requisitos" id="requisitos" rows="5" cols="33"><%= productoSeleccionado.requirement%>
+                    <textarea name="requisitos" id="requisitos" rows="5" cols="33"><%= productoSeleccionado.requisitos%>
                     </textarea>
                 </div>
 

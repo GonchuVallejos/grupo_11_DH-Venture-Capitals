@@ -59,12 +59,14 @@ const productsControllers = {
         console.log("borre el id" + id);
 
     },
-    edit:(req, res) => {
-        productoId = req.params.id
-
-		productoSeleccionado = products.find((product) => product.id == productoId)
+    edit: async (req, res) => {
+        //terminar de agregar la condicion de oferta en la pagina de editar producto
+        const productoSeleccionado = await db.Producto.findByPk(req.params.id)
+        console.log(productoSeleccionado.nombre)
         console.log("estoy en edit");
         res.render('productEdit', { productoSeleccionado })
+
+        //falta ver de traer el nombre de la img y la categoria
     },
 
     update: (req, res) => {

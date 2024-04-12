@@ -47,15 +47,15 @@ module.exports = (sequelize, dataTypes) => {
             as: 'persona',
             foreignKey: 'id_persona'
         })
-        Usuario.belongsTo(models.Role, {
+        Usuario.belongsTo(models.Rol, {
             as: 'rol',
             foreignKey: 'id_rol'
         })
-        //Marcando la relaciones con los otros modelos - Se usa hasMany, porque el Usuario tiene muchos carritos de compra
+        /*Marcando la relaciones con los otros modelos - Se usa hasMany, porque el Usuario tiene muchos carritos de compra
         Usuario.hasMany(models.Carrito_compras, {
             as: 'carrito_compras',
             foreignKey: 'id_usuario'
-        })
+        })*/
     }
 
     return Usuario

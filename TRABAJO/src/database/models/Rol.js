@@ -33,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Rol.associate = function (models) {
         //Marcando la relaciones con los otros modelos - Se usa hasMany, porque el Rol tiene muchos usuarios
-        Rol.hasMany(models.Usuarios, {
+        Rol.hasMany(models.Usuario, {
             as: 'usuario',
             foreignKey: 'id_rol'
         })

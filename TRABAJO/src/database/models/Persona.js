@@ -69,7 +69,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Persona.associate = function (models) {
         //Marcando la relaciones con los otros modelos - Se usa hasMany, porque la Persona tiene muchos usuarios
-        Persona.hasMany(models.Usuarios, {
+        Persona.hasMany(models.Usuario, {
             as: 'usuarios',
             foreignKey: 'id_persona'
         })
