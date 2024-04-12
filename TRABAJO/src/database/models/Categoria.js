@@ -35,19 +35,11 @@ module.exports = (sequelize, dataTypes) => {
 
     Categoria.associate = function (models){
         //marcando todas las relaciones con los otros modelos
-        Categoria.belongsTo(models.Producto,{
-            as: 'categoria',
+        Categoria.hasMany(models.Producto,{
+            as: 'productos',
             foreignKey: 'id_categoria'
 
         })
-
-       /* Movie.belongsToMany(models.Actor, {
-            as: 'actors',
-            through: 'actor_movie',
-            foreignKey: 'movie_id',
-            otherKey: 'actor_id', 
-            timestamps: false
-        })*/
     }
 
     return Categoria
