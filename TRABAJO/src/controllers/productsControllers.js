@@ -60,42 +60,38 @@ const productsControllers = {
 
     },
     edit: async (req, res) => {
-        //terminar de agregar la condicion de oferta en la pagina de editar producto
-        const productoSeleccionado = await db.Producto.findByPk(req.params.id)
-        console.log(productoSeleccionado.nombre)
+
+        const productoSeleccionado = await db.Producto.findByPk(req.params.id, {
+            include: ['categoria']
+        });
         console.log("estoy en edit");
         res.render('productEdit', { productoSeleccionado })
 
         //falta ver de traer el nombre de la img y la categoria
     },
 
-    update: (req, res) => {
+    update: async (req, res) => {
         let { id } = req.params;
         let hasDiscount = parseInt(req.body.descuento, 10);
         let hasOffert = false;
         if (hasDiscount > 0) { 
             hasOffert = true;
         }
-
-        products.forEach(producto => {
-            if (producto.id == id) {
-                producto.name = req.body.nombre;
-                if(req.cookies.file){
-                    producto.image = req.cookies.file.filename;
-                }
-                producto.price = req.body.precio;
-                producto.categorias = req.body.categorias;
-                producto.discount = req.body.descuento;
-                producto.inOffert = hasOffert;
-                producto.descripcion = req.body.descripcion;
-                producto.requirement = req.body.requisitos;
-                producto.history = req.body.historia;
-            }
-        });
-
-       
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+        await db.Producto.update({
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            historia : req.body.historia,
+            descuento : req.body.descuento,
+            imagen: req.params.imagen,
+            requisitos: req.body.requisitos,
+            oferta: hasOffert,
+            precio: req.body.precio,
+            id_categoria : req.body.categorias
+        },
+        {
+            where: { id: req.params.id}    
+        })
+        console.log(req.body)
         res.redirect('/products/productDetail/' + id);
     }
 }
