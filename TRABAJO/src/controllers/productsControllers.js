@@ -77,12 +77,16 @@ const productsControllers = {
         if (hasDiscount > 0) { 
             hasOffert = true;
         }
+        const productoSeleccionado = await db.Producto.findByPk(req.params.id);
+        const productoImagen = productoSeleccionado.imagen
+        
+        
         await db.Producto.update({
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             historia : req.body.historia,
             descuento : req.body.descuento,
-            imagen: req.params.imagen,
+            imagen: req.file ? req.file.filename : productoImagen,
             requisitos: req.body.requisitos,
             oferta: hasOffert,
             precio: req.body.precio,
