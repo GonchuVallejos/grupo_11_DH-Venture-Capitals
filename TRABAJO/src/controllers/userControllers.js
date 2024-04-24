@@ -7,8 +7,6 @@ const session = require('express-session'); // requerimos para poder utilizar se
 const { validationResult } = require('express-validator');
 
 
-
-
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 

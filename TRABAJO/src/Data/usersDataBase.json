@@ -19,5 +19,13 @@
     "apellido": "rojo",
     "email": "123@gmail.com",
     "password": "$2a$10$8R6IwzLWq0MJ103kIomUXux/BmTPqBgneRKmg4dqqY/BMrJUiO92W"
+  },
+  {
+    "id": "88807f94-e1a1-4a92-b34a-3a4f82eb57b4",
+    "nombre": "Gonzalo",
+    "apellido": "Vallejos Gallardo",
+    "email": "gonza_vallejos_91@hotmail.com",
+    "password": "$2a$10$OAaBE6d.1TO9lkUKlZlDFuPbr1gAhrNTMDLeBqrN3nXoQ3.iZVDPa",
+    "image": "default.jpg"
   }
 ]

@@ -56,7 +56,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: "Personas",
+        tableName: "personas",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

@@ -23,6 +23,7 @@ module.exports = (sequelize, dataTypes) => {
        
     };
     let config = {
+        tableName: "categorias",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

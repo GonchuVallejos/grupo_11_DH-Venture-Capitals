@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         id_rol: dataTypes.BIGINT(10)
     };
     let config = {
-        tableName: "Usuarios",
+        tableName: "usuarios",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

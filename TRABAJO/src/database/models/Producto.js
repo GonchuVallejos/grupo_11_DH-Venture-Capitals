@@ -48,6 +48,7 @@ module.exports = (sequelize, dataTypes) => {
        id_categoria: dataTypes.BIGINT(10)
     };
     let config = {
+        tableName: "productos",
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

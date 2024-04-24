@@ -57,7 +57,6 @@ const productsControllers = {
         fs.writeFileSync(productsFilePath, JSON.stringify(productsDelete, null, 2))
         res.redirect('/');
         console.log("borre el id" + id);
-
     },
     edit: async (req, res) => {
 
