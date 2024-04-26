@@ -39,7 +39,7 @@ CREATE TABLE usuarios(
     deleted_at TIMESTAMP NULL DEFAULT NULL,
     id_persona INT,
     nombre_usuario VARCHAR(30),
-    contraseña VARCHAR(255),
+    password VARCHAR(255),
     id_rol INT,
     avatar VARCHAR(255),
     FOREIGN KEY (id_persona) REFERENCES personas(id),
@@ -108,6 +108,11 @@ INSERT INTO categorias (id, descripcion) VALUES
 (1, 'Consolas'),
 (2, 'Cartuchos'),
 (3, 'Accesorios');
+
+INSERT INTO roles (id, descripcion) VALUES
+(1, 'Admin'),
+(2, 'Saler'),
+(3, 'Buyer');
 
 INSERT INTO productos (nombre, imagen, precio, descuento, oferta, descripcion, requisitos, historia, id_categoria) VALUES
 ('007 The World is not Enough', 'n64_007worldisnotenough02.png', 40000, '15', 0, 'En 007: The World Is Not Enough, juegas como James Bond, el famoso agente secreto del MI6, en una emocionante aventura llena de acción. Viaja por el mundo, desmantela organizaciones criminales y salva el día en este trepidante juego de disparos en primera persona para Nintendo 64.', 'Procesador: Ricoh 5A22, basado en el procesador WDC W65C816 de 16 bits. Velocidad de reloj: 1.79, 2.68 MHz, o 3.58 MHz (NTSC); 1,77 MHz, 2,66 MHz o 3,55 MHz (PAL). Memoria RAM principal: 128 KB. Sonido: Sony SPC700 de 8 bits - Procesador digital de sonido: S-DSP de 16 bits. Video: Circuitos S-PPU1 y S-PPU2, unidades de procesamiento de imagen de 16 bits. Alimentación: La fuentes de alimentación varían dependiendo de los modelos liberados en los diferentes mercados.', 'Lanzado en el año 2000, 007: The World is not Enough continuó el legado de los videojuegos de James Bond. Recibió críticas positivas por su atractiva trama y su emocionante jugabilidad.', 2),

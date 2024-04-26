@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs');
 let products = require('../data/productsDataBase.json')
 const crypto = require('crypto'); //Para generar los id
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json'); //comentar luego de integrar con BD
 
 const db = require('../database/models');
 const sequelize = db.sequelize;

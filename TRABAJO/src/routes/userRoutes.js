@@ -36,6 +36,6 @@ router.get('/productCart', userControllers.productCart);
 
 router.post('/register', upload.single('userAvatar'), userControllers.store);
 
-router.get('/updateUser', userControllers.update);
+router.get('/updateUser/:id', userControllers.update);
 
 module.exports = router;

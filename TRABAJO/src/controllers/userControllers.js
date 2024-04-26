@@ -7,38 +7,47 @@ const session = require('express-session'); // requerimos para poder utilizar se
 const { validationResult } = require('express-validator');
 
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require('sequelize')
+
+//quitar luego de agregar la relacion con la BD
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userControllers = {
-    login: (req, res) => {
-        const idFound = +req.params.id
-        const User = users.find(U => U.id === idFound)
+    login: async (req, res) => {
+
+        console.log(idFound)
+
         loggedUser = false;
-        if(req.session.userLogin){
+        if (req.session.userLogin) {
             loggedUser = true;
+            console.log('existe usuario logado y el mail es', req.session.userLogin)
         }
-        res.render('login',{User, loggedUser})
-        let errors = validationResult(req);
+        res.render('login', { loggedUser })
+
+        let errors = validationResult(req);//esto no se para que sirve.-
     },
-    enterLogin: (req, res) => {
+    enterLogin: async (req, res) => {
         userMail = req.body.email;
         userPass = req.body.password;
 
-        let check = usersModel.findeUserToLogin(userMail, userPass)
+        let check = await usersModel.findeUserToLogin(userMail, userPass)
+
+        console.log('estoy en el controlador y el resultado es ')
 
         if (check) {
             req.session.userLogin = userMail;
-            console.log(req.session.userLogin)
+            console.log('el mail logado es', req.session.userLogin)
             res.redirect('/')
         } else {
             let mensajeError = 'Usuario y/o contraseña invalidos'
-            res.render('login', {mensajeError:mensajeError});
+            res.render('login', { mensajeError: mensajeError });
         }
-
     },
 
-    destroySession: function(req, res){
+    destroySession: function (req, res) {
         req.session.destroy();
         res.redirect('/')
     },
@@ -46,55 +55,86 @@ const userControllers = {
     register: (req, res) => {
         res.render('register')
     },
-    store: (req, res) => {
-        
+    store: async (req, res) => {
+
         existeUsuario = false;
-        
-        users.forEach(function(user){
-            if(user.email == req.body.email){
-                existeUsuario = true;
-            }
-        })
         userImg = 'default.jpg'
+        personEmail = req.body.email
 
-        if(req.file && req.file.filename){
-            userImg = req.file.filename
+        const busquedaPersona = await db.Persona.findAll({
+            where: { email: personEmail }
+        })
 
-        }
-        
-        const newUser = {
-            id: crypto.randomUUID(),
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: userImg
+        if (busquedaPersona.length > 0) {
+            existeUsuario = true;
         }
 
-        users.push(newUser);
+        if (!existeUsuario) {
+
+            if (req.file && req.file.filename) {
+                userImg = req.file.filename
+            }
+            //si el usuario no existe se crea la persona
+            const nuevaPersona = await db.Persona.create(
+                {
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    email: personEmail,
+                    tipo_doc: req.body.tipodoc,
+                    dni: req.body.documento,
+                    domicilio: req.body.domicilio,
+                    fecha_nac: req.body.fecha_nac,
+                    sexo: req.body.sexo,
+                    telefono: req.body.telefono,
+                    estado: true
+                });
+            //creo el ususario luego de obtener el id de la persona que se creo anteriormente
+            await db.Usuario.create(
+                {
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    avatar: userImg,
+                    id_persona: nuevaPersona.id,
+                    id_rol: 1,
+                    nombre_usuario: req.body.nombre_usuario
+                }
+            )
+
+        } else {
+            res.send("ya existe el ususario") // al validar enviar a la vista este error
+        }
+
+        //users.push(newUser);
 
         //Sobreescribo el archivo json original
-        fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2))
+        //fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2))
 
         res.render('login');
     },
     productCart: (req, res) => {
         res.render('productCart')
     },
-    update: (req, res) => {
-        User.forEach(user => {
-            
-            if (user.id == id) {
-                if(req.cookies.file){
+    update: async (req, res) => {
+        const userId = req.params.id;
+
+        const user = []
+
+        const usuarioEncontrado = await db.Usuario.findOne(
+            {
+                where: {id : userId}
+            })
+        
+
+            if (usuarioEncontrado) {
+               /* if (req.cookies.file) {
                     res.cookie("imageUser", user.image = req.file.filename)
-                }
-                user.nombre = req.body.nombre;
-                user.apellido = req.body.apellido;
-                user.email = email;
-                producto.password = req.body.password;
+                }*/
+                user.nombre = usuarioEncontrado.nombre;
+                user.apellido = usuarioEncontrado.apellido;
+                user.email = usuarioEncontrado.email;
+                //producto.password = req.body.password;
             }
-        });
-        res.render('updateUser')
+        
+        res.render('updateUser', {user})
     }
 }
 
