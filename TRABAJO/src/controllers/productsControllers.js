@@ -13,51 +13,71 @@ const productsControllers = {
         productoId = req.params.id
 
 		productoSeleccionado = await db.Producto.findByPk(productoId)
-        //products.find((product) => product.id == productoId)
+        
         
         res.render('productDetail', { productoSeleccionado })
     },
-    productAdd: (req, res) => {
-        res.render('productAdd')
+    productAdd: async (req, res) => {
+        try {
+            const categoriasProductos = await db.Categoria.findAll();
+            console.log(categoriasProductos)
+            res.render('productAdd', {categoriasProductos})
+
+        } 
+        catch(error){
+            console.error('error al obtener datos de la base de datos', error);
+            res.status(500).send('error al obtener datos de la base de datos');
+        }     
+        
+
     },
 
-    store:(req, res) => {
+    store: async (req, res) => {
         let hasDiscount = parseInt(req.body.descuento, 10);
         let hasOffert = false;
         if (hasDiscount > 0){ 
             hasOffert = true;
         }
-
+        let productoId = "";
         let imageName = req.file ? req.file.filename : "default-image.png";
-
-        const newProduct = {
-            id : crypto.randomUUID(),
-            name: req.body.nombre,
-            image: res.cookie("imageProduct", imageName), //res.cookie("img", imageName)
-            price: req.body.precio,
-            categorias: req.body.categorias,
-            discount: req.body.descuento,
-            inOffert: hasOffert,
-            descripcion: req.body.descripcion,
-            requirement: req.body.requisitos,
-            history: req.body.historia
+        try {
+            let newProduct = await db.Producto.create({
+                nombre: req.body.nombre,
+                descripcion: req.body.descripcion,
+                historia : req.body.historia,
+                descuento : req.body.descuento,
+                imagen: imageName,
+                requisitos: req.body.requisitos,
+                oferta: hasOffert,
+                precio: req.body.precio,
+                id_categoria : req.body.categorias
+            })
+            productoId = newProduct.id
+            res.redirect('/products/productDetail/' + productoId);
         }
-        console.log(imageName);
         
-        products.push(newProduct);
-
-        //Sobreescribo el archivo json original
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-        let idProducto= newProduct.id
-        res.redirect('/products/productDetail/' + idProducto);
+        catch(error){
+            console.error('error al obtener datos de la base de datos', error);
+            res.status(500).send('error al obtener datos de la base de datos');
+        }     
+        
+        
     },
-    delete:(req, res) =>{
-        let id = req.params.id
-        let productsDelete = products.filter(product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(productsDelete, null, 2))
-        res.redirect('/');
-        console.log("borre el id" + id);
+    delete: async (req, res) =>{
+        try{
+            
+            await db.Producto.destroy({
+                where: {
+                    id : req.params.id
+                }
+            })
+            res.redirect('/')
+        }
+        catch{
+            return res.send('<h1> Ha ocurrido un error </h1>')
+        }
     },
+    
     edit: async (req, res) => {
 
         const productoSeleccionado = await db.Producto.findByPk(req.params.id, {
@@ -76,7 +96,8 @@ const productsControllers = {
         if (hasDiscount > 0) { 
             hasOffert = true;
         }
-        const productoSeleccionado = await db.Producto.findByPk(req.params.id);
+        try {
+            const productoSeleccionado = await db.Producto.findByPk(req.params.id);
         const productoImagen = productoSeleccionado.imagen
         
         
@@ -96,6 +117,12 @@ const productsControllers = {
         })
         console.log(req.body)
         res.redirect('/products/productDetail/' + id);
+        }
+        catch(error){
+            console.error('error al obtener datos de la base de datos', error);
+            res.status(500).send('error al obtener datos de la base de datos');
+        }     
+        
     }
 }
 

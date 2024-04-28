@@ -31,10 +31,11 @@
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" required>
                         <option value="Seleccione">Seleccione</option>
-                        <option value="Consolas">Consolas</option>
-                        <option value="Cartuchos">Cartuchos</option>
-                        <option value="Accesorios">Accesorios</option>
-                        <option value="Varios">Varios</option>
+                        <% if (locals.categoriasProductos) { %>
+                            <% categoriasProductos.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>"><%= categoria.descripcion %></option>
+                            <% }); %>
+                        <% } %>
                     </select>
                 </div>
                 <div>
