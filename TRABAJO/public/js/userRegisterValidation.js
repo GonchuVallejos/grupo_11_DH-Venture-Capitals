@@ -34,7 +34,7 @@ window.onload = function(){
             let ulErrores = document.querySelector(".errores ul");
             errores.forEach(error => {
                 ulErrores.innerHTML += `<li> ${error} </li>`
-            })
+            })  
         }
 
     })
