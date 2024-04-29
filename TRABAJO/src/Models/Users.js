@@ -11,32 +11,21 @@ const { Op } = require('sequelize')
 const User = {
     fileName: users,
 
-    findeUserToLogin:async function (userEmail, pass) {
+    findeUserToLogin: async function (userEmail, pass) {
 
         const personaBuscada = await db.Persona.findOne({
             include: ['usuarios'],
-            where: {email : userEmail},
+            where: { email: userEmail },
         })
-
-        const usuarioBuscado = await db.Usuario.findOne({
-            where: {id_persona : personaBuscada.id}
-        }) 
-
         
-
-
-       console.log("el usuario buscado es" , usuarioBuscado)
-
-        if (usuarioBuscado) {
+        if (personaBuscada) {
             console.log('entre a ver el pas')
-            let check = bcryptjs.compareSync(pass, usuarioBuscado.password)
-            console.log(check)
-            if (check) {
-                return true;
-            } else {
-                return false;
-            }
 
+            const [usuarioBuscado] = personaBuscada.usuarios
+
+            let check = bcryptjs.compareSync(pass, usuarioBuscado.password)
+
+            return check
         } else {
             return false;
         }
