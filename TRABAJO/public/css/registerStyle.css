@@ -92,6 +92,10 @@
     color: #bb2525;
 }
 
+.errores ul li{
+    color: #bb2525;
+}
+
 @media (min-width: 768px) {
 
     .form-register {

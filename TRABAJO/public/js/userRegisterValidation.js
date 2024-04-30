@@ -1,12 +1,13 @@
 window.onload = function(){
 
     const form = document.querySelector(".form-register");
+    console.log(form);
 
     form.addEventListener("submit", function(e){
 
         let errores = [];
 
-        let campoNombre = document.querySelector("input#nombre");
+        let campoNombre = document.querySelector("#nombre");
         let campoApellido = document.querySelector("input#apellido");
         let campoEmail = document.querySelector("input#email");
         let campoPassword = document.querySelector("input#password");
@@ -15,17 +16,17 @@ window.onload = function(){
 
         if(campoNombre.value.length < 2){
             errores.push("El campo Nombre debe contener al menos 2 caracteres");
-        } else if(campoApellido.value.length < 2){
+        } if(campoApellido.value.length < 2){
             errores.push("El campo Apellido debe contener al menos 2 caracteres");
-        } else if(campoEmail.value == ""){
+        } if(campoEmail.value == ""){
             errores.push("El campo Email es obligatorio");
-        }  else if(campoEmail.validity.typeMismatch){
+        }  if(campoEmail.validity.typeMismatch){
                 errores.push("El Email debe ser válido");
-        } else if(campoPassword.value.length < 8){
+        } if(campoPassword.value.length < 8){
             errores.push("El campo Contraseña debe contener al menos 8 caracteres");
-        } else if(campoRePassword.value !== campoPassword.value){
+        } if(campoRePassword.value !== campoPassword.value){
             errores.push("La confirmación de la contraseña debe coincidir");
-        } else if(campoImagen.validity.typeMismatch){
+        } if(campoImagen.validity.typeMismatch){
             errores.push("La imagen debe ser un archivo válido");
         }
 
@@ -36,6 +37,6 @@ window.onload = function(){
                 ulErrores.innerHTML += `<li> ${error} </li>`
             })  
         }
-
+/*  */
     })
 }
