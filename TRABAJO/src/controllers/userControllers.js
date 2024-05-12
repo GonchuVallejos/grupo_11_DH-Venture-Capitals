@@ -17,9 +17,7 @@ const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userControllers = {
     login: async (req, res) => {
-
-        console.log(idFound)
-
+        
         loggedUser = false;
         if (req.session.userLogin) {
             loggedUser = true;
@@ -34,7 +32,7 @@ const userControllers = {
         userPass = req.body.password;
 
         let check = await usersModel.findeUserToLogin(userMail, userPass)
-
+        
         console.log('estoy en el controlador y el resultado es ')
 
         if (check) {
