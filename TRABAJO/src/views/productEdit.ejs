@@ -14,6 +14,11 @@
     <%- include('./partials/header') %>
 
         <main>
+            <% if (locals.errors) { %>
+                <% for(let oneError in errors) { %>
+                    <p><%= errors[oneError].msg %></p>
+                <% }; %>
+            <% } %>
             <form action="/products/productEdit/<%= productoSeleccionado.id%>?_method=PUT" method="POST" class="form-register" enctype="multipart/form-data">
                 <h2>EDITAR PRODUCTO</h2>
                 <div>
@@ -21,7 +26,7 @@
                     <input type="text" name="nombre" id="nombre" value="<%= productoSeleccionado.nombre%>" required>
                 </div>
                 <div>
-                    <label for="descripción">Descripcion</label>
+                    <label for="descripcion">Descripcion</label>
                     <textarea name="descripcion" id="descripcion" rows="5" cols="33"><%= productoSeleccionado.descripcion%>
                     </textarea>
                 </div>

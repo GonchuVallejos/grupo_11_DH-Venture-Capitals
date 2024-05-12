@@ -1,0 +1,2656 @@
+
+<html>
+<head>
+    <title>Aportes en Linea</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <strong>CUIL</strong>
+            </td>
+            <td colspan="3" align="center">
+                <strong>
+                    <label id="lblCuil">20177715302</label>
+                </strong>
+            </td>
+            <td colspan="2">
+                <strong>Apellido y nombre</strong>
+            </td>
+            <td colspan="4">
+                <strong>
+                    <label id="lblNombre">LAMAS NICOLAS ALEJANDRO</label>
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nota
+            </td>
+            <td colspan="9">
+                Esta planilla muestra sus datos en relaci&oacute;n de dependencia.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td colspan="9">
+                Para los per&iacute;odos que no se muestran, no existe informaci&oacute;n en nuestros
+                registros.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td colspan="9">
+                Para ver informaci&oacute;n de aut&oacute;nomo/monotributo/casas particulares oprimir el bot&oacute;n
+                "Ver pagos SICAM" en la pantalla de per&iacute;odos de Aportes en L&iacute;nea.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td colspan="2" align="center">
+                <strong>Aportes de seguridad<br />
+                    social</strong>
+            </td>
+            <td colspan="3" align="center">
+                <strong>Aportes de obra social</strong>
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <strong>Periodo</strong>
+            </td>
+            <td align="center">
+                <strong>CUIT</strong>
+            </td>
+            <td align="center">
+                <strong>Razon Social</strong>
+            </td>
+            <td align="center" valign="bottom">
+                <strong>Remun.<br />
+                    total bruta</strong>
+            </td>
+            <td align="center">
+                <strong>Declarado</strong>
+            </td>
+            <td align="center">
+                <strong>Depositado</strong>
+            </td>
+            <td align="center">
+                <strong>Declarado</strong>
+            </td>
+            <td align="center">
+                <strong>Depositado</strong>
+            </td>
+            <td align="center">
+                <strong>Obra social de destino</strong></td>
+            <td align="center">
+                <strong>Contribuci&oacute;n
+                    <br />
+                    patronal de
+                    <br />
+                    obra social</strong>
+            </td>
+        </tr>
+        
+                <tr>
+                    <td>
+                        200004
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        229,94
+                    </td>
+                    <td>
+                        32,88
+                    </td>
+                    <td>
+                        32,88
+                    </td>
+                    <td>
+                        6,21
+                    </td>
+                    <td>
+                        6,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200005
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        114,97
+                    </td>
+                    <td>
+                        16,44
+                    </td>
+                    <td>
+                        16,44
+                    </td>
+                    <td>
+                        3,10
+                    </td>
+                    <td>
+                        3,10
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200006
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        651,50
+                    </td>
+                    <td>
+                        93,17
+                    </td>
+                    <td>
+                        93,17
+                    </td>
+                    <td>
+                        17,59
+                    </td>
+                    <td>
+                        17,59
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200007
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        229,94
+                    </td>
+                    <td>
+                        32,88
+                    </td>
+                    <td>
+                        32,91
+                    </td>
+                    <td>
+                        6,21
+                    </td>
+                    <td>
+                        0,01
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200008
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        229,94
+                    </td>
+                    <td>
+                        32,88
+                    </td>
+                    <td>
+                        32,90
+                    </td>
+                    <td>
+                        6,21
+                    </td>
+                    <td>
+                        0,01
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200105
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        600,00
+                    </td>
+                    <td>
+                        85,80
+                    </td>
+                    <td>
+                        85,79
+                    </td>
+                    <td>
+                        16,20
+                    </td>
+                    <td>
+                        16,20
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200106
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        266,66
+                    </td>
+                    <td>
+                        38,13
+                    </td>
+                    <td>
+                        38,13
+                    </td>
+                    <td>
+                        7,20
+                    </td>
+                    <td>
+                        7,20
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200107
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        200,00
+                    </td>
+                    <td>
+                        28,60
+                    </td>
+                    <td>
+                        28,60
+                    </td>
+                    <td>
+                        5,40
+                    </td>
+                    <td>
+                        5,40
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200108
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        200,00
+                    </td>
+                    <td>
+                        28,60
+                    </td>
+                    <td>
+                        28,60
+                    </td>
+                    <td>
+                        5,40
+                    </td>
+                    <td>
+                        5,40
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200203
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        0,00
+                    </td>
+                    <td>
+                         - 
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200204
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        0,00
+                    </td>
+                    <td>
+                         - 
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200210
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        365,00
+                    </td>
+                    <td>
+                        30,30
+                    </td>
+                    <td>
+                        30,30
+                    </td>
+                    <td>
+                        9,86
+                    </td>
+                    <td>
+                        0,00
+                    </td>
+                    <td>
+                         - 
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200211
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        0,00
+                    </td>
+                    <td>
+                         - 
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200212
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        243,33
+                    </td>
+                    <td>
+                        20,20
+                    </td>
+                    <td>
+                        20,20
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        0,00
+                    </td>
+                    <td>
+                         - 
+                    </td>
+                    <td>
+                        Impago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200301
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200302
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        15,16
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200309
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200310
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200311
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200312
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        243,33
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200401
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200402
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200409
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200410
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200411
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200412
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        243,33
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200501
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200502
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200511
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        547,50
+                    </td>
+                    <td>
+                        56,40
+                    </td>
+                    <td>
+                        56,40
+                    </td>
+                    <td>
+                        14,78
+                    </td>
+                    <td>
+                        14,78
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200512
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        243,33
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        25,06
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        6,57
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200601
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200602
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200603
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200604
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        18,81
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        4,93
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200609
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200610
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200611
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200612
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        290,66
+                    </td>
+                    <td>
+                        29,94
+                    </td>
+                    <td>
+                        29,94
+                    </td>
+                    <td>
+                        7,85
+                    </td>
+                    <td>
+                        7,85
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200701
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200702
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        240,00
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        22,45
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        5,89
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200709
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        330,00
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200710
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        330,00
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200711
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        330,00
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        33,99
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        8,91
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200712
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        440,00
+                    </td>
+                    <td>
+                        45,32
+                    </td>
+                    <td>
+                        45,32
+                    </td>
+                    <td>
+                        11,88
+                    </td>
+                    <td>
+                        11,88
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200801
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        350,00
+                    </td>
+                    <td>
+                        50,05
+                    </td>
+                    <td>
+                        50,05
+                    </td>
+                    <td>
+                        9,45
+                    </td>
+                    <td>
+                        9,45
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200802
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        350,00
+                    </td>
+                    <td>
+                        50,05
+                    </td>
+                    <td>
+                        50,05
+                    </td>
+                    <td>
+                        9,45
+                    </td>
+                    <td>
+                        9,45
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200809
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        356,16
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        50,95
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200810
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        356,16
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200811
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        356,16
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        50,89
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200812
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        474,88
+                    </td>
+                    <td>
+                        67,91
+                    </td>
+                    <td>
+                        67,92
+                    </td>
+                    <td>
+                        12,82
+                    </td>
+                    <td>
+                        12,82
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200901
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        356,16
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200902
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        356,16
+                    </td>
+                    <td>
+                        50,93
+                    </td>
+                    <td>
+                        50,96
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        9,62
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200909
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        373,96
+                    </td>
+                    <td>
+                        53,48
+                    </td>
+                    <td>
+                        53,48
+                    </td>
+                    <td>
+                        10,10
+                    </td>
+                    <td>
+                        10,10
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200910
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        373,96
+                    </td>
+                    <td>
+                        53,48
+                    </td>
+                    <td>
+                        53,48
+                    </td>
+                    <td>
+                        10,10
+                    </td>
+                    <td>
+                        10,10
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200911
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        392,66
+                    </td>
+                    <td>
+                        56,15
+                    </td>
+                    <td>
+                        56,15
+                    </td>
+                    <td>
+                        10,60
+                    </td>
+                    <td>
+                        10,60
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        200912
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        549,72
+                    </td>
+                    <td>
+                        78,61
+                    </td>
+                    <td>
+                        78,61
+                    </td>
+                    <td>
+                        14,84
+                    </td>
+                    <td>
+                        14,84
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201001
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        412,29
+                    </td>
+                    <td>
+                        58,96
+                    </td>
+                    <td>
+                        58,96
+                    </td>
+                    <td>
+                        11,13
+                    </td>
+                    <td>
+                        11,14
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201002
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        412,29
+                    </td>
+                    <td>
+                        58,96
+                    </td>
+                    <td>
+                        58,96
+                    </td>
+                    <td>
+                        11,13
+                    </td>
+                    <td>
+                        11,13
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201009
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        480,23
+                    </td>
+                    <td>
+                        68,68
+                    </td>
+                    <td>
+                        68,68
+                    </td>
+                    <td>
+                        12,97
+                    </td>
+                    <td>
+                        12,97
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201010
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        499,44
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201011
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        499,44
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        71,43
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201012
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        665,92
+                    </td>
+                    <td>
+                        95,23
+                    </td>
+                    <td>
+                        95,23
+                    </td>
+                    <td>
+                        17,98
+                    </td>
+                    <td>
+                        17,98
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201101
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        499,44
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201102
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        499,44
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        71,42
+                    </td>
+                    <td>
+                        13,48
+                    </td>
+                    <td>
+                        13,50
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201109
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        637,28
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201110
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        637,28
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201111
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        637,28
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        91,12
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201112
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        1.099,70
+                    </td>
+                    <td>
+                        157,26
+                    </td>
+                    <td>
+                        157,26
+                    </td>
+                    <td>
+                        29,69
+                    </td>
+                    <td>
+                        29,69
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201201
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        637,28
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201202
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        637,28
+                    </td>
+                    <td>
+                        91,13
+                    </td>
+                    <td>
+                        91,11
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        17,21
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201209
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        802,98
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        114,81
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201210
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        802,98
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201211
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        802,98
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        114,82
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201212
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        1.432,64
+                    </td>
+                    <td>
+                        204,87
+                    </td>
+                    <td>
+                        204,87
+                    </td>
+                    <td>
+                        38,68
+                    </td>
+                    <td>
+                        38,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201301
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        802,98
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201302
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        802,98
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        114,83
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        21,68
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        201309
+                    </td>
+                    <td>
+                        30518591327
+                    </td>
+                    <td>
+                        UNIVERSIDAD CATOLICA DE SALTA
+                    </td>
+                    <td>
+                        1.102,00
+                    </td>
+                    <td>
+                        157,59
+                    </td>
+                    <td>
+                        157,59
+                    </td>
+                    <td>
+                        29,75
+                    </td>
+                    <td>
+                        29,75
+                    </td>
+                    <td>
+                        1063 - OS DOCENTES PARTICULARES
+                    </td>
+                    <td>
+                        Pago
+                    </td>
+                </tr>
+            
+    </table>
+</body>
+</html>
