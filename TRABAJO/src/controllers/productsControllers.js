@@ -132,7 +132,7 @@ const productsControllers = {
         else{
             try {
                 const productoSeleccionado = await db.Producto.findByPk(req.params.id);
-            const productoImagen = productoSeleccionado.imagen
+                const productoImagen = productoSeleccionado.imagen
             
             
             await db.Producto.update({
