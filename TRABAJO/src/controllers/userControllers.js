@@ -21,7 +21,7 @@ const userControllers = {
         loggedUser = false;
         if (req.session.userLogin) {
             loggedUser = true;
-            console.log('existe usuario logado y el mail es', req.session.userLogin)
+            console.log('existe usuario logeado y el mail es', req.session.userLogin)
         }
         res.render('login', { loggedUser })
 
@@ -37,7 +37,7 @@ const userControllers = {
 
         if (check) {
             req.session.userLogin = userMail;
-            console.log('el mail logado es', req.session.userLogin)
+            console.log('el mail logeado es', req.session.userLogin)
             res.redirect('/')
         } else {
             let mensajeError = 'Usuario y/o contraseña invalidos'
