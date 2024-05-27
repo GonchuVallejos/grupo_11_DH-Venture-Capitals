@@ -8,4 +8,6 @@ routes.use('/products', require('./productsRoutes'))
 
 routes.use('/users', require('./userRoutes'))
 
+routes.use('/api', require('./api/apiRoutes'))
+
 module.exports = routes;
