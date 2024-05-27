@@ -26,6 +26,10 @@
                 <i class="fa-solid fa-eye" id="btn-password"
                     onclick="mostrarContrasena('password', 'btn-password')"></i>
             </div>
+            <div>
+                <label for="remember">Recordarme</label>
+                <input type="checkbox" name="remember" id="remember">
+            </div>
             <% if (locals.mensajeError) { %>
                 <p class="error-message"><%= locals.mensajeError %></p>
             <% } %>
