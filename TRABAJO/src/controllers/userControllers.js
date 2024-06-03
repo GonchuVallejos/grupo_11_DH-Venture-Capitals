@@ -21,7 +21,7 @@ const userControllers = {
         loggedUser = false;
         if (req.session.userLogin || req.cookies.user) {
             loggedUser = true;
-            console.log('existe usuario logado y el mail es', req.session.userLogin)
+            console.log('existe usuario logeado y el mail es', req.session.userLogin)
         }
         res.render('login', { loggedUser })
 
