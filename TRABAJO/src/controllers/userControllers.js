@@ -19,7 +19,7 @@ const userControllers = {
     login: async (req, res) => {
         
         loggedUser = false;
-        if (req.session.userLogin) {
+        if (req.session.userLogin || req.cookies.user) {
             loggedUser = true;
             console.log('existe usuario logeado y el mail es', req.session.userLogin)
         }
@@ -30,6 +30,7 @@ const userControllers = {
     enterLogin: async (req, res) => {
         userMail = req.body.email;
         userPass = req.body.password;
+        userRemember = req.body.remember;
 
         let check = await usersModel.findeUserToLogin(userMail, userPass)
         
@@ -37,7 +38,11 @@ const userControllers = {
 
         if (check) {
             req.session.userLogin = userMail;
-            console.log('el mail logeado es', req.session.userLogin)
+            if(userRemember){
+                res.cookie('user', userMail, { maxAge: 60000 * 60 })
+                console.log('cookie creada');
+            }
+            console.log('el mail logado es', req.session.userLogin)
             res.redirect('/')
         } else {
             let mensajeError = 'Usuario y/o contraseña invalidos'
@@ -46,6 +51,7 @@ const userControllers = {
     },
 
     destroySession: function (req, res) {
+        res.clearCookie('user');
         req.session.destroy();
         res.redirect('/')
     },

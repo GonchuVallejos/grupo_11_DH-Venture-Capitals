@@ -1,62 +1,5 @@
 
 
-@media (min-width: 359px){
-    
-    .text-container{
-        padding: 0 5px;
-        
-    }
-    
-    .thumbnail-container {
-        display: flex;
-        justify-content: space-evenly;
-       
-      
-    }
-    .img-container-img{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .img{
-        width: 300px;
-    }
-}
-
-.product-details-container {
-    grid-template-columns: 1fr 2fr;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px){
-    
-    .text-container{
-        width: 60%;
-        padding: 0 5px;
-        
-        
-    }
-
-    .product-detail{
-        display: flex;
-        padding: 20px 0;
-    }
-
-    .product-details-container {
-        width: 50%;
-        
-    }
-    
-    .img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-    
-}
-
 .product-details-container {
     grid-template-columns: 1fr 2fr;
     margin: 0 auto;
@@ -171,3 +114,80 @@
 }
 
 
+.img-edit{
+    width: 100px;
+}
+
+
+
+
+@media (min-width: 359px){
+    
+    .text-container{
+        padding: 0 5px;
+        
+    }
+    
+    .thumbnail-container {
+        display: flex;
+        justify-content: space-evenly;
+       
+      
+    }
+    .img-container-img{
+        display: flex;
+        justify-content: center;
+    }
+    .img-container-edit{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img{
+        width: 150px;
+    }
+    .img-edit{
+        width: 150px;
+    }
+}
+
+.product-details-container {
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    
+    .text-container{
+        width: 60%;
+        padding: 0 5px;
+        
+        
+    }
+
+    .product-detail{
+        display: flex;
+        padding: 20px 0;
+    }
+
+    .product-details-container {
+        width: 50%;
+        
+    }
+    
+    .img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .img-container-edit{
+        width: 200px;
+    }
+    .img-edit{
+        width: 200px;
+    }
+    
+}

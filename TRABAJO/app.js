@@ -4,7 +4,7 @@ const app = express();
 const path = require('node:path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session') // requerimos para poder utilizar sesiones
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser'); // requerimos para poder usar cookies
 
 //Port
 const PORT = process.env.PORT || 3000;
@@ -15,7 +15,7 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret : "no decir" })) // lo agregamos como MD de Aplicacion para usarlo en todo el sistema
-app.use(cookieParser());
+app.use(cookieParser()); // lo agregamos para poder usar cookies
 
 
 //EJS config
