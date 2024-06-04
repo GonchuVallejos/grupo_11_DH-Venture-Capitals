@@ -7,7 +7,7 @@ const session = require('express-session') // requerimos para poder utilizar ses
 const cookieParser = require('cookie-parser'); // requerimos para poder usar cookies
 
 //Port
-const PORT = process.env.PORT || 3001;
+const PORT = require('./configPort.js').PORT;
 
 // middleWares
 app.use(cors());
