@@ -5,32 +5,61 @@ const { Op } = require("sequelize");
 const Products = db.Producto;
 const Categories = db.Categoria;
 
-const productsAPIController = {
-    'list': (req, res) => {
-        Products.findAll({
-            include: ['categoria']
-        })
-            .then(products => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: products.length,
-                        url: '/api/products'
-                    },
-                    data: products
-                }
+const PORT = require('../../../configPort').PORT;
 
-                res.json(respuesta)
-            })
-            .catch(error => {
-                res.status(500).json({
-                    meta: {
-                        status: 500,
-                        message: 'Error al obtener los Productos'
-                    },
-                    error: error.message
-                });
+const productsAPIController = {
+    'list': async (req, res) => {
+        try {
+            // Obtengo todos los productos incluidas las categorias
+            const products = await Products.findAll({
+                include: ['categoria']
             });
+
+            //Obtengo las categorias con la cantidad de productos que tiene cada una
+            const cetegoriesCount = await Categories.findAll({
+                attributes: [
+                    'id',
+                    'descripcion',
+                    [db.sequelize.fn('COUNT', db.sequelize.col('productos.id_categoria')), 'cantidad']
+                ],
+                include: [
+                    {
+                        model: Products,
+                        as: 'productos',
+                        attributes: []
+                    }
+                ],
+                group: ['categoria.id']
+            });
+
+            //agrego la URL del detalle de cada producto
+            const productsWithUrl = products.map(product => {
+                return {
+                    ...product.dataValues,
+                    detailURL: "http://localhost:" + PORT + "/api/products/" + product.id
+                }
+            });
+
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    totalProducts: products.length,
+                    url: '/api/products',
+                    countByCategory: cetegoriesCount
+                },
+                data: productsWithUrl
+            };
+            res.json(respuesta);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({
+                meta: {
+                    status: 500,
+                    message: 'Error al obtener los productos'
+                },
+                error: error.message
+            });
+        }
     },
     'detail': (req, res) => {
         Products.findByPk(req.params.id, {
@@ -43,7 +72,10 @@ const productsAPIController = {
                             status: 200,
                             url: '/api/products/' + product.id
                         },
-                        data: product
+                        data: {
+                            ...product.dataValues,
+                            imageURL: "http://localhost:" + PORT + "/img/portada/" + product.imagen
+                        }
                     }
                     res.json(respuesta)
                 } else {

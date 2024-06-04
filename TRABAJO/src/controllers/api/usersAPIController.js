@@ -3,6 +3,8 @@ const db = require('../../database/models');
 
 const Users = db.Usuario;
 
+const PORT = require('../../../configPort').PORT;
+
 const usersAPIController = {
     'list': (req, res) => {
         Users.findAll({
@@ -10,13 +12,22 @@ const usersAPIController = {
             include: ['persona']
         })
             .then(users => {
+
+                //agrego la URL del detalle de cada usuario
+                const usersWithUrl = users.map(user => {
+                    return {
+                        ...user.dataValues,
+                        userURL: "http://localhost:" + PORT + "/api/users/" + user.id
+                    }
+                });
+
                 let respuesta = {
                     meta: {
                         status: 200,
                         total: users.length,
                         url: '/api/users'
                     },
-                    data: users
+                    data: usersWithUrl
                 }
 
                 res.json(respuesta)
@@ -43,7 +54,11 @@ const usersAPIController = {
                             status: 200,
                             url: '/api/users/' + user.id
                         },
-                        data: user
+                        data: {
+                            ...user.dataValues,
+                            userURL: "http://localhost:" + PORT + "/img/userAvatar/" + user.avatar
+                        }
+
                     }
                     res.json(respuesta)
                 } else {

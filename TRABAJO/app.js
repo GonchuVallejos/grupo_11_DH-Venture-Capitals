@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser'); // requerimos para poder usar coo
 
 
 //Port
-const PORT = process.env.PORT || 3001;
+const PORT = require('./configPort.js').PORT;
 
 // middleWares
 app.use(cors());
