@@ -5,7 +5,7 @@ const path = require('node:path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session') // requerimos para poder utilizar sesiones
 const cookieParser = require('cookie-parser'); // requerimos para poder usar cookies
-const cors = require('cors');
+
 
 //Port
 const PORT = process.env.PORT || 3001;
