@@ -5,6 +5,7 @@ const path = require('node:path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session') // requerimos para poder utilizar sesiones
 const cookieParser = require('cookie-parser'); // requerimos para poder usar cookies
+const cors = require('cors');
 
 //Port
 const PORT = process.env.PORT || 3000;
@@ -18,6 +19,7 @@ app.use(session({ secret : "no decir" })) // lo agregamos como MD de Aplicacion 
 app.use(cookieParser()); // lo agregamos para poder usar cookies
 
 
+
 //EJS config
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, './src/views/') )
@@ -25,6 +27,8 @@ app.set('views', path.join(__dirname, './src/views/') )
 // Public (static) Listen Server
 
 app.use(express.static('public'))
+
+app.use(cors());
 
 // Routes
 
