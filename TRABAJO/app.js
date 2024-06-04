@@ -1,5 +1,5 @@
 const express = require('express');
-
+const cors = require('cors');
 const app = express();
 const path = require('node:path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -8,9 +8,10 @@ const cookieParser = require('cookie-parser'); // requerimos para poder usar coo
 const cors = require('cors');
 
 //Port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // middleWares
+app.use(cors());
 app.use(express.static("public"))
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));

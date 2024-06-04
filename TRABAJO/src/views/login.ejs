@@ -33,7 +33,6 @@
             <% if (locals.mensajeError) { %>
                 <p class="error-message"><%= locals.mensajeError %></p>
             <% } %>
-
             <button type="submit" class="btn-register">Iniciar Sesión</button>
             <br>
             <a href="../users/register">No tenes cuenta? Registrate</a>
@@ -49,7 +48,7 @@
 
     <%- include('./partials/footer') %>
 
-    <script>
+    <script src="/js/userLoginValidation.js">
         function mostrarContrasena(tipoId, iconId) {
             var tipo = document.getElementById(tipoId);
             var icon = document.getElementById(iconId);
