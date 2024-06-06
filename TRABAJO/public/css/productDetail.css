@@ -89,6 +89,43 @@
     background-color: #45a049;
 }
 
+.edit-product{
+    width: 200px;
+    background-color: #534caf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 'background-color' 0.5s;
+}
+
+.edit-product:hover {
+    background-color: #727ca0;
+}
+
+.delete-product{
+    width: 200px;
+    background-color: #c9614f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 'background-color' 0.5s;
+}
+
+.delete-product:hover {
+    background-color: #e95419;
+}
+
+.edit-delete-button{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
 .specifications {
     max-width: 90%;
    margin: auto;
@@ -116,6 +153,14 @@
 
 .img-edit{
     width: 100px;
+}
+
+
+.medios_de_pago img{
+    display: flex;
+    justify-content: center;
+    max-width: 450px;
+    padding-left: 50px;
 }
 
 
@@ -150,6 +195,7 @@
     .img-edit{
         width: 150px;
     }
+   
 }
 
 .product-details-container {
@@ -189,5 +235,5 @@
     .img-edit{
         width: 200px;
     }
-    
+   
 }

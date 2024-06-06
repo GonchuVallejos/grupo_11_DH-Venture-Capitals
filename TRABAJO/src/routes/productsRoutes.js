@@ -30,11 +30,13 @@ router.delete('/productDetail/:id', productControllers.delete);
 
 router.get('/productEdit/:id', productControllers.edit);
 
-router.put('/productEdit/:id',upload.single('imagen'), productValidations, productControllers.update);
+// router.put('/productEdit/:id',upload.single('imagen'), productValidations, productControllers.update);
+router.put('/productEdit/:id',upload.single('imagen'),productValidations, productControllers.update);
 
 router.get('/productAdd', productControllers.productAdd);
 
-router.post('/productAdd', upload.single('imagen'), productValidations, productControllers.store);
+// router.post('/productAdd', upload.single('imagen'), productValidations, productControllers.store);
+router.post('/productAdd', upload.single('imagen'), productControllers.store);
 
 
 
