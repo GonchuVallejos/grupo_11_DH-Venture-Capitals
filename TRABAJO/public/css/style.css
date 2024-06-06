@@ -15,36 +15,59 @@ body{
 }
 
 .header-top{
-    height: 35vh;
+    height: 18vh;
     background-color: #141E46;
     color: #bb2525;
     position: fixed;
     width: 100%;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 3px 1px #141E46; 
+}
+
+.nav-logo{
+    display: flex;
+    margin-left: 5px;
+ 
 }
 
 .logo-busqueda{
     padding: 5px;
     display: flex;
-    flex-direction: column;
+    margin-left: auto;
     align-items: center;
-    position: relative;
+   
+    
     
 }
 
 .logo-busqueda img{
-    width: 100px;
-    margin-bottom: 10px;
+    width: 115px;
+    margin-right: 8px;
     
 }
 
 .barra-busqueda{
     background-color: white;
+    margin: auto;
+    border-radius: 3px;
 }
 
-.barra-busqueda input{
+.barra-busqueda .input{
     border: none;
+    background-color: white;
+    padding-right: 2px;
+
 }
+.barra-busqueda input{
+    max-width: 120px;
+}
+
+.barra-busqueda input:focus {
+    outline: none;
+}
+
 
 .usuario{
     margin: 10px;
@@ -52,19 +75,29 @@ body{
     justify-content: space-around;
     font-size: 30px;
     text-decoration: none;
+ 
+}
+
+.usuario i {
+    font-size: 25px;
 }
 
 .main-navbar{
     font-size: 35px;
     text-align: center;
+    align-self: center;
+    margin-left: 10px;
 
 }
 
 .menu-desplegable {
     display: none;
     z-index: 100;
-    position: relative;
+    position: absolute;
+    right: 0px;
     transition: all 0.5s;
+    width: 100%;
+    
 }
 
 .menu-desplegable ul{
@@ -73,12 +106,14 @@ body{
 
 .submenu-cartuchos {
     display: none;
+    
 }
 
-.main-navbar:hover > .menu-desplegable {
+
+.open-menu {
     display: block;
     transition: all 3s;
-    background-color: rgba(20, 30, 70, 0.9);
+    background-color: rgba(10, 15, 35, 0.95);
     
 }
 
@@ -113,7 +148,7 @@ footer{
 }
 
 main{
-    margin-top: 35vh;
+    margin-top: 18vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -126,15 +161,16 @@ main{
 }
 
 section{
-    width: 90%;
+    width: 95%;
 }
 .banner-informativo{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     background-color: rgb(193, 193, 193);
     text-align: center;
     color: #FFF5E0;
+    box-shadow: 0px 0px 2px 1px rgb(193, 193, 193);
 }
 
 .banner-informativo-article i{
@@ -150,6 +186,7 @@ section{
 
 .banner-informativo-article p{
     padding: 10px 5px 10px 5px;
+    font-weight: 500;
 }
 
 .index-productos{
@@ -178,8 +215,12 @@ section div h1{
     margin-bottom: 30px;
     max-width: 400px;
     background-color: white;
-    box-shadow: 0px 0px 5px #eb4f4f;
+    box-shadow: 0px 0px 2px 1px #eb4f4f;
 
+}
+
+.index-productos article:hover{
+    box-shadow: 0px 0px 2px 2px #eb4f4f;
 }
 
 .index-producto-precio-descuento{
@@ -200,7 +241,7 @@ section div h1{
     align-items: center;
     background-color: #eb4f4f;
     color: #FFF5E0;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     text-align: center;
     margin: 5px 0px 5px 0px;
@@ -225,26 +266,54 @@ a{
     text-decoration: none;
     color: #BB2525;
 }
+
+
+@media (min-width: 375px) {
+    .barra-busqueda input{
+        max-width: 250px;
+    }
+    
+
+
+}
+
 @media (min-width: 768px) {
     .header-top{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 15px;
-        align-items: center;
-        height: 30vh;
+      
+        height: 15vh;
+    }
+
+    section{
+        width: 90%;
     }
 
     .logo-busqueda{
         flex-direction: row;
         justify-content: space-around;
-        width: 100%;
-        order: 0;
+        align-items: center;
+        margin-left: 10px;
+    
     }
 
     .main-navbar{
-        order: 1;
-        
+        font-size: 65px;
+        padding-bottom: 0px;
+        margin-right: 20px;   
+    }
+
+    .nav-logo{
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 15px;
+     
+    }
+
+    .barra-busqueda input{
+        max-width: 350px;
+        padding: 5px;
+        margin-left: 3px;
     }
 
     ul li {
@@ -252,10 +321,15 @@ a{
         font-size: 20px;
         font-weight: bold;
     }
-
+    ul li:hover {
+        box-shadow: 0px 0px 5px 5px black;
+    }
 
     .usuario{
-        order: 2;
+        align-items: flex-end;
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
     }
 
     .usuario i{
@@ -264,9 +338,24 @@ a{
 
     .menu-desplegable {
         position: absolute;
-        left: 50px;
-        top: 120px;
+        left: 10px;
+        top: 100px;
         float: left;
+        width: 250px;
+    }
+    
+    .submenu-cartuchos{
+        position: absolute;
+        left: 250px;
+        top: 0px;
+        float: left;
+        width: 200px;
+        transition: all 3s;
+        background-color: rgba(10, 15, 35, 0.95);
+        border: 1px solid black;
+    }
+    .banner{
+        height: 6vh;
     }
     
     .index-productos article{
@@ -329,12 +418,13 @@ a{
     }
 
     main{
-        margin-top: 30vh;
+        margin-top: 15vh;
     }
 
     .banner-informativo{
         flex-direction: row;
     }
+    
 
     .banner-informativo-article h3{
         height: 75px;
@@ -343,14 +433,15 @@ a{
     .banner-informativo .borde-vertical{
         background-color: #FFF5E0;
         display: block;
-        height: 200px;
+        height: 170px;
         margin: 1em 0;
         width: 3px;
     }
 
     .logo-busqueda img{
-        width: 150px;
-        margin-bottom: 10px;
+        width: 180px;
+        margin-right: 25px;
+        margin-left: 10px;
     }
 }
 
