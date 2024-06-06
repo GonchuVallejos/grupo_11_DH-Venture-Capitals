@@ -13,7 +13,11 @@ const mainControllers = {
     //antes se utilizaba esta forma
     /*const pathHome = path.join(__dirname, '..' , '..' , 'views/index.html')
     res.sendFile(pathHome);*/
-
+    loggedUser = false;
+        if (req.session.userLogin || req.cookies.user) {
+            loggedUser = true;
+            console.log('existe usuario logeado y el mail es', req.session.userLogin)
+        }
     //dividir en productos con oferta y sin ooferta
     const productWithOffert = await db.Producto.findAll({
       where: {
@@ -27,7 +31,7 @@ const mainControllers = {
     
 
 
-    res.render('index', { productWithOffert, productWithOutOffert })
+    res.render('index', { productWithOffert, productWithOutOffert, loggedUser })
   },
   search: async (req, res) => {
     //caputrar la informacion de queryParams

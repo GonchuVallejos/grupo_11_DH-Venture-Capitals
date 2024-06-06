@@ -36,7 +36,9 @@ app.use(cors());
 app.use('/', require('./src/routes/index.routes.js'))
 
 // cuando hay un error 404
-//app.use((req, res, next) => next(createError(404)));
+app.use((req, res, next) => {
+    res.status(404).render(path.join(__dirname,'src','views', '404.ejs'));
+});
 
 
 app.listen(PORT, () => console.log(`Server up on port: http://localhost:${PORT}`))

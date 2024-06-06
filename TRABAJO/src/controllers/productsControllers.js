@@ -11,12 +11,19 @@ const sequelize = db.sequelize;
 
 const productsControllers = {
     productDetail: async (req, res) => {
+        
+        loggedUser = false;
+        if (req.session.userLogin || req.cookies.user) {
+            loggedUser = true;
+            console.log('existe usuario logeado y el mail es', req.session.userLogin)
+        }
+        
         productoId = req.params.id
 
 		productoSeleccionado = await db.Producto.findByPk(productoId)
         
         
-        res.render('productDetail', { productoSeleccionado })
+        res.render('productDetail', { productoSeleccionado, loggedUser })
     },
     productAdd: async (req, res) => {
         try {
