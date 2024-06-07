@@ -2,28 +2,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 80vw;
+    color: #141E46;
 }
 
 .form-register div input {
-    width: 90%;
+    width: 80vw;
     padding: 10px;
     margin: 10px;
     border-radius: 25px;
+    border: 0px;
+    box-shadow: inset 0 -1px 2px gray;
 }
 
 .form-register div textarea{
-    width: 90%;
+    width: 80vw;
     padding: 10px;
     margin: 10px;
     border-radius: 25px;
 }
 
 .form-register div select{
-    width: 90%;
+    width: 80vw;
     padding: 10px;
     margin: 10px;
     border-radius: 25px;
+    border: 0px;
+    box-shadow: inset 0 -1px 2px gray;
 }
 
 .form-pass {
@@ -35,6 +40,7 @@
     padding-right: 30px;
     width: 90%;
 }
+.imagen{box-shadow: none !important;}
 
 .form-pass .fa-solid {
     cursor: pointer;
@@ -42,7 +48,10 @@
     color: #bb2525;
     right: 20px;
 }
-
+textarea{
+    border: 0px;
+box-shadow: inset 0 -1px 2px gray;
+}
 .form-register label {
     display: none;
 }
@@ -52,24 +61,36 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(20, 30, 70, 1);
-    padding: 5px;
+    text-wrap: nowrap;
+    color: #141E46;
+    padding: 0px;
     margin: 10px;
-    width: 80%;
+    width: 100%;   
 }
 
 .form-register h2{
     margin: 15px;
     color: #FFF5E0;
 }
+h2{background-color: #eb4f4f;;
+    width: 100%;
+    height: 5vh;
+    align-content: center;
+    text-align: center;}
+    .form-register label {
+        display: none;
+    }
 
 .btn-register {
     padding: 10px;
     margin: 10px;
-    width: 30%;
-    font-weight: bold;
+    width: 50%;
     border-radius: 25px;
     border: none;
+    color: #FFF5E0;
+    font-weight: lighter;
+    background-color: #eb4f4f;
+    box-shadow: inset -1px -1px 3px #201f1f
 }
 
 .btn-update {
@@ -95,7 +116,10 @@
 .errores ul li{
     color: #bb2525;
 }
-
+.btn-register:hover{
+background-color: #bb2525;
+box-shadow:inset 0 -1px 3px #201f1f;
+transform: scale(1.5s);}
 @media (min-width: 768px) {
 
     .form-register {
@@ -113,7 +137,7 @@
         display: block;
         width: 150px;
         text-align: left;
-        color: #FFF5E0;
+        color: #141E46;
     }
 
     .form-pass .fa-solid {
@@ -121,11 +145,7 @@
         position: absolute;
         color: #bb2525;
         right: 15px
-    }
-
-    .btn-register {
-        width: 225px;
-    }
+    } 
 
     .btn-update {
         width: 225px;

@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    justify-content: space-between ;
 
 }
 
@@ -26,24 +27,21 @@ body{
     box-shadow: 0px 0px 3px 1px #141E46; 
 }
 
-.nav-logo{
+.iconos{
     display: flex;
-    margin-left: 5px;
- 
 }
-
 .logo-busqueda{
     padding: 5px;
     display: flex;
     margin-left: auto;
     align-items: center;
+    width: 100%;
+    justify-content: space-around;
    
-    
-    
 }
 
 .logo-busqueda img{
-    width: 115px;
+    height: 8vh;
     margin-right: 8px;
     
 }
@@ -70,23 +68,23 @@ body{
 
 
 .usuario{
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
+   width: 80vw;
+    display: inline;
     font-size: 30px;
     text-decoration: none;
+    justify-content: space-around;
  
 }
 
 .usuario i {
     font-size: 25px;
+    display: inline-block;
 }
 
 .main-navbar{
     font-size: 35px;
-    text-align: center;
-    align-self: center;
     margin-left: 10px;
+    display: inline;
 
 }
 
@@ -124,12 +122,13 @@ body{
 footer{
     display: flex;
     padding: 10px;
-    height: 195px;
+    height: 25vh;
     background-color: #141E46;
     color: #BB2525;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
+    font-size: smaller;
 
 }
 
@@ -149,6 +148,7 @@ footer{
 
 main{
     margin-top: 18vh;
+    background-color: #FFF5E0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -267,7 +267,6 @@ a{
     color: #BB2525;
 }
 
-
 @media (min-width: 375px) {
     .barra-busqueda input{
         max-width: 250px;
@@ -298,17 +297,10 @@ a{
     }
 
     .main-navbar{
-        font-size: 65px;
         padding-bottom: 0px;
         margin-right: 20px;   
     }
 
-    .nav-logo{
-        display: flex;
-        margin-top: 15px;
-        margin-bottom: 15px;
-     
-    }
 
     .barra-busqueda input{
         max-width: 350px;
@@ -326,7 +318,6 @@ a{
     }
 
     .usuario{
-        align-items: flex-end;
         position: absolute;
         right: 10px;
         bottom: 0px;

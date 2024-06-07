@@ -4,6 +4,7 @@
     align-items: center;
     width: 80%;
 }
+main{background-color:#FFF5E0;}
 
 .form-login div input {
     width: 90%;
@@ -21,6 +22,10 @@
     padding-right: 30px;
     width: 90%;
 }
+.check{
+    width: 15vw !important;
+    color: #bb2525;
+ }
 
 .form-pass .fa-solid {
     cursor: pointer;
@@ -31,7 +36,11 @@
 .error-message{
     color: #bb2525;
 }
-
+h2{background-color: #eb4f4f;;
+width: 100%;
+height: 5vh;
+align-content: center;
+text-align: center;}
 .form-register label {
     display: none;
 }
@@ -41,10 +50,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(20, 30, 70, 1);
-    padding: 5px;
+    text-wrap: nowrap;
+    color: #141E46;
+    padding: 0px;
     margin: 10px;
-    width: 80%;
+    width: 100%;
 }
 
 .form-login h2{
@@ -56,9 +66,17 @@
     padding: 10px;
     margin: 10px;
     width: 50%;
-    font-weight: bold;
     border-radius: 25px;
     border: none;
+    color: #FFF5E0;
+    font-weight: lighter;
+    background-color: #eb4f4f;
+    box-shadow: inset -1px -1px 3px #201f1f
+}
+.btn-register:hover{
+    background-color: #bb2525;
+    box-shadow:inset 0 -1px 3px #201f1f;
+    transform: scale(1.5s);
 }
 
 @media (min-width: 768px) {
@@ -79,7 +97,7 @@
         display: block;
         width: 150px;
         text-align: right;
-        color: #FFF5E0;
+       
     }
 
     .form-pass .fa-solid {
