@@ -28,7 +28,9 @@
             </div>
             <div class="check">
                 <label for="remember">Recordarme</label>
-                <input type="checkbox" name="remember" id="remember">
+                <div class="check-input">
+                    <input  type="checkbox" name="remember" id="remember">
+                </div>
             </div>
             <% if (locals.mensajeError) { %>
                 <p class="error-message"><%= locals.mensajeError %></p>
@@ -48,7 +50,7 @@
 
     <%- include('./partials/footer') %>
 
-    <script src="/js/userLoginValidation.js">
+    <script>
         function mostrarContrasena(tipoId, iconId) {
             var tipo = document.getElementById(tipoId);
             var icon = document.getElementById(iconId);
@@ -64,6 +66,7 @@
             }
         }
     </script>
+    <script src="/js/userLoginValidation.js"></script>
 
 </body>
 

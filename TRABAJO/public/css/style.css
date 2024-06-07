@@ -16,7 +16,7 @@ body{
 }
 
 .header-top{
-    height: 18vh;
+    height: 15vh;
     background-color: #141E46;
     color: #bb2525;
     position: fixed;
@@ -49,7 +49,8 @@ body{
 .barra-busqueda{
     background-color: white;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .barra-busqueda .input{
@@ -68,16 +69,19 @@ body{
 
 
 .usuario{
-   width: 80vw;
     display: inline;
     font-size: 30px;
     text-decoration: none;
     justify-content: space-around;
+    position: absolute;
+    right: 10px;
+
  
 }
 
 .usuario i {
     font-size: 25px;
+    padding: 5px;
     display: inline-block;
 }
 
@@ -129,6 +133,7 @@ footer{
     align-items: start;
     justify-content: space-between;
     font-size: smaller;
+    text-align: center;
 
 }
 
@@ -140,14 +145,16 @@ footer{
     width: 50%
 }
 
+
 .footer-redes i{
+    
     color: #FFF5E0;
     font-size: 20px;
     margin-bottom: 5px;
 }
 
 main{
-    margin-top: 18vh;
+    margin-top: 15vh;
     background-color: #FFF5E0;
     display: flex;
     justify-content: center;
@@ -290,7 +297,7 @@ a{
 
     .logo-busqueda{
         flex-direction: row;
-        justify-content: space-around;
+        
         align-items: center;
         margin-left: 10px;
     
@@ -303,8 +310,7 @@ a{
 
 
     .barra-busqueda input{
-        max-width: 350px;
-        padding: 5px;
+        width: 220px;
         margin-left: 3px;
     }
 
@@ -359,29 +365,35 @@ a{
     }
 
     footer{
-        display: flex;
+        height: 15vh;
+        display: block;
         flex-wrap: wrap;
         justify-content: space-around;
         flex-direction: row;
         padding: 15px;
         align-items: flex-start;
     }
+    .footer-container{
+        display: flex;
+    }
     
     .footer-info{
-        flex-basis: 70%;
-        max-width: 70%;
+        flex-basis: 50%;
+        max-width: 40%;
         flex-direction: column;
+        align-self: left;
+        text-align: center;
     }
 
     .footer-redes{
-        flex-basis: 30%;
+        flex-basis: 50%;
         max-width: 30%;
     }
 
     .footer-titulo{
         letter-spacing: .05em;
         line-height: 1.05;
-        text-transform: uppercase
+        
     }
     footer p{
         width: 100vw;
@@ -392,11 +404,12 @@ a{
         display: block;
         height: 3px;
         margin: 1em 0;
-        max-width: 30px;
+        max-width: 30vw;
         width: 100%
     }
 
     .footer-accesos{
+        font-size: 14px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -435,12 +448,20 @@ a{
         margin-left: 10px;
     }
 }
+@media (min-width: 1024px){
+    .logo-busqueda{
+        justify-content: left;
+        margin-left: 150px;
+
+    }
+}
 
 @media (min-width: 1200px){
 
     .index-productos article{
         flex-basis: 20%
     }
+  
 
     .index-producto-img img{
         width: 250px;

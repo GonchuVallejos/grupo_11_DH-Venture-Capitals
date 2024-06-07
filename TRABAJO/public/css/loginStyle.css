@@ -12,6 +12,18 @@ main{background-color:#FFF5E0;}
     margin: 10px;
     border-radius: 25px;
 }
+.form-login label {
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-weight: 500;
+   
+}
+
+.check-input{
+    width: 20px;
+}
+
 
 .form-pass {
     position: relative;
@@ -26,6 +38,7 @@ main{background-color:#FFF5E0;}
     width: 15vw !important;
     color: #bb2525;
  }
+ 
 
 .form-pass .fa-solid {
     cursor: pointer;
@@ -60,6 +73,8 @@ text-align: center;}
 .form-login h2{
     margin: 15px;
     color: #FFF5E0;
+    border-radius: 2px;
+    box-shadow: inset -1px -1px 3px #201f1f;
 }
 
 .btn-register {
@@ -71,7 +86,7 @@ text-align: center;}
     color: #FFF5E0;
     font-weight: lighter;
     background-color: #eb4f4f;
-    box-shadow: inset -1px -1px 3px #201f1f
+    box-shadow: inset -1px -1px 3px #201f1f;
 }
 .btn-register:hover{
     background-color: #bb2525;
@@ -83,7 +98,7 @@ text-align: center;}
 
     .form-login {
 
-        margin: 30px;;
+        margin-top: 80px;
         width: 610px;
     }
     .form-login div {
@@ -93,12 +108,8 @@ text-align: center;}
         width: 80%;
     }
     
-    .form-login label {
-        display: block;
-        width: 150px;
-        text-align: right;
-       
-    }
+
+    
 
     .form-pass .fa-solid {
         cursor: pointer;
@@ -114,4 +125,9 @@ text-align: center;}
     .form-register div input::placeholder {
         color: transparent;
     }
+
+    .check-input{
+        max-width: 50px;
+    }
+    
 }
