@@ -51,10 +51,10 @@
                     <% if (locals.loggedUser) { %>
                     <div class="edit-delete-button">
                         <form action="/products/productEdit/<%= productoSeleccionado.id %>" method="GET" >
-                            <button class= "edit-product" type="submit">Editar</button>
+                            <button class= "edit-delete" type="submit">Editar</button>
                         </form>
                         <form action="/products/productDetail/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" >
-                            <button class= "delete-product type="submit">Eliminar</button>
+                            <button class= "edit-delete" type="submit">Eliminar</button>
                         </form>
                     </div>
                     <% } %>

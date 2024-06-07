@@ -84,7 +84,7 @@ h2{background-color: #eb4f4f;;
 .btn-register {
     padding: 10px;
     margin: 10px;
-    width: 50%;
+    width: 15vw;
     border-radius: 25px;
     border: none;
     color: #FFF5E0;
@@ -92,7 +92,9 @@ h2{background-color: #eb4f4f;;
     background-color: #eb4f4f;
     box-shadow: inset -1px -1px 3px #201f1f
 }
-
+.btn-register a{
+    color: #FFF5E0;
+}
 .btn-update {
     padding: 10px;
     margin: 10px;
@@ -100,7 +102,7 @@ h2{background-color: #eb4f4f;;
     font-weight: bold;
     border-radius: 25px;
     border: none;
-    color: green;
+    color:#141E46;
 }
 
 .btn-delete {
@@ -130,12 +132,20 @@ transform: scale(1.5s);}
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 85%;
     }
-    
+    .form-register div input{
+        width: 100%;
+    }
+    .form-register div select{
+        width: 100%;
+    }
+    .form-register div textarea{
+        width: 100%;
+    }
     .form-register label {
         display: block;
-        width: 150px;
+        width: 250px;
         text-align: left;
         color: #141E46;
     }

@@ -46,6 +46,7 @@
 
 .price-add-to-cart {
     padding-bottom: 20px;
+    
 }
 
 .add-to-cart{
@@ -61,53 +62,43 @@
 
 .add-to-cart button {
     width: 200px;
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 'background-color' 0.5s;
+    padding: 10px;
+margin: 10px;
+width: 15vw;
+border-radius: 25px;
+border: none;
+color: #FFF5E0;
+font-weight: lighter;
+background-color: #eb4f4f;
+box-shadow: inset -1px -1px 3px #201f1f
 }
 
 .add-to-cart button:hover {
-    background-color: #45a049;
-}
+    background-color: #bb2525;
+box-shadow:inset 0 -1px 3px #201f1f;
+transform: scale(1.5s);}
 
-.edit-product{
+.edit-delete{
     width: 200px;
-    background-color: #534caf;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 'background-color' 0.5s;
+    padding: 10px;
+margin: 10px;
+width: 15vw;
+border-radius: 25px;
+border: none;
+color: #FFF5E0;
+font-weight: lighter;
+background-color: #eb4f4f;
+box-shadow: inset -1px -1px 3px #201f1f
 }
 
-.edit-product:hover {
-    background-color: #727ca0;
-}
-
-.delete-product{
-    width: 200px;
-    background-color: #c9614f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 'background-color' 0.5s;
-}
-
-.delete-product:hover {
-    background-color: #e95419;
-}
+.edit-delete:hover {
+    background-color: #bb2525;
+box-shadow:inset 0 -1px 3px #201f1f;
+transform: scale(1.5s);}
 
 .edit-delete-button{
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -177,7 +168,7 @@
 
     .img-edit{
         width: 150px;
-        image-rendering:
+        image-rendering:auto
     }
    
 }
