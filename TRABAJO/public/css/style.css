@@ -168,7 +168,7 @@ main{
 }
 
 section{
-    width: 95%;
+    width: auto;
 }
 .banner-informativo{
     display: flex;
