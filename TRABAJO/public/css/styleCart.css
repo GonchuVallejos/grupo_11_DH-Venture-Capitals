@@ -75,21 +75,39 @@
 
 /*------------main-----------------*/
 
-
-.main-container{width: 90%;
-    background-color: rgba(255, 105, 105, 0.4);
-    color: rgb(20, 30, 70); 
-    margin:auto
+button{
+    border: none;
 }
 
-.title-cart{ margin-left: 5px;}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
 
-.productos{margin: 7px;
-background-color: rgba(255, 255, 255, 0.3);
-padding:5px }
+.main-container{width: 90%;
+    background-color: rgb(187, 37, 37);
+    color: white; 
+    margin:auto;
+    padding: 20px;
+    border: 3px solid rgb(20, 30, 70);
+    border-radius: 30px;
+}
 
-#prod_1{display:flex;
-    position: relative;  
+.title-cart{ margin-left: 5px; justify-content: center; display: flex;}
+
+.productos{
+    margin: 7px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#prod_1{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .productos img{
     width: 80px;
@@ -101,16 +119,24 @@ padding:5px }
     list-style: none;
     margin-left: 10px;
 }
-.eliminar{color: rgb(187, 37, 37);
+.eliminar{
+    color: white;
     font-size: 20px;
-    position: absolute;
-    right: 15px;
-    top: 30%;
+    position: relative;
+    left: 90%;
+    background-color: rgb(20, 30, 70);
+    padding: 5px;
+    border-radius: 5px;
+    top: 17%;
 
 }
 
 .envio{margin: 7px;
-padding-top: 10px;}
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
 .envio label{font-size: 12px;display: block;
     font-weight: 500;
@@ -138,11 +164,27 @@ font-weight: 500;
 font-size: 12px;
 }
 
-.precioTotal{margin: 15px 7px;
+.flex-envio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
-.suma{text-align: end;
-color: rgb(187, 37, 37);}
+.precioTotal{
+    margin: 15px 7px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-info{
+    font-size: 75%;
+}
+
+.suma{text-align: end; color: white;}
+
+.total{color: rgb(20, 30, 70);}
 
 .precioTotal .comprar{
     display: block;
@@ -161,106 +203,46 @@ font-size: 18px;
     padding-bottom: 10px;
 color: rgb(187, 37, 37);}
 
-/*------------footer-----------
-footer{
+.grid-carrito{
     display: flex;
-    padding: 10px;
-    height: 195px;
-    background-color: #141E46;
-    color: #BB2525;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    gap:30px;
 }
 
-.footer-accesos a{
-    text-decoration: none;
-    color: #FFF5E0;
-}
-
-.footer-redes i{
-    color: #FFF5E0;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-*/
+/*------------footer-----------*/
 
 @media (min-width: 768px) {
-    /*.header-top{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 15px;
-        align-items: center;
+    .productos img{
+        width: 100px;
+        height: 100px;
+    }
+    .eliminar{
+        font-size: 25px
     }
 
-    .logo-busqueda{
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        order: 0;
+    #prod_1 li{
+        font-size: 18px;
     }
 
-    .main-navbar{
-        order: 1;
-        
+    .envio input{
+        width: 35vw;
     }
 
-    .usuario{
-        order: 2;
-    }
+    .envio button{
+        width: 100px;
+        }
 
-    .usuario i{
-        padding: 10px;
-    }
-
-    .menu-desplegable {
-        position: absolute;
-        left: 70px;
-        top: 120px;
-        float: left;
-    }
-}
-
-*main{width: 500px;}*/
-
-.productos img{
-    width: 100px;
-    height: 100px;
-}
-.eliminar{
-    font-size: 25px
-}
-
-#prod_1 li{
-    font-size: 18px;
-}
-
-.envio input{
-    width: 350px;
-}
-
-.envio button{
-    width: 100px;
-     }
-
-     /*footer{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-direction: row;
-        padding: 15px;
-        align-items: flex-start;
-    }
-    
-    .footer-info{
-        flex-basis: 70%;
-        max-width: 70%;
-        flex-direction: column;
-    }
-    .footer-redes{
-        flex-basis: 30%;
-        max-width: 30%;
-    }*/
+    .flex-envio{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    .grid-carrito{
+            display: grid;
+            grid-template-columns:1.5fr 2fr;
+        }
+    .container{
+            height: 90vh;
+        }
 }
