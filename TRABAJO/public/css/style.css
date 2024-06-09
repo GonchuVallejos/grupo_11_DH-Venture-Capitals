@@ -89,7 +89,7 @@ body{
 footer{
     display: flex;
     padding: 10px;
-    height: 195px;
+    height: 260px;
     background-color: #141E46;
     color: #BB2525;
     flex-direction: column;
@@ -97,6 +97,23 @@ footer{
     justify-content: space-between;
 
 }
+/* AGREGADO SABADO 8 JUNIO */
+span.footer-titulo {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    line-height: 2.05;
+}
+
+/*.footer-iconos {
+    justify-content: space-evenly;
+}*/
+
+.footer-accesos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* HASTA ACÁ */
 
 .is-divider{
     background-color: #FFF5E0;
@@ -285,6 +302,16 @@ a{
         flex-direction: row;
         padding: 15px;
         align-items: flex-start;
+        bottom: 0;
+        position: fixed;
+        width: 101%;
+        height: 200px;
+    }
+    /*  AGREGADO SAB 8 JUNIO  */
+    .footer-iconos {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
     }
     
     .footer-info{
