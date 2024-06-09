@@ -36,7 +36,7 @@
                 </div>
                 <div>
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagen" id="imagen"> 
+                    <input class="imagen" type="file" name="imagen" id="imagen"> 
                 </div>
                 <div>
                     <p></p>
@@ -89,7 +89,10 @@
                 </div>
 
             <button type="submit" class="btn-register">Editar!</button>
+
+            
         </form>
+        <button class="btn-register"><a href="/products/productDetail/<%= productoSeleccionado.id %>">Volver</a></button>
     </main>
 
     <%- include('./partials/footer') %>

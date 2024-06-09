@@ -6,6 +6,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const session = require('express-session') // requerimos para poder utilizar sesiones
 const cookieParser = require('cookie-parser'); // requerimos para poder usar cookies
 
+
 //Port
 const PORT = require('./configPort.js').PORT;
 
@@ -19,6 +20,7 @@ app.use(session({ secret : "no decir" })) // lo agregamos como MD de Aplicacion 
 app.use(cookieParser()); // lo agregamos para poder usar cookies
 
 
+
 //EJS config
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, './src/views/') )
@@ -27,12 +29,16 @@ app.set('views', path.join(__dirname, './src/views/') )
 
 app.use(express.static('public'))
 
+app.use(cors());
+
 // Routes
 
 app.use('/', require('./src/routes/index.routes.js'))
 
 // cuando hay un error 404
-//app.use((req, res, next) => next(createError(404)));
+app.use((req, res, next) => {
+    res.status(404).render(path.join(__dirname,'src','views', '404.ejs'));
+});
 
 
 app.listen(PORT, () => console.log(`Server up on port: http://localhost:${PORT}`))

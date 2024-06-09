@@ -196,9 +196,21 @@ INSERT INTO `usuarios` (`id`, `id_persona`, `nombre_usuario`, `password`, `id_ro
 --
 -- Indices de la tabla `carrito_compras`
 --
-ALTER TABLE `carrito_compras`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_usuario` (`id_usuario`);
+INSERT INTO `usuarios` (`id`, `id_persona`, `nombre_usuario`, `password`, `id_rol`, `avatar`) VALUES
+(2, 6, 'manu', '$2a$10$Phl8LpnGHpPFlIRC6R.NQOnKXqdg.1xrTVwUneYBxTvOk4O0gePye', 1, 'default.jpg'),
+(3, 7, 'jose', '$2a$10$YT6UQUoNyvqbfyQ/uz3uTuaD2v2qtnoaVSBRHhT6iuBCIXeVFPe4S', 1, 'userAvatarjose@prerez.com-1716816184904.jpeg'),
+(4, 8, 'catriel', '$2a$10$LJbSa6QDyD92l3ha19wxVeMAFQyn.h1d1YD2X8zAQyPjBpVzfoLYS', 1, 'default.jpg'),
+(5, 9, 'asd', '$2a$10$If7CWJWsaVIDbVUkjW2ZVOw5V5w0gmNQ.OcuT2R.k7mTTaxi2qOX6', 1, 'userAvatarasd@asd.com-1717507071075.jpeg');
+INSERT INTO `usuarios` (`id`, `id_persona`, `nombre_usuario`, `password`, `id_rol`, `avatar`) VALUES
+(2, 6, 'manu', '$2a$10$Phl8LpnGHpPFlIRC6R.NQOnKXqdg.1xrTVwUneYBxTvOk4O0gePye', 1, 'default.jpg'),
+(3, 7, 'jose', '$2a$10$YT6UQUoNyvqbfyQ/uz3uTuaD2v2qtnoaVSBRHhT6iuBCIXeVFPe4S', 1, 'userAvatarjose@prerez.com-1716816184904.jpeg'),
+(4, 8, 'catriel', '$2a$10$LJbSa6QDyD92l3ha19wxVeMAFQyn.h1d1YD2X8zAQyPjBpVzfoLYS', 1, 'default.jpg'),
+(5, 9, 'asd', '$2a$10$If7CWJWsaVIDbVUkjW2ZVOw5V5w0gmNQ.OcuT2R.k7mTTaxi2qOX6', 1, 'userAvatarasd@asd.com-1717507071075.jpeg');
+INSERT INTO `usuarios` (`id`, `id_persona`, `nombre_usuario`, `password`, `id_rol`, `avatar`) VALUES
+(2, 6, 'manu', '$2a$10$Phl8LpnGHpPFlIRC6R.NQOnKXqdg.1xrTVwUneYBxTvOk4O0gePye', 1, 'default.jpg'),
+(3, 7, 'jose', '$2a$10$YT6UQUoNyvqbfyQ/uz3uTuaD2v2qtnoaVSBRHhT6iuBCIXeVFPe4S', 1, 'userAvatarjose@prerez.com-1716816184904.jpeg'),
+(4, 8, 'catriel', '$2a$10$LJbSa6QDyD92l3ha19wxVeMAFQyn.h1d1YD2X8zAQyPjBpVzfoLYS', 1, 'default.jpg'),
+(5, 9, 'asd', '$2a$10$If7CWJWsaVIDbVUkjW2ZVOw5V5w0gmNQ.OcuT2R.k7mTTaxi2qOX6', 1, 'userAvatarasd@asd.com-1717507071075.jpeg');
 
 --
 -- Indices de la tabla `carrito_compras_detalle`

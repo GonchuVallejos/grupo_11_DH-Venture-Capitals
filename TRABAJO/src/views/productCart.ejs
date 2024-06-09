@@ -9,45 +9,55 @@
 
 <body>
     <%- include('./partials/header') %>
+    <link rel="stylesheet" href="/css/style.css">
 
         <main>
-            <div class="main-container">
-                <div class="title-cart">
-                    <h1>MIS COMPRAS</h1>
-                </div>
-
-                <div class="productos">
-                    <ul>
-                        <li id="prod_1">
-                            <img src="#" arc="prod_img">
+            <div class="container">
+                <div class="main-container">
+                    <div class="title-cart">
+                        <h1>MIS COMPRAS</h1>
+                    </div>
+                    <div class="grid-carrito">
+                        <div class="productos">
                             <ul>
-                                <li class="descripcion">
-                                    <h4>Descripcion</h4>
+                                <li id="prod_1">
+                                    <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="<%= productoSeleccionado.name %>">
+                                    <div>
+                                        <ul class="product-info">
+                                            <li class="product-info">
+                                                <h4>Producto:</h4>
+                                                <p><%= productoSeleccionado.nombre %></p>
+                                            </li>
+                                            <li class="product-info">Cantidad: 1</li>
+                                            <li class="product-info">$ <%= productoSeleccionado.precio %> </li>
+                                        </ul>
+                                        <span class="eliminar"><i class="far fa-trash-alt"></i></span>
+                                    </div>
                                 </li>
-                                <li class="cantidad">Cantidad:</li>
-                                <li class="precio">$ </li>
                             </ul>
-                            <span class="eliminar"><i class="far fa-trash-alt"></i></span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="envio">
-                    <h4>Envío</h4>
-                    <form action="/productCart" method="GET">
-                        <label for="envio">Código Postal</label>
-                        <input type="tel" name="cp" id="envio" placeholder="Código Postal">
-                        <button type="submit">Calcular</button>
-                        <p>* Se mostrará información de los posibles metodos de envío a la hora de ingresar un código
-                            postal válido.</p>
-                    </form>
-                </div>
-                <div class="precioTotal">
-                    <h2>Total</h2>
-                    <h2 class="suma">$ 95.500,00</h2>
-                    <button type="submit" class="comprar">Comprar</button>
-                    <a class="agregar" href="/index">Agregar mas productos</a>
+                        </div>
+                        <div class="envio">
+                            <h4>Envío</h4>
+                            <form class="flex-envio" action="/productCart" method="GET">
+                                <label for="envio">Código Postal</label>
+                                <input type="tel" name="cp" id="envio" placeholder="Código Postal">
+                                <button type="submit">Calcular</button>
+                                <p>* Se mostrará información de los posibles metodos de envío a la hora de ingresar un código
+                                    postal válido.</p>
+                            </form>
+                        </div>
+                        <div class="precioTotal">
+                            <h2 class="total">Total</h2>
+                            <h2 class="suma">$ <%= productoSeleccionado.precio %></h2>
+                        </div>
+                        <div class="precioTotal">
+                            <button type="submit" class="comprar">Comprar</button>
+                            <a class="agregar" href="/index">Agregar mas productos</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
         </main>
         <%- include('./partials/footer') %>
 </body>

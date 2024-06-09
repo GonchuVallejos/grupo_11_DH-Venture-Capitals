@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    justify-content: space-between ;
 
 }
 
@@ -15,56 +16,90 @@ body{
 }
 
 .header-top{
-    height: 35vh;
+    height: 15vh;
     background-color: #141E46;
     color: #bb2525;
     position: fixed;
     width: 100%;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 3px 1px #141E46; 
 }
 
+.iconos{
+    display: flex;
+}
 .logo-busqueda{
     padding: 5px;
     display: flex;
-    flex-direction: column;
+    margin-left: auto;
     align-items: center;
-    position: relative;
-    
+    width: 100%;
+    justify-content: space-around;
+   
 }
 
 .logo-busqueda img{
-    width: 100px;
-    margin-bottom: 10px;
+    height: 8vh;
+    margin-right: 8px;
     
 }
 
 .barra-busqueda{
     background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.barra-busqueda input{
+.barra-busqueda .input{
     border: none;
+    background-color: white;
+    padding-right: 2px;
+
 }
+.barra-busqueda input{
+    max-width: 120px;
+}
+
+.barra-busqueda input:focus {
+    outline: none;
+}
+
 
 .usuario{
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
+    display: inline;
     font-size: 30px;
     text-decoration: none;
+    justify-content: space-around;
+    position: absolute;
+    right: 10px;
+
+ 
+}
+
+.usuario i {
+    font-size: 25px;
+    padding: 5px;
+    display: inline-block;
 }
 
 .main-navbar{
     font-size: 35px;
-    text-align: center;
+    margin-left: 10px;
+    display: inline;
 
 }
 
 .menu-desplegable {
     display: none;
     z-index: 100;
-    position: relative;
+    position: absolute;
+    right: 0px;
     transition: all 0.5s;
+    width: 100%;
+    
 }
 
 .menu-desplegable ul{
@@ -73,12 +108,14 @@ body{
 
 .submenu-cartuchos {
     display: none;
+    
 }
 
-.main-navbar:hover > .menu-desplegable {
+
+.open-menu {
     display: block;
     transition: all 3s;
-    background-color: rgba(20, 30, 70, 0.9);
+    background-color: rgba(10, 15, 35, 0.95);
     
 }
 
@@ -89,12 +126,20 @@ body{
 footer{
     display: flex;
     padding: 10px;
+
     height: 260px;
+
+    /* ACABO DE CAMBIAR
+    height: 25vh;*/
+
     background-color: #141E46;
     color: #BB2525;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
+    /* ACABO DE CAMBIAR 
+    font-size: smaller;
+    text-align: center;*/
 
 }
 /* AGREGADO SABADO 8 JUNIO */
@@ -123,14 +168,17 @@ span.footer-titulo {
     width: 50%
 }
 
+
 .footer-redes i{
+    
     color: #FFF5E0;
     font-size: 20px;
     margin-bottom: 5px;
 }
 
 main{
-    margin-top: 35vh;
+    margin-top: 15vh;
+    background-color: #FFF5E0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -143,15 +191,16 @@ main{
 }
 
 section{
-    width: 90%;
+    width: auto;
 }
 .banner-informativo{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     background-color: rgb(193, 193, 193);
     text-align: center;
     color: #FFF5E0;
+    box-shadow: 0px 0px 2px 1px rgb(193, 193, 193);
 }
 
 .banner-informativo-article i{
@@ -167,6 +216,7 @@ section{
 
 .banner-informativo-article p{
     padding: 10px 5px 10px 5px;
+    font-weight: 500;
 }
 
 .index-productos{
@@ -195,8 +245,12 @@ section div h1{
     margin-bottom: 30px;
     max-width: 400px;
     background-color: white;
-    box-shadow: 0px 0px 5px #eb4f4f;
+    box-shadow: 0px 0px 2px 1px #eb4f4f;
 
+}
+
+.index-productos article:hover{
+    box-shadow: 0px 0px 2px 2px #eb4f4f;
 }
 
 .index-producto-precio-descuento{
@@ -217,7 +271,7 @@ section div h1{
     align-items: center;
     background-color: #eb4f4f;
     color: #FFF5E0;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     text-align: center;
     margin: 5px 0px 5px 0px;
@@ -242,26 +296,45 @@ a{
     text-decoration: none;
     color: #BB2525;
 }
+
+@media (min-width: 375px) {
+    .barra-busqueda input{
+        max-width: 250px;
+    }
+    
+
+
+}
+
 @media (min-width: 768px) {
     .header-top{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 15px;
-        align-items: center;
-        height: 30vh;
+      
+        height: 15vh;
+    }
+
+    section{
+        width: 90%;
     }
 
     .logo-busqueda{
         flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        order: 0;
+        
+        align-items: center;
+        margin-left: 10px;
+    
     }
 
     .main-navbar{
-        order: 1;
-        
+        padding-bottom: 0px;
+        margin-right: 20px;   
+    }
+
+
+    .barra-busqueda input{
+        width: 220px;
+        margin-left: 3px;
     }
 
     ul li {
@@ -269,10 +342,14 @@ a{
         font-size: 20px;
         font-weight: bold;
     }
-
+    ul li:hover {
+        box-shadow: 0px 0px 5px 5px black;
+    }
 
     .usuario{
-        order: 2;
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
     }
 
     .usuario i{
@@ -281,9 +358,24 @@ a{
 
     .menu-desplegable {
         position: absolute;
-        left: 50px;
-        top: 120px;
+        left: 10px;
+        top: 100px;
         float: left;
+        width: 250px;
+    }
+    
+    .submenu-cartuchos{
+        position: absolute;
+        left: 250px;
+        top: 0px;
+        float: left;
+        width: 200px;
+        transition: all 3s;
+        background-color: rgba(10, 15, 35, 0.95);
+        border: 1px solid black;
+    }
+    .banner{
+        height: 6vh;
     }
     
     .index-productos article{
@@ -296,14 +388,16 @@ a{
     }
 
     footer{
-        display: flex;
+        height: 15vh;
+        display: block;
         flex-wrap: wrap;
         justify-content: space-around;
         flex-direction: row;
         padding: 15px;
         align-items: flex-start;
         bottom: 0;
-        position: fixed;
+        /*ACABO DE CAMBIAR
+        position: fixed;*/
         width: 101%;
         height: 200px;
     }
@@ -313,22 +407,27 @@ a{
         display: flex;
         justify-content: space-between;
     }
+    .footer-container{
+        display: flex;
+    }
     
     .footer-info{
-        flex-basis: 70%;
-        max-width: 70%;
+        flex-basis: 50%;
+        max-width: 40%;
         flex-direction: column;
+        align-self: left;
+        text-align: center;
     }
 
     .footer-redes{
-        flex-basis: 30%;
+        flex-basis: 50%;
         max-width: 30%;
     }
 
     .footer-titulo{
         letter-spacing: .05em;
         line-height: 1.05;
-        text-transform: uppercase
+        
     }
     footer p{
         width: 100vw;
@@ -339,11 +438,12 @@ a{
         display: block;
         height: 3px;
         margin: 1em 0;
-        max-width: 30px;
+        max-width: 30vw;
         width: 100%
     }
 
     .footer-accesos{
+        font-size: 14px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -356,12 +456,13 @@ a{
     }
 
     main{
-        margin-top: 30vh;
+        margin-top: 15vh;
     }
 
     .banner-informativo{
         flex-direction: row;
     }
+    
 
     .banner-informativo-article h3{
         height: 75px;
@@ -370,14 +471,22 @@ a{
     .banner-informativo .borde-vertical{
         background-color: #FFF5E0;
         display: block;
-        height: 200px;
+        height: 170px;
         margin: 1em 0;
         width: 3px;
     }
 
     .logo-busqueda img{
-        width: 150px;
-        margin-bottom: 10px;
+        width: 180px;
+        margin-right: 25px;
+        margin-left: 10px;
+    }
+}
+@media (min-width: 1024px){
+    .logo-busqueda{
+        justify-content: left;
+        margin-left: 150px;
+
     }
 }
 
@@ -386,6 +495,7 @@ a{
     .index-productos article{
         flex-basis: 20%
     }
+  
 
     .index-producto-img img{
         width: 250px;

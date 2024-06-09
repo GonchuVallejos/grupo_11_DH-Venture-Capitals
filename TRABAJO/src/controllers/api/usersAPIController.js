@@ -9,7 +9,7 @@ const usersAPIController = {
     'list': (req, res) => {
         Users.findAll({
             attributes: ['id', 'nombre_usuario', 'avatar', 'id_persona', 'id_rol'],
-            include: ['persona']
+            include: ['persona', 'rol']
         })
             .then(users => {
 

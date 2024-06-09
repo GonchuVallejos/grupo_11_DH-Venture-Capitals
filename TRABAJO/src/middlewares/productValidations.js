@@ -10,11 +10,12 @@ const productValidations= [
         let file = req.file;
         if(file){
             let fileExtension = path.extname(file.originalname)
-            let acceptedExtensions = ['.jpg', 'jpeg', '.png', '.gif']
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif']
             if (!acceptedExtensions.includes(fileExtension)){
                 throw new Error(`Las extensiones permitidas para imagenes son ${acceptedExtensions.join(', ')}`)
             }
         }
+        return true;
     })
 ]
 

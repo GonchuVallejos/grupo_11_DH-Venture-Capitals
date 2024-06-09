@@ -11,58 +11,54 @@
     
     <main>
         <section class="product-detail">
-            <div class="product-details-container">
+            <div class="nameProduct">
+                <h2><%= productoSeleccionado.nombre %></h2>
+            </div>
+            <div class="grid-container">
                 <div class="img-container">
-                    <div class="img-container-img">
-                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="<%= productoSeleccionado.name %>" class="img">
-                    </div>
-                    
-                    <div class="thumbnail-container">
-                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 1" class="thumbnail">
-                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 2" class="thumbnail">
-                        <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="Thumbnail 3" class="thumbnail">
-                    </div>
+                    <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="<%= productoSeleccionado.name %>" class="img">
+                </div>
+                <div class="specifications">
+                    <h3>Historia del producto:</h3>
+                    <ul>
+                        <li> <%= productoSeleccionado.historia %> </li>
+                    </ul>
+                    <h3>Descripcion del producto:</h3>
+                    <ul>
+                        <li> <%= productoSeleccionado.descripcion %> </li>
+                    </ul>
+                    <h3>Especificaciones del producto:</h3>
+                    <ul>
+                        <li> <%= productoSeleccionado.requisitos %> </li>
+                    </ul>
                 </div>
             </div>
-            <div class="text-container">
-                <div class="nameProduct">
-                    <h2><%= productoSeleccionado.nombre %></h2>
+            <div class="to-cart">
+                <div class="price-add-to-cart">
+                    <h3>Precio de Contado: </h3>
+                    <p>$<strong><%= productoSeleccionado.precio %></strong></p>
                 </div>
-                <div class="details">
-                    <div class="price">
-                        <p>Medios de pago</p>
-                    </div>
-                    <div class="shipping">
-                        <p>Medios de envío</p>
-                    </div>
-                    <div class="price-add-to-cart">
-                        <p>Precio: $<%= productoSeleccionado.precio %></p>
-                    </div>
-                    <div class="add-to-cart">
-                        <button>Agregar al carrito</button>
-                    </div>
-                    <div>
-                        <form action="/products/productEdit/<%= productoSeleccionado.id %>" method="GET" >
-                            <button type="submit">Editar</button>
-                        </form>
-                        <form action="/products/productDetail/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" >
-                            <button type="submit">Eliminar</button>
-                        </form>
-                        
-                    </div>
+                <div class="payment-method">
+                    <h3>Medios de Pago</h2>
+                        <div>
+                            <a href=""><img src="/img/payment-methods.png" alt="Logo de la página"></a>
+                        </div>
+                </div>
+                <div class="add-to-cart">
+                    <button onclick="window.location.href='/products/productCart/<%= productoSeleccionado.id %>';">Agregar al carrito</button>
                 </div>
             </div>
+            <% if (locals.loggedUser && locals.loggedUserAdmin) { %>
+                <div class="edit-delete-button">
+                    <form action="/products/productEdit/<%= productoSeleccionado.id %>" method="GET" >
+                        <button class= "edit-delete" type="submit">Editar</button>
+                    </form>
+                    <form action="/products/productDetail/<%= productoSeleccionado.id %>?_method=DELETE" method="POST" >
+                        <button class= "edit-delete" type="submit">Eliminar</button>
+                    </form>
+                </div>
+                <% } %>
         </section>
-        
-        
-        <div class="specifications">
-            <h3>Especificaciones del producto:</h3>
-            <ul>
-                <li> <%= productoSeleccionado.requisitos %> </li>
-            <br>
-            <p>Historia:</p>
-            <p> <%= productoSeleccionado.historia %></p>
-        </div>
 
     </main>
     <%- include('./partials/footer') %>

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path')
 const productValidations = require('../middlewares/productValidations');
+const sesionValidations = require('../middlewares/sesionFactory');
 const router = express.Router();
 
 const multer = require('multer') // requiero multer para poder subir archivos
@@ -30,12 +31,15 @@ router.delete('/productDetail/:id', productControllers.delete);
 
 router.get('/productEdit/:id', productControllers.edit);
 
-router.put('/productEdit/:id',upload.single('imagen'), productValidations, productControllers.update);
+// router.put('/productEdit/:id',upload.single('imagen'), productValidations, productControllers.update);
+router.put('/productEdit/:id',upload.single('imagen'),productValidations, productControllers.update);
 
 router.get('/productAdd', productControllers.productAdd);
 
-router.post('/productAdd', upload.single('imagen'), productValidations, productControllers.store);
+// router.post('/productAdd', upload.single('imagen'), productValidations, productControllers.store);
+router.post('/productAdd', upload.single('imagen'), productControllers.store);
 
+router.get('/productCart/:id', sesionValidations.userToAddProduct ,productControllers.productDetailCart);
 
 
 

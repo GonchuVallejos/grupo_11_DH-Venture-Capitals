@@ -1,45 +1,55 @@
 <header class="header-top">
-    <div class="logo-busqueda">
-        <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
-        <form action="/search" method="GET">
-            <div class="barra-busqueda">
-                <input type="text" name ="keywords" class="input" placeholder="Buscar">
-                <button class="input"><i class="fa fa-search"></i></button>
-            </div>
-        </form>
-    </div>
-
-    <div class="usuario">
-        <a href="/users/login"><i class="far fa-user"></i></a>
-        <a href=""><i class="far fa-heart"></i></a>
-        <a href="/users/productCart"><i class="fas fa-shopping-cart"></i></a>
-    </div>
-
-    <nav class="main-navbar">
-        <i class="fas fa-bars"></i>
-        <div class="menu-desplegable">
-            <ul>
-                <li>
-                    CONSOLAS
-                </li>
-                <li>
-                    <div class="cartuchos">
-                        CARTUCHOS
-                        <ul class="submenu-cartuchos">
-                            <li><a href="#">Super Nintendo</a></li>
-                            <li><a href="#">Sega</a></li>
-                            <li><a href="#">Play Station 1</a></li>
-                            <li><a href="#">Ver todos</a></li>
-                        </ul>
+            <div class="logo-busqueda">
+                <span>
+                    <a href="/"><img src="/img/logo-1UP.svg" alt="Logo de la página"></a>
+                </span>
+                <form action="/search" method="GET">
+                    <div class="barra-busqueda">
+                        <input type="text" name ="keywords" class="input" placeholder="Buscar">
+                        <button class="input"><i class="fa fa-search"></i></button>
                     </div>
-                </li>
-                <li>
-                    ACCESORIOS
-                </li>
-                <li>
-                    VARIOS
-                </li>
-            </ul>
+                </form>
+            </div>
+        <div class="iconos">
+            <nav class="main-navbar">
+                <i class="fas fa-bars" id="menu-button"></i>
+                <div class="menu-desplegable">
+                    <ul>
+                        <li>
+                            CONSOLAS
+                        </li>
+                        <li>
+                            <div class="cartuchos">
+                                CARTUCHOS
+                                <ul class="submenu-cartuchos">
+                                    <li><a href="#">Super Nintendo</a></li>
+                                    <li><a href="#">Sega</a></li>
+                                    <li><a href="#">Play Station 1</a></li>
+                                    <li><a href="#">Ver todos</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            ACCESORIOS
+                        </li>
+                        <li>
+                            VARIOS
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="usuario">
+                <% if (locals.loggedUser) { %>
+                <a href="/products/productAdd" title="Agregar Producto"><i class="fa-solid fa-paperclip"></i></a>
+                <% } %>
+                <a href="/users/login" title="Logueate"><i class="far fa-user"></i></a>
+                <a href="" title="Favoritos"><i class="far fa-heart"></i></a>
+                <a href="/users/productCart" title="Agrega al Carrito"><i class="fas fa-shopping-cart"></i></a>
+            </div>
         </div>
-    </nav>
+        
+    
+
+        <script src="/js/header.js"></script>
 </header>
