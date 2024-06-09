@@ -42,7 +42,9 @@
         </form>
         
         <% } else { %>
+            
             <form action="/users/destroy" method="POST" class="form-login">
+                <p>¡Hola, <%= locals.loggedName %>!</p>
                 <button type="submit" class="btn-register">Cerrar Sesion</button>
             </form>
         <% } %>   

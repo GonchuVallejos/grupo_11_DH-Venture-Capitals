@@ -7,6 +7,7 @@ let products = require('../data/productsDataBase.json')
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { verifyLoggedUser } = require('../Models/Users');
 
 const mainControllers = {
   index: async (req, res) => {
@@ -37,6 +38,7 @@ const mainControllers = {
     //caputrar la informacion de queryParams
     const busqueda = req.query.keywords;
 
+    verifyLoggedUser(req, res)
 
     //extraer los productos que macheen con la vista52.56 minutos video
     const productoBuscado = await db.Producto.findAll({
@@ -49,7 +51,7 @@ const mainControllers = {
 
 
     //vista
-    res.render('results', { productoBuscado, busqueda })
+    res.render('results', { productoBuscado, busqueda, loggedUser })
 
   }
 }

@@ -5,6 +5,7 @@ const bcryptjs = require('bcryptjs'); // para encriptar o hashear la conrtaseña
 const usersModel = require('../Models/Users')
 const session = require('express-session'); // requerimos para poder utilizar sesiones
 const { validationResult } = require('express-validator');
+const { verifyLoggedUser } = require('../Models/Users');
 
 
 const db = require('../database/models');
@@ -18,12 +19,9 @@ const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const userControllers = {
     login: async (req, res) => {
         
-        loggedUser = false;
-        if (req.session.userLogin || req.cookies.user) {
-            loggedUser = true;
-            console.log('existe usuario logeado y el mail es', req.session.userLogin)
-        }
-        res.render('login', { loggedUser })
+        verifyLoggedUser(req, res);
+
+        res.render('login', { loggedUser, loggedName })
 
         let errors = validationResult(req);//esto no se para que sirve.-
     },
@@ -38,12 +36,22 @@ const userControllers = {
 
         if (check) {
             req.session.userLogin = userMail;
+            let user = await usersModel.findeUserWithMail(userMail)
+            req.session.userName = user.nombre_usuario;
+            req.session.userRol = user.id_rol;
+            
             if(userRemember){
                 res.cookie('user', userMail, { maxAge: 60000 * 60 })
+                res.cookie('userRolId', user.id_rol, { maxAge: 60000 * 60 })
+                res.cookie('userName', user.nombre_usuario, { maxAge: 60000 * 60 })
                 console.log('cookie creada');
             }
             console.log('el mail logado es', req.session.userLogin)
+            if (req.session.lastUrl) {
+                res.redirect(req.session.lastUrl)
+            } else {
             res.redirect('/')
+            }
         } else {
             let mensajeError = 'Usuario y/o contraseña invalidos'
             res.render('login', { mensajeError: mensajeError });
@@ -53,7 +61,7 @@ const userControllers = {
     destroySession: function (req, res) {
         res.clearCookie('user');
         req.session.destroy();
-        res.redirect('/')
+        res.redirect('/users/login')
     },
 
     register: (req, res) => {

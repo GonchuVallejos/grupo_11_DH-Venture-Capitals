@@ -7,7 +7,15 @@ const sesionFactory = {
             res.redirect('/')
         }
         next();
-    }
+    },
+    userToAddProduct: (req, res, next) => {
+        if (!req.session.userLogin && !req.cookies.user){
+            req.session.lastUrl = req.originalUrl;
+            console.log('la url es', req.session.lastUrl)
+            res.redirect('/users/login')
+        }
+        next();
+    },
 }
 
 

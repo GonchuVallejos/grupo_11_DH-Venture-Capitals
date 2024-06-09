@@ -19,6 +19,14 @@
                     <img src="/img/portada/<%= productoSeleccionado.imagen %>" alt="<%= productoSeleccionado.name %>" class="img">
                 </div>
                 <div class="specifications">
+                    <h3>Historia del producto:</h3>
+                    <ul>
+                        <li> <%= productoSeleccionado.historia %> </li>
+                    </ul>
+                    <h3>Descripcion del producto:</h3>
+                    <ul>
+                        <li> <%= productoSeleccionado.descripcion %> </li>
+                    </ul>
                     <h3>Especificaciones del producto:</h3>
                     <ul>
                         <li> <%= productoSeleccionado.requisitos %> </li>
@@ -27,13 +35,20 @@
             </div>
             <div class="to-cart">
                 <div class="price-add-to-cart">
-                    <p>Precio: $<%= productoSeleccionado.precio %></p>
+                    <h3>Precio de Contado: </h3>
+                    <p>$<strong><%= productoSeleccionado.precio %></strong></p>
+                </div>
+                <div class="payment-method">
+                    <h3>Medios de Pago</h2>
+                        <div>
+                            <a href=""><img src="/img/payment-methods.png" alt="Logo de la página"></a>
+                        </div>
                 </div>
                 <div class="add-to-cart">
-                    <button>Agregar al carrito</button>
+                    <button onclick="window.location.href='/products/productCart/<%= productoSeleccionado.id %>';">Agregar al carrito</button>
                 </div>
             </div>
-            <% if (locals.loggedUser) { %>
+            <% if (locals.loggedUser && locals.loggedUserAdmin) { %>
                 <div class="edit-delete-button">
                     <form action="/products/productEdit/<%= productoSeleccionado.id %>" method="GET" >
                         <button class= "edit-delete" type="submit">Editar</button>

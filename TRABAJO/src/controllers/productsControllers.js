@@ -6,24 +6,32 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json'); 
 const { validationResult } = require('express-validator');
 
 const db = require('../database/models');
+const { verifyLoggedUser } = require('../Models/Users');
 const sequelize = db.sequelize;
 
 
 const productsControllers = {
     productDetail: async (req, res) => {
-        
-        loggedUser = false;
-        if (req.session.userLogin || req.cookies.user) {
-            loggedUser = true;
-            console.log('existe usuario logeado y el mail es', req.session.userLogin)
-        }
+      
+        verifyLoggedUser(req, res);
         
         productoId = req.params.id
 
 		productoSeleccionado = await db.Producto.findByPk(productoId)
         
         
-        res.render('productDetail', { productoSeleccionado, loggedUser })
+        res.render('productDetail', { productoSeleccionado, loggedUser, loggedUserAdmin })
+    },
+    productDetailCart: async (req, res) => {
+        
+        verifyLoggedUser(req, res);
+        
+        productoId = req.params.id
+
+		productoSeleccionado = await db.Producto.findByPk(productoId)
+        
+        
+        res.render('productCart', { productoSeleccionado, loggedUser })
     },
     productAdd: async (req, res) => {
         try {
@@ -163,7 +171,8 @@ const productsControllers = {
                 console.error('error al obtener datos de la base de datos', error);
                 res.status(500).send('error al obtener datos de la base de datos');
             }
-        }     
+        } 
+        
         
     }
 }

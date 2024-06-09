@@ -30,6 +30,41 @@ const User = {
             return false;
         }
 
+    },
+    findeUserWithMail: async function (userEmail) {
+
+        const personaBuscada = await db.Persona.findOne({
+            include: ['usuarios'],
+            where: { email: userEmail },
+        })
+        
+        if (personaBuscada) {
+            console.log('entre a ver el pas')
+
+            const [usuarioBuscado] = personaBuscada.usuarios
+
+            return usuarioBuscado
+        } 
+    },
+    verifyLoggedUser:(req, res) => {
+        loggedUser = false;
+        loggedUserAdmin= false;
+        loggedName = '';
+        if (req.session.userLogin || req.cookies.user) {
+            loggedUser = true;
+            if(req.session.userLogin){
+                loggedName = req.session.userName;
+            } else{
+                loggedName = req.cookies.userName;
+            }
+            
+            
+            if(req.cookies.userRolId == 1 || req.session.userRol == 1){
+                loggedUserAdmin = true;
+
+            }
+            console.log('existe usuario logeado y el mail es', req.session.userLogin)
+        }
     }
 
 }
