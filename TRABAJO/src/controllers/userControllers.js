@@ -16,9 +16,13 @@ const { Op } = require('sequelize')
 const userFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
+//defino el tipo de rol por defecto
+
+const rolType = 2;
+
 const userControllers = {
     login: async (req, res) => {
-        
+
         verifyLoggedUser(req, res);
 
         res.render('login', { loggedUser, loggedName })
@@ -31,7 +35,7 @@ const userControllers = {
         userRemember = req.body.remember;
 
         let check = await usersModel.findeUserToLogin(userMail, userPass)
-        
+
         console.log('estoy en el controlador y el resultado es ')
 
         if (check) {
@@ -39,8 +43,8 @@ const userControllers = {
             let user = await usersModel.findeUserWithMail(userMail)
             req.session.userName = user.nombre_usuario;
             req.session.userRol = user.id_rol;
-            
-            if(userRemember){
+
+            if (userRemember) {
                 res.cookie('user', userMail, { maxAge: 60000 * 60 })
                 res.cookie('userRolId', user.id_rol, { maxAge: 60000 * 60 })
                 res.cookie('userName', user.nombre_usuario, { maxAge: 60000 * 60 })
@@ -50,7 +54,7 @@ const userControllers = {
             if (req.session.lastUrl) {
                 res.redirect(req.session.lastUrl)
             } else {
-            res.redirect('/')
+                res.redirect('/')
             }
         } else {
             let mensajeError = 'Usuario y/o contraseña invalidos'
@@ -106,7 +110,7 @@ const userControllers = {
                     password: bcryptjs.hashSync(req.body.password, 10),
                     avatar: userImg,
                     id_persona: nuevaPersona.id,
-                    id_rol: 1,
+                    id_rol: rolType,
                     nombre_usuario: req.body.nombre_usuario
                 }
             )
@@ -132,21 +136,21 @@ const userControllers = {
 
         const usuarioEncontrado = await db.Usuario.findOne(
             {
-                where: {id : userId}
+                where: { id: userId }
             })
-        
 
-            if (usuarioEncontrado) {
-               /* if (req.cookies.file) {
-                    res.cookie("imageUser", user.image = req.file.filename)
-                }*/
-                user.nombre = usuarioEncontrado.nombre;
-                user.apellido = usuarioEncontrado.apellido;
-                user.email = usuarioEncontrado.email;
-                //producto.password = req.body.password;
-            }
-        
-        res.render('updateUser', {user})
+
+        if (usuarioEncontrado) {
+            /* if (req.cookies.file) {
+                 res.cookie("imageUser", user.image = req.file.filename)
+             }*/
+            user.nombre = usuarioEncontrado.nombre;
+            user.apellido = usuarioEncontrado.apellido;
+            user.email = usuarioEncontrado.email;
+            //producto.password = req.body.password;
+        }
+
+        res.render('updateUser', { user })
     }
 }
 
