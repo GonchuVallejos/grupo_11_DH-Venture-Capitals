@@ -342,7 +342,7 @@ a{
         font-size: 20px;
         font-weight: bold;
     }
-    ul li:hover {
+    .menu-desplegable ul li:hover {
         box-shadow: 0px 0px 5px 5px black;
     }
 
